@@ -11,7 +11,7 @@ const Layout = () => {
       <Head/>
       
       {/* Navbar */}
-      <Navbar />
+      {/* <Navbar /> */}
 
       {/* Main Content */}
       <main className="flex-grow ">

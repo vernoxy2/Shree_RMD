@@ -12,7 +12,7 @@ const Inquiry = () => {
           <LazyImage src={InquiryImg} alt="Inquiry Image" className="w-fit" />
         </div>
         <div className="space-y-5">
-            <div></div>
+          <div></div>
           <h1>Inquiry Now Form</h1>
 
           <form className="pt-6 space-y-4">
@@ -23,8 +23,8 @@ const Inquiry = () => {
                 className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
               />
               <input
-                type="Email*"
-                placeholder="Enter your name"
+                type="email"
+                placeholder="Email*"
                 className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
@@ -35,11 +35,11 @@ const Inquiry = () => {
               className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
             />
           </form>
-          <PrimaryBtn 
-  to="/contact" 
-  text="Send Message" 
-  icon={<FaArrowRight />} 
-/>
+          <PrimaryBtn
+            to="/contact"
+            text="Send Message"
+            icon={<FaArrowRight />}
+          />
         </div>
       </div>
     </section>

@@ -42,7 +42,7 @@ const AboutUS = () => {
             <p>
               Established in 2016 under the esteemed Shree Prabhav Hem Kamdhenu
               Girivihar Trust, Shree RMD Ayurved College & Hospital stands as a
-              center of excellence in Ayurvedic education and healthcare.  Our
+              center of excellence in Ayurvedic education and healthcare. Our
               vision goes beyond teaching medicine{" "}
             </p>
             <p>

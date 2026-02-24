@@ -3,6 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Layout from "./Components/Layout/Layout.jsx";
+import ExaminationResults from "./Pages/Ayurved Collage/Academics/University_Examination/Components/ExaminationResults.jsx";
+import Admission_Update from "./Pages/Ayurved Collage/Academics/Admission_Update/Admission_Update.jsx";
 
 
 // Lazy loaded pages
@@ -34,7 +36,22 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path="home" index element={<Home />} />
+          {/* About Us */}
           <Route path="about-us" element={<AboutUs />} />
+          <Route path="about-us" element={<AboutUs />} />
+
+          {/* Ayurveda College */}
+          <Route
+            path="/ayurveda-college/University-Examination"
+            element={<ExaminationResults />}
+          />
+          <Route
+            path="/ayurveda-college/Admission-Update"
+            element={<Admission_Update />}
+          />
+
+
           <Route path="contact-us" element={<ContactUs />} />
         </Route>
       </Routes>
