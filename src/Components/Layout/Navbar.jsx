@@ -56,9 +56,9 @@ const NavLink = [
 
 const Navbar = () => {
   return (
-    <div className="container">
-      <div className="rounded-full container bg-primary py-4">
-        <div className="flex items-center justify-between">
+    <div className="container ">
+      <div className="rounded-full container px-10 bg-primary py-4">
+        <div className="flex items-center justify-around">
             {NavLink.map((item, index) => (
               <div key={index} className="hover:text-primary text-white transition">
                 <a href={item.url}>{item.name}</a>

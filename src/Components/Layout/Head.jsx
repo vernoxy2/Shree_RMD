@@ -6,7 +6,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 import { BiLogoFacebookSquare } from "react-icons/bi";
 const Head = () => {
   return (
-    <div className="container mx-auto  py-6 shadow-inner flex items-start justify-between">
+    <div className="container mx-auto  py-6 shadow-inner md:flex items-start justify-between">
       <LazyImage src={HeadLogo} alt="Head Logo" className="max-h-14" />
 
       <div className="flex items-center gap-3">
