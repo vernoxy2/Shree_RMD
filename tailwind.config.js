@@ -21,6 +21,10 @@ export default {
         secondary: '#00ff00',
         tertiary: '#0000ff',
       },
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
+      },
     },
   },
   plugins: [],
