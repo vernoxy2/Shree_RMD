@@ -749,11 +749,11 @@ export default function ExaminationResults() {
       </div>
 
       {/* ══ FOOTER ══ */}
-      <div style={{ background: C.textDark, textAlign: "center", padding: "18px 24px" }}>
+      {/* <div style={{ background: C.textDark, textAlign: "center", padding: "18px 24px" }}>
         <p style={{ margin: 0, fontSize: 11, color: "rgba(255,255,255,.3)" }}>
           © 2026 <span style={{ color: C.gold }}>Dhanvantari Ayurveda College &amp; Hospital</span> &nbsp;|&nbsp; Affiliated to MUHS &nbsp;|&nbsp; NAAC A+ Accredited
         </p>
-      </div>
+      </div> */}
     </section>
   );
 }

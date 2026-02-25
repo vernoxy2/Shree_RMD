@@ -69,35 +69,41 @@ const DropdownItem = ({ item, depth = 0 }) => {
     <div className="relative group/item">
 
       {/* Main Link */}
-      <NavLink
-        to={item.url}
-        className={({ isActive }) =>
-          `flex items-center justify-between px-4 py-2 whitespace-nowrap transition
-          ${
-            isActive
-              ? "bg-primary text-white font-semibold"
-              : "text-gray-700 hover:bg-primary hover:text-white"
-          }`
-        }
-      >
-        {item.name}
-
-        {item.children && (
-          <FaChevronRight
-            size={12}
-            className="ml-2"
-          />
-        )}
-      </NavLink>
+      {item.url ? (
+        <NavLink
+          to={item.url}
+          className={({ isActive }) =>
+            `flex items-center justify-between px-4 py-2 whitespace-nowrap transition
+            ${
+              isActive
+                ? "bg-primary text-white font-semibold"
+                : "text-gray-700 hover:bg-gray-100 hover:text-primary"
+            }
+            ${item.children ? "" : ""}
+            `
+          }
+        >
+          {item.name}
+          {item.children && <FaChevronRight size={12} className="ml-2" />}
+        </NavLink>
+      ) : (
+        // For items WITHOUT a url (like "About college"), render a div instead
+        <div
+          className={`flex items-center justify-between px-4 py-2 whitespace-nowrap cursor-pointer transition text-gray-700
+            ${item.children ? "group-hover/item:border-b-2 group-hover/item:border-primary group-hover/item:font-semibold group-hover/item:text-primary" : "hover:bg-primary hover:text-white"}
+          `}
+        >
+          {item.name}
+          {item.children && <FaChevronRight size={12} className="ml-2" />}
+        </div>
+      )}
 
       {/* Hover Dropdown */}
       {item.children && (
         <div
           className={`
             absolute
-            ${depth === 0
-              ? "left-0 top-full"
-              : "left-full top-0"}
+            ${depth === 0 ? "left-0 -top-full" : "left-[calc(100%+6px)] top-0"}
             min-w-[220px]
             bg-white rounded-md shadow-lg
             opacity-0 invisible
@@ -108,15 +114,10 @@ const DropdownItem = ({ item, depth = 0 }) => {
           `}
         >
           {item.children.map((child, index) => (
-            <DropdownItem
-              key={index}
-              item={child}
-              depth={depth + 1}
-            />
+            <DropdownItem key={index} item={child} depth={depth + 1} />
           ))}
         </div>
       )}
-
     </div>
   );
 };
@@ -144,9 +145,9 @@ const Navbar = () => {
 
               {/* First Level Dropdown */}
               {item.children && (
-                <div className="absolute top-full left-0 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 min-w-[220px]">
+                <div className="absolute top-full left-0 mt-1.5 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 min-w-[220px]">
                   {item.children.map((child, i) => (
-                    <DropdownItem key={i} item={child} />
+                    <DropdownItem key={i} item={child} depth={1} />
                   ))}
                 </div>
               )}

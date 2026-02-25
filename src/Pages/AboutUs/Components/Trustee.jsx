@@ -11,9 +11,9 @@ const Trustee = () => {
           alt="Kantilal"
           className="w-full lg:w-1/2 lg:float-left lg:pr-8 pb-4"
         />
-        <h1 className="text-3xl ">Shri Kantilal Hastimalji Oswal</h1>
+        <h1 className="text-4xl ">Shri Kantilal Hastimalji Oswal</h1>
         <h1 className="text-3xl font-normal text-[#676767]">( Trustee )</h1>
-        <p className="text-primary">Dear all</p>
+        <p className="text-primary font-bold">Dear all</p>
         <p>
           The Girivihartrust’s RMD Ayurveda college and hospital and Cancer
           Hospital is a pillar of strength and encouragement for anyone looking
