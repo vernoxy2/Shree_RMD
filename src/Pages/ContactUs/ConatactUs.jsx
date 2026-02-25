@@ -1,10 +1,15 @@
 import React from 'react';
+import TellUs from './Components/TellUs';
+import GetTouch from './Components/GetTouch';
+import PrimaryHeader from '../../Components/Ui/PrimaryHeader';
 
 const ConatactUs = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+    <PrimaryHeader HeadLine={"Contact Us"}/>
+    <GetTouch/>
+    <TellUs/>
+    </>
   );
 }
 
