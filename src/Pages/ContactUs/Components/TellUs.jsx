@@ -1,6 +1,8 @@
 import React from "react";
 import PrimaryBtn from "../../../Components/Ui/PrimaryBtn";
 import { FaArrowRight } from "react-icons/fa";
+import PrimaryTextarea from "../../../Components/Ui/PrimaryTextarea";
+import PrimaryInput from "../../../Components/Ui/PrimaryInput";
 
 const TellUs = () => {
   return (
@@ -12,36 +14,20 @@ const TellUs = () => {
             <div></div>
 
             <form className="pt-6 space-y-4">
-              <div className="flex gap-8">
-                <input
-                  type="text"
-                  placeholder="Name*"
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
-                />
-                <input
-                  type="Email"
-                  placeholder="Email*"
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
-                />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <PrimaryInput label="Name*" placeholder="Name*" type="text" />
+                
+                <PrimaryInput label="Email*" placeholder="Email*" type="email" />
+               
               </div>
-              <div className="flex gap-8">
-                <input
-                  type="number"
-                  placeholder="phone*"
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
-                />
-                <input
-                  type="text"
-                  placeholder="Subject*"
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
-                />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <PrimaryInput label="Subject*" placeholder="Subject*" type="number" />
+                
+                <PrimaryInput label="Phone*" placeholder="Phone*" type="number" />
               </div>
-              <textarea
-                type="text"
-                placeholder="Message*"
-                rows={5}
-                className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
-              />
+              
+              <PrimaryTextarea label="Message" placeholder={"Message*"}  />
             </form>
             <PrimaryBtn
               to="/contact"
