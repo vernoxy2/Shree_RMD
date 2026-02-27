@@ -5,6 +5,10 @@ import Established from "./Components/Established";
 import Department from "./Components/Department";
 import AddmissionUpdate from "./Components/AddmissionUpdate";
 import Affiliation from "./Components/Affiliation";
+import BlogsSec from "./Components/BlogsSec";
+import GallerySec from "./Components/GallerySec";
+import ResAndDev from "./Components/ResAndDev";
+import Calendar from "./Components/Calendar";
 
 const AyurvedCollage = () => {
   return (
@@ -19,7 +23,11 @@ const AyurvedCollage = () => {
       <Established/>
       <Department/>
       <AddmissionUpdate/>
+      <Calendar/>
+      <ResAndDev/>
       <Affiliation/>
+      <GallerySec/>
+      <BlogsSec/>
     </div>
   );
 };

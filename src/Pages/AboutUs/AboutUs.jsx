@@ -6,6 +6,8 @@ import Trustees from "./Components/Trustees";
 import Trustee from "./Components/Trustee";
 import AboutCampus from "./Components/AboutCampus";
 import GuruJi from "./Components/GuruJi";
+import Principal from "./Components/Principal";
+import Director from "./Components/Director";
 
 const AboutUs = () => {
   return (
@@ -16,6 +18,8 @@ const AboutUs = () => {
       <Trustee/>
       <Trustees/>
       <CoreValues />
+      <Principal/>
+      <Director/>
     </>
   );
 };
