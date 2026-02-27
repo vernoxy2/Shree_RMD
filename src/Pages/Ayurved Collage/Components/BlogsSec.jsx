@@ -3,6 +3,8 @@ import Blog1 from "../../../assets/AyurvedCollage/BlogImg/Blog1.svg";
 import Blog2 from "../../../assets/AyurvedCollage/BlogImg/Blog2.svg";
 import Blog3 from "../../../assets/AyurvedCollage/BlogImg/Blog3.svg";
 import PrimaryBtn from "../../../Components/Ui/PrimaryBtn";
+import RoundBtn from "../../../Components/Ui/RoundBtn";
+import RoundPrimaryBtn from "../../../Components/Ui/RoundPrimaryBtn";
 
 const BlogData = [
   {
@@ -33,7 +35,7 @@ const BlogsSec = () => {
     <div className="bg-[#FFF6F6] py-20">
       <div className="container space-y-12">
         <h1 className="text-center">Blogs</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
           {BlogData.map((item) => (
             <div key={item.id} className="flex flex-col h-full">
               <h3 className="w-full bg-primary text-xl text-center text-white font-black font-poppins px-14 py-2">
@@ -43,7 +45,7 @@ const BlogsSec = () => {
               <div className="py-4 space-y-4">
                 <h3 className="text-xl text-primary font-bold font-inter pr-24">{item.subTitle}</h3>
                 <p className="pr-6">{item.text}</p>
-                <PrimaryBtn text="Read More" />
+                <RoundPrimaryBtn text="Read More" />
               </div>
             </div>
           ))}
