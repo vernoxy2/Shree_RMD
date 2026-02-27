@@ -1,6 +1,6 @@
 import React from "react";
 import Rajeshbhai from "../../../assets/AboutUsPageImg/Rajeshbhai.svg";
-import Nimeshbhai from "../../../assets/AboutUsPageImg/nIMESHBHAI.SVG";
+import Nimeshbhai from "../../../assets/AboutUsPageImg/Nimeshbhai.svg";
 
 const Principal = () => {
   return (
