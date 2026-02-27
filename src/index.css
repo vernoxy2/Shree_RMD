@@ -8,6 +8,9 @@
     h1{
         @apply text-5xl font-bold text-primary font-poppins
     }
+    h2{
+        @apply text-3xl font-bold text-primary font-poppins
+    }
     p{
         @apply text-[#676767] font-medium font-inter
     }

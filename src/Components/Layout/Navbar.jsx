@@ -20,7 +20,7 @@ const NavLinkData = [
         children: [
           {
             name: "Committee",
-            url: "/ayurveda-college/admission",
+            url: "/ayurveda-college/committee",
           },
           {
             name: "Grievance and  redressal",
@@ -38,16 +38,54 @@ const NavLinkData = [
         children: [
           { name: "Departments", url: "/ayurveda-college/admission" },
           { name: "Time Table", url: "/ayurveda-college/admission" },
-          { name: "Admission Update", url: "/ayurveda-college/Admission-Update" },
+          {
+            name: "Admission Update",
+            url: "/ayurveda-college/Admission-Update",
+          },
           {
             name: "University Examination",
             url: "/ayurveda-college/University-Examination",
           },
         ],
       },
-      { name: "Students", url: "/ayurveda-college/admission" },
-      { name: "Faculty And Research", url: "/ayurveda-college/admission" },
-      { name: "Medical And Updates", url: "/ayurveda-college/admission" },
+      {
+        name: "Students",
+        children: [
+          {
+            name: "Students Details",
+            url: "/ayurveda-college/students-details",
+          },
+          { name: "Attendance", url: "/ayurveda-college/attendance" },
+          { name: "Activities", url: "/ayurveda-college/Activities" },
+        ],
+      },
+      {
+        name: "Faculty And Research",
+        children: [
+          {
+            name: "Staff Details",
+            url: "/ayurveda-college/staff-details",
+          },
+          {
+            name: "Research Work  And Publication",
+            url: "/ayurveda-college/attendance",
+          },
+        ],
+      },
+      { name: "Medical And Updates", children: [
+          {
+            name: "gallery",
+            url: "/ayurveda-college/gallery",
+          },
+        
+        ], },
+    ],
+  },
+  {
+    name: "Ayurved Hospital",
+    url: "/research-and-development",
+    children: [
+      { name: "Admission", url: "/research-and-development/admission" },
     ],
   },
   {
@@ -57,17 +95,18 @@ const NavLinkData = [
       { name: "Admission", url: "/research-and-development/admission" },
     ],
   },
-  { name: "Press & Media", url: "/press-and-media" },
+  // { name: "Press & Media", url: "/press-and-media" },
+  { name: "Trust", url: "/press-and-media" },
+  { name: "Pharmacy", url: "/press-and-media" },
   { name: "Gallery", url: "/gallery" },
-  { name: "Vacancy", url: "/vacancy" },
+  // { name: "Vacancy", url: "/vacancy" },
   { name: "Contact us", url: "/contact-us" },
-  { name: "Enquiry", url: "/enquiry" },
+  // { name: "Enquiry", url: "/enquiry" },
 ];
 
 const DropdownItem = ({ item, depth = 0 }) => {
   return (
     <div className="relative group/item">
-
       {/* Main Link */}
       {item.url ? (
         <NavLink
@@ -127,15 +166,13 @@ const Navbar = () => {
     <div className="container xl:px-24 z-50">
       <div className="lg:rounded-full px-8 bg-primary">
         <div className="flex items-stretch justify-between h-16">
-
           {NavLinkData.map((item, index) => (
             <div key={index} className="relative group flex items-center">
-
               <NavLink
                 to={item.url}
                 end={item.url === "/"}
                 className={({ isActive }) =>
-                  `flex items-center gap-1 px-4 h-full transition
+                  `flex items-center gap-1 px-4 h-full transition text-sm
                   ${isActive ? "font-bold text-white" : "text-white"}`
                 }
               >
@@ -151,10 +188,8 @@ const Navbar = () => {
                   ))}
                 </div>
               )}
-
             </div>
           ))}
-
         </div>
       </div>
     </div>

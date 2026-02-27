@@ -6,6 +6,8 @@ import Layout from "./Components/Layout/Layout.jsx";
 import Admission_Update from "./Pages/Ayurved Collage/Academics/Admission_Update/Admission_Update.jsx";
 import AyurvedCollage from "./Pages/Ayurved Collage/AyurvedCollage.jsx";
 import University_Examination from "./Pages/Ayurved Collage/Academics/University_Examination/University_Examination.jsx";
+import Activities from "./Pages/Ayurved Collage/Students/Activities/Activities.jsx";
+import CategoriesDepartment from "./Pages/Ayurved Collage/CategoriesDepartment/CategoriesDepartment.jsx";
 
 
 // Lazy loaded pages
@@ -44,7 +46,12 @@ const App = () => {
 
           {/* Ayurveda College */}
           <Route path="ayurveda-college" element={<AyurvedCollage />} />
+          <Route path="/ayurveda-college/categories-department" element={<CategoriesDepartment />} />
 
+          <Route
+            path="/ayurveda-college/committee"
+            element={<University_Examination />}
+          />
           <Route
             path="/ayurveda-college/University-Examination"
             element={<University_Examination />}
@@ -53,7 +60,10 @@ const App = () => {
             path="/ayurveda-college/Admission-Update"
             element={<Admission_Update />}
           />
-
+          <Route
+            path="/ayurveda-college/Activities"
+            element={<Activities />}
+          />
 
           <Route path="contact-us" element={<ContactUs />} />
         </Route>

@@ -6,11 +6,16 @@ const Trustee = () => {
   return (
     <div>
       <div className="container py-28 space-y-4">
+        <div className="relative">
+
         <LazyImage
           src={Kantilal}
           alt="Kantilal"
           className="w-full lg:w-1/2 lg:float-left lg:pr-8 pb-4"
         />
+          <div className="absolute border-2 border-primary p-28 -top-8 -left-8 z-[-1]"></div>
+        </div>
+
         <h1 className="text-4xl ">Shri Kantilal Hastimalji Oswal</h1>
         <h1 className="text-3xl font-normal text-[#676767]">( Trustee )</h1>
         <p className="text-primary font-bold">Dear all</p>
