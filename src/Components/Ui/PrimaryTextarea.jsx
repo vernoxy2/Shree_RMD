@@ -1,5 +1,5 @@
 import React from "react";
-import Down from "./../../assets/inputDown.svg";
+import Down from "./../../assets/InputDown.svg";
 
 const PrimaryTextarea = ({ label, placeholder, id, rows = 4 }) => {
   return (

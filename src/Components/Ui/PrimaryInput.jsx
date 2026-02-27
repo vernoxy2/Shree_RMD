@@ -1,4 +1,4 @@
-import Down from "./../../assets/inputDown.svg";
+import Down from "./../../assets/InputDown.svg";
 
 const PrimaryInput = ({ label, placeholder, type = "text", id }) => {
   return (
