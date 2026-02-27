@@ -8,7 +8,7 @@ import AyurvedCollage from "./Pages/Ayurved Collage/AyurvedCollage.jsx";
 import University_Examination from "./Pages/Ayurved Collage/Academics/University_Examination/University_Examination.jsx";
 import Activities from "./Pages/Ayurved Collage/Students/Activities/Activities.jsx";
 import CategoriesDepartment from "./Pages/Ayurved Collage/CategoriesDepartment/CategoriesDepartment.jsx";
-
+import Committee from "./Pages/Ayurved Collage/About college/Committee/Committee.jsx";
 
 // Lazy loaded pages
 const Home = lazy(() => import("./Pages/Home/Home.jsx"));
@@ -46,11 +46,16 @@ const App = () => {
 
           {/* Ayurveda College */}
           <Route path="ayurveda-college" element={<AyurvedCollage />} />
-          <Route path="/ayurveda-college/categories-department" element={<CategoriesDepartment />} />
-
+          {/* Ayurveda College - Categories Department */}
+          <Route
+            path="/ayurveda-college/categories-department"
+            element={<CategoriesDepartment />}
+          />
+          {/* About College /}
+          {/* About College - committee*/}
           <Route
             path="/ayurveda-college/committee"
-            element={<University_Examination />}
+            element={<Committee />}
           />
           <Route
             path="/ayurveda-college/University-Examination"
@@ -60,10 +65,7 @@ const App = () => {
             path="/ayurveda-college/Admission-Update"
             element={<Admission_Update />}
           />
-          <Route
-            path="/ayurveda-college/Activities"
-            element={<Activities />}
-          />
+          <Route path="/ayurveda-college/Activities" element={<Activities />} />
 
           <Route path="contact-us" element={<ContactUs />} />
         </Route>

@@ -1,5 +1,6 @@
 import React from "react";
 import PrimaryHeader from "../../../Components/Ui/PrimaryHeader";
+import CategoriesHead from"../../../assets/AyurvedCollage/CategoriesDepartmentImgs/CategoriesHead.webp"
 import Professional from "./Components/Professional";
 import { Department1 } from "./Components/DepartMentdata";
 import { Department2 } from "./Components/DepartMentdata";
@@ -9,6 +10,7 @@ const CategoriesDepartment = () => {
   return (
     <div className="bg-[#FFF6F6]">
       <PrimaryHeader
+      BgImg={CategoriesHead}
         HeadLine={
           <>
             Professional <br />
