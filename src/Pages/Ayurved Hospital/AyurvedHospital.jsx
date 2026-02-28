@@ -3,6 +3,11 @@ import PrimaryHeader from "../../Components/Ui/PrimaryHeader";
 import AyurvedHospitalHead from "../../assets/AyurvedHospital/AyurvedHospitalHead.png";
 import Compassionate from "./Components/Compassionate";
 import OurTeam from "./Components/OurTeam";
+import Campus from "./Components/Campus";
+import Services from "./Components/Services";
+import Infrastructure from "./Components/Infrastructure";
+import Diagnostics from "./Components/Diagnostics";
+import Snapshot from "./Components/snapshot";
 
 const AyurvedHospital = () => {
   return (
@@ -14,6 +19,11 @@ const AyurvedHospital = () => {
       />
       <Compassionate />
       <OurTeam />
+      <Campus />
+      <Services/>
+      <Infrastructure/>
+      <Diagnostics/>
+      {/* <Snapshot/> */}
     </div>
   );
 };
