@@ -9,6 +9,13 @@ import University_Examination from "./Pages/Ayurved Collage/Academics/University
 import Activities from "./Pages/Ayurved Collage/Students/Activities/Activities.jsx";
 import CategoriesDepartment from "./Pages/Ayurved Collage/CategoriesDepartment/CategoriesDepartment.jsx";
 import Committee from "./Pages/Ayurved Collage/About college/Committee/Committee.jsx";
+import StudentsDetails from "./Pages/Ayurved Collage/Students/StudentsDetails/StudentsDetails.jsx";
+import AyurvedHospital from "./Pages/Ayurved Hospital/AyurvedHospital.jsx";
+import StudentAttendance from "./Pages/Ayurved Collage/Attendance/StudentAttendance/StudentAttendance.jsx";
+import StaffAttendance from "./Pages/Ayurved Collage/Attendance/StaffAttendance/StaffAttendance.jsx";
+import TeachingStaffDetails from "./Pages/Ayurved Collage/Faculty And Research/Staff Details/TeachingStaffDetails.jsx";
+import NonTeachingStaffDetails from "./Pages/Ayurved Collage/Faculty And Research/Staff Details/NonTeachingStaffDetails.jsx";
+import ResearchPublication from "./Pages/Ayurved Collage/Faculty And Research/ResearchPublication/ResearchPublication.jsx";
 
 // Lazy loaded pages
 const Home = lazy(() => import("./Pages/Home/Home.jsx"));
@@ -42,7 +49,6 @@ const App = () => {
           <Route path="home" index element={<Home />} />
           {/* About Us */}
           <Route path="about-us" element={<AboutUs />} />
-          <Route path="about-us" element={<AboutUs />} />
 
           {/* Ayurveda College */}
           <Route path="ayurveda-college" element={<AyurvedCollage />} />
@@ -53,10 +59,8 @@ const App = () => {
           />
           {/* About College /}
           {/* About College - committee*/}
-          <Route
-            path="/ayurveda-college/committee"
-            element={<Committee />}
-          />
+          <Route path="/ayurveda-college/committee" element={<Committee />} />
+          {/* Accademics */}
           <Route
             path="/ayurveda-college/University-Examination"
             element={<University_Examination />}
@@ -65,7 +69,38 @@ const App = () => {
             path="/ayurveda-college/Admission-Update"
             element={<Admission_Update />}
           />
-          <Route path="/ayurveda-college/Activities" element={<Activities />} />
+          {/* Students Details */}
+          <Route
+            path="/ayurveda-college/students-details"
+            element={<StudentsDetails />}
+          />
+          <Route
+            path="/ayurveda-college/students-attendance"
+            element={<StudentAttendance />}
+          />
+          <Route
+            path="/ayurveda-college/staff-attendance"
+            element={<StaffAttendance />}
+          />
+          <Route path="/ayurveda-college/activities" element={<Activities />} />
+          {/* Faculty */}
+          {/* Staff Details */}
+          <Route
+            path="/ayurveda-college/Teaching-staff-details"
+            element={<TeachingStaffDetails />}
+          />
+          <Route
+            path="/ayurveda-college/Non-Teaching-staff-details"
+            element={<NonTeachingStaffDetails />}
+          />
+          {/* Research Work and Publication */}
+          <Route
+            path="/ayurveda-college/research-work-and-publication"
+            element={<ResearchPublication />}
+          />
+
+          {/* Ayurved Hospital */}
+          <Route path="/ayurved-Hospital" element={<AyurvedHospital />} />
 
           <Route path="contact-us" element={<ContactUs />} />
         </Route>

@@ -116,11 +116,11 @@ const CommitteeList = () => {
             <button
               key={i}
               onClick={() => setActive(i)}
-              className={`w-full text-left px-4 py-3 text-sm font-medium transition-colors duration-150 border-b border-pink-50 last:border-0 rounded-xl
+              className={`w-full text-left px-4 py-3 text-xl transition-colors duration-150 border-b border-pink-50 last:border-0 rounded-xl
                 ${
                   i === active
-                    ? "bg-primary text-white font-semibold"
-                    : "text-gray-600 bg-[#F6F6F6] hover:bg-primary/20 hover:text-primary"
+                    ? "bg-primary text-white font-bold"
+                    : "text-gray-600 bg-[#F6F6F6] hover:bg-primary/20 hover:text-primary font-medium"
                 }`}
             >
               {item.label}
