@@ -47,32 +47,34 @@ const Enrollment = () => {
           </iframe>
         </div>
         {/* ── Sidebar ── */}
-        <div
-          className="custom-scroll w-5/12 flex-shrink-0 bg-white px-6 py-14 rounded-2xl shadow-md border border-pink-100 h-[400px] overflow-y-auto"
-          style={{
-            scrollbarWidth: "thin",
-            scrollbarColor: "#a63a4b #f3f4f6",
-          }}
-        >
-            <div className=" space-y-3.5">
-              {years.map((year) => (
-                <button
-                  key={year}
-                  onClick={() => setSelected(year)}
-                  className={`w-full rounded-xl  text-left px-5 py-4 text-sm font-semibold border-b border-pink-50 last:border-0 transition-colors duration-150
+        <div className="custom-scroll w-5/12 flex-shrink-0 bg-white px-6 py-14 rounded-2xl shadow-md border border-pink-100 ">
+          <div
+            style={{
+              scrollbarWidth: "thin",
+              scrollbarColor: "#a63a4b #f3f4f6",
+              scrollbarGutter: "stable",
+              scrollBehavior: "smooth",
+            }}
+            className=" space-y-5 h-[462px] overflow-y-auto"
+          >
+            {years.map((year) => (
+              <button
+                key={year}
+                onClick={() => setSelected(year)}
+                className={`w-full rounded-xl  text-left px-5 py-4 text-xl border-b border-pink-50 last:border-0 transition-colors duration-150
                   ${
                     year.label === selected.label
-                      ? "bg-primary text-white"
-                      : "text-secondary bg-[#F6F6F6] hover:bg-primary/20 hover:text-primary"
+                      ? "bg-primary text-white font-bold"
+                      : "text-secondary bg-[#F6F6F6] hover:bg-primary/20 hover:text-primary font-medium"
                   }`}
-                >
-                  {year.label}
-                </button>
-              ))}
-            </div>
-
-            {/*  */}
+              >
+                {year.label}
+              </button>
+            ))}
           </div>
+
+          {/*  */}
+        </div>
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ const NavLinkData = [
   {
     name: "About Us",
     url: "/about-us",
-    children: [{ name: "Admission", url: "/about-us/admission" }],
+    // children: [{ name: "Admission", url: "/about-us/admission" }],
   },
   {
     name: "Ayurved College",
@@ -36,7 +36,10 @@ const NavLinkData = [
         name: "Academics",
         // url: "/ayurveda-college/admission",
         children: [
-          { name: "Departments", url: "/ayurveda-college/admission" },
+          {
+            name: "Departments",
+            url: "/ayurveda-college/categories-department",
+          },
           { name: "Time Table", url: "/ayurveda-college/admission" },
           {
             name: "Admission Update",
@@ -55,35 +58,58 @@ const NavLinkData = [
             name: "Students Details",
             url: "/ayurveda-college/students-details",
           },
-          { name: "Attendance", url: "/ayurveda-college/attendance" },
-          { name: "Activities", url: "/ayurveda-college/Activities" },
+          { name: "Activities", url: "/ayurveda-college/activities" },
         ],
       },
+      { name: "Attendance", 
+        children: [
+          {
+            name: "Students Attendance",
+            url: "/ayurveda-college/students-attendance",
+          },
+          {
+            name: "Staff Attendance",
+            url: "/ayurveda-college/staff-attendance",
+          },
+        ]
+       },
+
       {
-        name: "Faculty And Research",
+        name: "Faculty",
         children: [
           {
             name: "Staff Details",
-            url: "/ayurveda-college/staff-details",
+            children: [
+              {
+                name: "Teaching Staff",
+                url: "/ayurveda-college/Teaching-staff-details",
+              },
+              {
+                name: "Non Teaching Staff",
+                url: "/ayurveda-college/Non-Teaching-staff-details",
+              },
+            ],
           },
           {
             name: "Research Work  And Publication",
-            url: "/ayurveda-college/attendance",
+            url: "/ayurveda-college/research-work-and-publication",
           },
         ],
       },
-      { name: "Medical And Updates", children: [
+      {
+        name: "Medical And Updates",
+        children: [
           {
             name: "gallery",
             url: "/ayurveda-college/gallery",
           },
-        
-        ], },
+        ],
+      },
     ],
   },
   {
     name: "Ayurved Hospital",
-    url: "/research-and-development",
+    url: "/ayurved-Hospital",
     children: [
       { name: "Admission", url: "/research-and-development/admission" },
     ],
