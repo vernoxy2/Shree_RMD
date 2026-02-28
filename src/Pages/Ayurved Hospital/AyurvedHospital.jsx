@@ -7,7 +7,7 @@ import Campus from "./Components/Campus";
 import Services from "./Components/Services";
 import Infrastructure from "./Components/Infrastructure";
 import Diagnostics from "./Components/Diagnostics";
-import Snapshot from "./Components/snapshot";
+// import Snapshot from "./Components/snapshot";
 
 const AyurvedHospital = () => {
   return (
