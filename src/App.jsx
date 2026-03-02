@@ -16,6 +16,8 @@ import StaffAttendance from "./Pages/Ayurved Collage/Attendance/StaffAttendance/
 import TeachingStaffDetails from "./Pages/Ayurved Collage/Faculty And Research/Staff Details/TeachingStaffDetails.jsx";
 import NonTeachingStaffDetails from "./Pages/Ayurved Collage/Faculty And Research/Staff Details/NonTeachingStaffDetails.jsx";
 import ResearchPublication from "./Pages/Ayurved Collage/Faculty And Research/ResearchPublication/ResearchPublication.jsx";
+import Kayachikitsa from "./Pages/Ayurved Hospital/ServicesSnapshot/Kayachikitsa.jsx";
+import ServicesSnapshot from "./Pages/Ayurved Hospital/ServicesSnapshot/Components/ServicesSnapshot.jsx";
 
 // Lazy loaded pages
 const Home = lazy(() => import("./Pages/Home/Home.jsx"));
@@ -101,6 +103,8 @@ const App = () => {
 
           {/* Ayurved Hospital */}
           <Route path="/ayurved-Hospital" element={<AyurvedHospital />} />
+          {/* Services */}
+          <Route path="/ayurved-Hospital/kayachikitsa" element={<ServicesSnapshot />} />
 
           <Route path="contact-us" element={<ContactUs />} />
         </Route>
