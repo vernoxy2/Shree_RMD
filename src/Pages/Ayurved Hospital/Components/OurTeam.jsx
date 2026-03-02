@@ -1,6 +1,7 @@
 import React from "react";
 import TeamBg from "../../../assets/AyurvedHospital/TeamBg.webp";
 import PrimaryBtn from "../../../Components/Ui/PrimaryBtn";
+import { RiTeamFill } from "react-icons/ri";
 
 const OurTeam = () => {
   return (
@@ -18,7 +19,7 @@ const OurTeam = () => {
           approach drive academic success, research advancement, and quality
           healthcare services.
         </p>
-        <PrimaryBtn text={"Contact Us"} />
+        <PrimaryBtn text={"Meet Our Team"} icon={<RiTeamFill />}/>
       </div>
     </div>
   );

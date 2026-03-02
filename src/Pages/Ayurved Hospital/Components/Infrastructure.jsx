@@ -9,8 +9,8 @@ const Infrastructure = () => {
       className=" bg-cover"
       style={{ backgroundImage: `url(${InfrastructureBg})` }}
     >
-      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div className="2xl:pr-20 space-y-5 py-20">
+      <div className=" grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="2xl:pr-20 space-y-5 py-20 container xl:pl-24 ">
           <h2 className="text-white">
             Hospital Infrastructure & Patient Care Services
           </h2>
@@ -23,7 +23,7 @@ const Infrastructure = () => {
             and patient care.
           </p>
         </div>
-        <div>
+        <div className="my-auto">
           <LazyImage
             src={InfrastructureImg}
             alt="Infrastructure"

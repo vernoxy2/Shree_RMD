@@ -3,7 +3,7 @@ import CategoryImg1 from "../../../assets/AyurvedCollage/CategoriesImg/Cat1.png"
 import CategoryImg2 from "../../../assets/AyurvedCollage/CategoriesImg/Cat2.png";
 import CategoryImg3 from "../../../assets/AyurvedCollage/CategoriesImg/Cat3.png";
 import { IoIosArrowForward } from "react-icons/io";
-import { Link } from "react-router";
+import { Link, Links } from "react-router-dom";
 
 const Department = () => {
   const [active, setActive] = React.useState(0);
