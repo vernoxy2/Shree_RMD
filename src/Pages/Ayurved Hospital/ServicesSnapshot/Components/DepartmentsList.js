@@ -18,7 +18,7 @@ import JanuBasti from "../../../../assets/AyurvedHospital/DepartmentsImgs/Pancha
 import Rakthamoksham from "../../../../assets/AyurvedHospital/DepartmentsImgs/Panchakarma/Rakthamoksham.svg";
 import Vaman from "../../../../assets/AyurvedHospital/DepartmentsImgs/Panchakarma/Vaman.svg";
 // Shalya Images    
-import Shiravedh from "../../../../assets/AyurvedHospital/DepartmentsImgs/Shalya/shiravedh.svg";
+import Shiravedh from "../../../../assets/AyurvedHospital/DepartmentsImgs/Shalya/Shiravedh.svg";
 
 export const DepartmentsList = [
   {
