@@ -40,7 +40,7 @@ const ServicesSnapshot = () => {
       />
       <section className="container py-24 flex gap-8">
         {/* LEFT CONTENT */}
-        <div className="w-4/12 bg-white rounded-2xl shadow-2xl py-9 px-5 h-full sticky top-0">
+        <div className="w-4/12 bg-white rounded-2xl shadow-2xl py-9 px-5 h-full sticky top-12">
           <ul className="space-y-4">
             {DepartmentsList.map((item) => (
               <li
