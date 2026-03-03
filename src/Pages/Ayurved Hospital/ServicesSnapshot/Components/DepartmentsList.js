@@ -6,6 +6,7 @@ import ShamanChikitsa from "../../../../assets/AyurvedHospital/DepartmentsImgs/K
 import DrSujay from "../../../../assets/AyurvedHospital/DepartmentsImgs/Kayachikitsa/Dr.Sujay.svg";
 import DrMeera from "../../../../assets/AyurvedHospital/DepartmentsImgs/Kayachikitsa/DrMeera.svg";
 import Krishnaprabha from "../../../../assets/AyurvedHospital/DepartmentsImgs/Kayachikitsa/Krishnaprabha.svg";
+
 // Panchakarma Images
 import DrMitali from "../../../../assets/AyurvedHospital/DepartmentsImgs/Panchakarma/DrMitali.svg";
 import DrPriya from "../../../../assets/AyurvedHospital/DepartmentsImgs/Panchakarma/DrPriya.svg";
@@ -17,6 +18,7 @@ import Shirodhara from "../../../../assets/AyurvedHospital/DepartmentsImgs/Panch
 import JanuBasti from "../../../../assets/AyurvedHospital/DepartmentsImgs/Panchakarma/JanuBasti.svg";
 import Rakthamoksham from "../../../../assets/AyurvedHospital/DepartmentsImgs/Panchakarma/Rakthamoksham.svg";
 import Vaman from "../../../../assets/AyurvedHospital/DepartmentsImgs/Panchakarma/Vaman.svg";
+
 // Shalya Images
 import Shiravedh from "../../../../assets/AyurvedHospital/DepartmentsImgs/Shalya/Shiravedh.svg";
 import Agnikarma from "../../../../assets/AyurvedHospital/DepartmentsImgs/Shalya/Agnikarma.svg";
@@ -24,6 +26,7 @@ import Ksharsutra from "../../../../assets/AyurvedHospital/DepartmentsImgs/Shaly
 import Drnitin from "../../../../assets/AyurvedHospital/DepartmentsImgs/Shalya/Drnitin.svg";
 import DrSnehalpatel from "../../../../assets/AyurvedHospital/DepartmentsImgs/Shalya/DrSnehalpatel.svg";
 import DrVaibhavi from "../../../../assets/AyurvedHospital/DepartmentsImgs/Shalya/DrVaibhavi.svg";
+
 // Shalakya Images
 import KaenaPooran from "../../../../assets/AyurvedHospital/DepartmentsImgs/Shalakya/KaenaPooran.svg";
 import Pracchanakarma from "../../../../assets/AyurvedHospital/DepartmentsImgs/Shalakya/Pracchanakarma.svg";
@@ -33,6 +36,7 @@ import Bidalak from "../../../../assets/AyurvedHospital/DepartmentsImgs/Shalakya
 import DrJaykrishnan from "../../../../assets/AyurvedHospital/DepartmentsImgs/Shalakya/DrJaykrishnan.svg";
 import DrSonal from "../../../../assets/AyurvedHospital/DepartmentsImgs/Shalakya/DrSonal.svg";
 import DrUnnati from "../../../../assets/AyurvedHospital/DepartmentsImgs/Shalakya/DrUnnati.svg";
+
 // StriRoga Images
 import Pperiods from "../../../../assets/AyurvedHospital/DepartmentsImgs/StriRoga/Pperiods.svg";
 import Postnatal from "../../../../assets/AyurvedHospital/DepartmentsImgs/StriRoga/Postnatal.svg";
@@ -44,6 +48,7 @@ import Garbh from "../../../../assets/AyurvedHospital/DepartmentsImgs/StriRoga/G
 import DrHemant from "../../../../assets/AyurvedHospital/DepartmentsImgs/StriRoga/DrHemant.svg";
 import DrJeenal from "../../../../assets/AyurvedHospital/DepartmentsImgs/StriRoga/DrJeenal.svg";
 import DrSonalp from "../../../../assets/AyurvedHospital/DepartmentsImgs/StriRoga/DrSonal.svg";
+
 // Kaumarbhritya Images
 import Preventive from "../../../../assets/AyurvedHospital/DepartmentsImgs/Kaumarbhritya/Preventive.svg";
 import NICU from "../../../../assets/AyurvedHospital/DepartmentsImgs/Kaumarbhritya/NICU.svg";
@@ -51,7 +56,8 @@ import IPD from "../../../../assets/AyurvedHospital/DepartmentsImgs/Kaumarbhrity
 import OPD from "../../../../assets/AyurvedHospital/DepartmentsImgs/Kaumarbhritya/OPD.svg";
 import DrGeetha from "../../../../assets/AyurvedHospital/DepartmentsImgs/Kaumarbhritya/DrGeetha.svg";
 import DrPina from "../../../../assets/AyurvedHospital/DepartmentsImgs/Kaumarbhritya/DrPina.svg";
-// 
+
+// Swasthavritta Images
 import Drprajakta from "../../../../assets/AyurvedHospital/DepartmentsImgs/Swasthavritta/Drprajakta.svg";
 import DrAditya from "../../../../assets/AyurvedHospital/DepartmentsImgs/Swasthavritta/DrAditya.svg";
 import Naturopathy from "../../../../assets/AyurvedHospital/DepartmentsImgs/Swasthavritta/Naturopathy.svg";
@@ -61,7 +67,7 @@ import SwasthRakshana from "../../../../assets/AyurvedHospital/DepartmentsImgs/S
 
 export const DepartmentsList = [
   {
-    id: 1,
+    id: "Kayachikitsa",
     title: "Department of Kayachikitsa",
     highlight: "Kayachikitsa (General Medicine)",
     desc1:
@@ -109,7 +115,7 @@ export const DepartmentsList = [
     ],
   },
   {
-    id: 2,
+    id: "Panchakarma",
     title: "Department of Panchakarma",
     highlight: "Panchakarma (Bio-Purification)",
     desc1:
@@ -172,7 +178,7 @@ export const DepartmentsList = [
     ],
   },
   {
-    id: 3,
+    id: "Shalya",
     title: "Department of Shalya Tantra",
     highlight: "Shalya Tantra: (General Surgery)",
     desc1:
@@ -215,7 +221,7 @@ export const DepartmentsList = [
     ],
   },
   {
-    id: 4,
+    id: "Shalakya",
     title: "Department of Shalakya Tantra",
     highlight: "Shalakya Tantra (ENT, Ophthalmology & Dentistry)",
     desc1:
@@ -268,7 +274,7 @@ export const DepartmentsList = [
     ],
   },
   {
-    id: 5,
+    id: "StriRoga",
     title: "Department of Stri Roga and Prasuti Tantra",
     highlight: "Prasuti Tantra and Streeroga",
     desc1:
@@ -331,7 +337,7 @@ export const DepartmentsList = [
     ],
   },
   {
-    id: 6,
+    id: "Kaumarbhritya",
     title: "Department of Kaumarbhritya",
     highlight: "Kaumarbhritya (Pediatrics)",
     desc1:
@@ -374,7 +380,7 @@ export const DepartmentsList = [
     ],
   },
   {
-    id: 7,
+    id: "Swasthavritta",
     title: "Department of Swasthavritta",
     highlight: "Swasthavritta (Preventive Medicine & Hygiene)",
     desc1:

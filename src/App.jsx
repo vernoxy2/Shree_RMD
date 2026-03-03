@@ -104,7 +104,7 @@ const App = () => {
           {/* Ayurved Hospital */}
           <Route path="/ayurved-Hospital" element={<AyurvedHospital />} />
           {/* Services */}
-          <Route path="/ayurved-Hospital/kayachikitsa" element={<ServicesSnapshot />} />
+          <Route path="/ayurved-Hospital/:department" element={<ServicesSnapshot />} />
 
           <Route path="contact-us" element={<ContactUs />} />
         </Route>
