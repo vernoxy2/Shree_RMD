@@ -7,7 +7,7 @@ import { BiLogoFacebookSquare } from "react-icons/bi";
 import Navbar from "./Navbar";
 const Head = () => {
   return (
-    <div className="lg:-mb-8 relative z-50">
+    
     <div className="container mx-auto px-4 xl:px-24  pt-6 pb-4 shadow-inner md:flex items-start justify-between">
       <LazyImage src={HeadLogo} alt="Head Logo" className="max-h-14" />
 
@@ -44,8 +44,6 @@ const Head = () => {
           <FaLinkedin className="text-primary text-xl rounded" />
         </div>
       </div>
-    </div>
-      <Navbar />
     </div>
   );
 };

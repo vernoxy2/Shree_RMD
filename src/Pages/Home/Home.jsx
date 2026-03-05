@@ -4,16 +4,18 @@ import UFeatures from "./Components/UFeatures";
 import Legacy from "./Components/Legacy";
 import AboutUS from "./Components/AboutUS";
 import HomeSlider from "./Components/HomeSlider";
+import Reviews from "./Components/Reviews";
 
 const Home = () => {
   return (
     <>
-    <HomeSlider/>
+      <HomeSlider />
       <AboutUS />
       <Legacy />
       <UFeatures />
       <Inquiry />
-    </> 
+      <Reviews />
+    </>
   );
 };
 

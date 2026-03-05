@@ -18,6 +18,10 @@ import NonTeachingStaffDetails from "./Pages/Ayurved Collage/Faculty And Researc
 import ResearchPublication from "./Pages/Ayurved Collage/Faculty And Research/ResearchPublication/ResearchPublication.jsx";
 import Kayachikitsa from "./Pages/Ayurved Hospital/ServicesSnapshot/Kayachikitsa.jsx";
 import ServicesSnapshot from "./Pages/Ayurved Hospital/ServicesSnapshot/Components/ServicesSnapshot.jsx";
+import Trust from "./Pages/Trust/Trust.jsx";
+import HospitalAttendance from "./Pages/Ayurved Hospital/Hospital Attendance/HospitalAttendancePage.jsx";
+import HospitalAttendancePage from "./Pages/Ayurved Hospital/Hospital Attendance/HospitalAttendancePage.jsx";
+import DoctorsSchedule from "./Pages/Ayurved Hospital/Doctors Schedule/DoctorsSchedule.jsx";
 
 // Lazy loaded pages
 const Home = lazy(() => import("./Pages/Home/Home.jsx"));
@@ -102,10 +106,16 @@ const App = () => {
           />
 
           {/* Ayurved Hospital */}
-          <Route path="/ayurved-Hospital" element={<AyurvedHospital />} />
+          <Route path="/ayurved-hospital" element={<AyurvedHospital />} />
+          {/*  */}
+          <Route path="/ayurved-hospital/doctors-schedule" element={<DoctorsSchedule />} />
+          {/* Ayurved Hospital */}
+          <Route path="/ayurved-hospital/attendance" element={<HospitalAttendancePage />} />
           {/* Services */}
-          <Route path="/ayurved-Hospital/:department" element={<ServicesSnapshot />} />
+          <Route path="/ayurved-hospital/:department" element={<ServicesSnapshot />} />
 
+          <Route path="trust" element={<Trust />} />
+          {/* Contact Us */}
           <Route path="contact-us" element={<ContactUs />} />
         </Route>
       </Routes>
