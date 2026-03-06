@@ -94,22 +94,22 @@ function RecordRow({ name, index }) {
     >
       <div className="flex items-center gap-3">
         <span
-          className="w-5 h-5 rounded-full text-xs font-bold flex items-center justify-center shrink-0"
+          className="w-8 h-8 rounded-full text-sm font-bold flex items-center justify-center shrink-0"
           style={{ background: C.light, color: C.primary }}
         >
           {index + 1}
         </span>
         <div className="flex items-center gap-2">
-          <svg className="w-4 h-4 shrink-0" fill="none" stroke={C.sub} strokeWidth={1.8} viewBox="0 0 24 24">
+          <svg className="w-6 h-6 shrink-0" fill="none" stroke={C.sub} strokeWidth={1.8} viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round"
               d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
             />
           </svg>
-          <span className="text-xs font-medium" style={{ color: C.dark }}>{name}</span>
+          <span className=" font-medium" style={{ color: C.dark }}>{name}</span>
         </div>
       </div>
       <button
-        className="text-xs font-semibold px-3 py-1 rounded-full border transition-all duration-150"
+        className="text-sm font-semibold px-4 py-1 rounded-full border transition-all duration-150"
         style={{
           color: hovered ? "#fff" : C.primary,
           borderColor: C.primary,
@@ -159,12 +159,12 @@ function YearAccordion({ data, defaultOpen }) {
 
           <div>
             <div className="flex items-center gap-2 flex-wrap">
-              <h2 className="font-bold text-base" >
+              <h2 className="font-bold text-xl" >
                 Hospital Biometric Attendance
               </h2>
               {col.label && (
                 <span
-                  className="text-xs font-semibold px-2 py-0.5 rounded-full"
+                  className="text-sm font-semibold px-2 py-0.5 rounded-full"
                   style={{ background: col.accent + "20", color: col.accent }}
                 >
                   {col.label}
@@ -172,7 +172,7 @@ function YearAccordion({ data, defaultOpen }) {
               )}
             </div>
             <div className="flex items-center gap-3 mt-0.5">
-              <span className="text-xs" style={{ color: C.sub }}>
+              <span className="text-sm" style={{ color: C.sub }}>
                 {totalDocs} record{totalDocs !== 1 ? "s" : ""} · {data.type}
               </span>
               <div className="flex gap-0.5">
@@ -209,12 +209,12 @@ function YearAccordion({ data, defaultOpen }) {
           className="px-5 pb-5 pt-2"
           style={{ borderTop: `1px solid ${col.border}`, background: "#fafafa" }}
         >
-          <p className="text-xs font-semibold uppercase tracking-widest mb-3 mt-2" style={{ color: C.sub }}>
+          <p className="text-sm font-semibold uppercase tracking-widest mb-3 mt-2" style={{ color: C.sub }}>
             Monthly Records
           </p>
           <MonthGrid months={data.months} accent={col.accent} />
 
-          <p className="text-xs font-semibold uppercase tracking-widest mt-5 mb-2" style={{ color: C.sub }}>
+          <p className="text-sm font-semibold uppercase tracking-widest mt-5 mb-2" style={{ color: C.sub }}>
             Files
           </p>
           <div className="grid gap-1.5">
@@ -240,7 +240,6 @@ export default function HospitalAttendance() {
     (s, y) => s + y.months.length + (y.extra?.length || 0),
     0
   );
-
   const filtered = search
     ? ATTENDANCE_DATA.map((y) => ({
         ...y,
@@ -259,7 +258,7 @@ export default function HospitalAttendance() {
       <div className="container pt-12 pb-10">
         <div className="flex items-end justify-between gap-4 flex-wrap">
           {/* Search */}
-          <div className="sticky top-0 z-20 bg-white max-w-4xl">
+          <div className="sticky top-0 z-20 bg-white w-full">
             <div className="w-full py-3">
               <div className="relative">
                 <svg
@@ -297,7 +296,7 @@ export default function HospitalAttendance() {
           </div>
 
           {/* Summary cards */}
-          <div className="flex gap-3 flex-wrap">
+          {/* <div className="flex gap-3 flex-wrap">
             {[
               { n: ATTENDANCE_DATA.length, label: "Years" },
               { n: totalRecords, label: "Records" },
@@ -312,12 +311,12 @@ export default function HospitalAttendance() {
                 <p className="text-xs" style={{ color: "rgba(255,255,255,0.5)" }}>{s.label}</p>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
 
       {/* Year Accordions */}
-      <div className="container py-7 pb-20 grid gap-4">
+      <div className="container  pb-20 grid gap-4">
         {filtered.length === 0 ? (
           <div className="text-center py-16">
             <p className="text-4xl mb-3">📂</p>

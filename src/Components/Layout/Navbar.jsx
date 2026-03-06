@@ -183,7 +183,7 @@ const NavLinkData = [
         children: [
           {
             name: "Hospital Activities",
-            url: "/ayurved-Hospital/About-Hospital",
+            url: "/ayurved-hospital/activities",
           },
         ],
       },
@@ -202,8 +202,8 @@ const NavLinkData = [
   { name: "Pharmacy", url: "/press-and-media" },
   { name: "Gallery", url: "/gallery" },
   // { name: "Vacancy", url: "/vacancy" },
+  { name: "Enquiry", url: "/enquiry" },
   { name: "Contact us", url: "/contact-us" },
-  // { name: "Enquiry", url: "/enquiry" },
 ];
 
 const DropdownItem = ({ item, depth = 0 }) => {

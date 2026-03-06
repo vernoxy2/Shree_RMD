@@ -395,8 +395,8 @@ const DAY_COLORS = {
 function DayBadge({ day }) {
   return (
     <span
-      style={{ background: DAY_COLORS[day] || C.primary }}
-      className="inline-block text-white text-xs font-bold px-2 py-0.5 rounded-full"
+      // style={{ background: DAY_COLORS[day] || C.primary }}
+      className="inline-block text-primary text-sm font-bold px-2 py-0.5 rounded-full bg-primary/10 border border-primary/20"
     >
       {day}
     </span>
@@ -407,14 +407,14 @@ function TimingBadge({ timing }) {
   const isMorning = timing.includes("9");
   return (
     <span
-      style={{
-        background: isMorning ? "#fffbeb" : C.primaryLight,
-        color: isMorning ? "#92400e" : C.primary,
-        border: `1px solid ${isMorning ? "#fcd34d" : C.primaryBorder}`,
-      }}
-      className="text-xs font-medium px-2 py-0.5 rounded-full whitespace-nowrap"
+      // style={{
+      //   background: isMorning ? "#fffbeb" : C.primaryLight,
+      //   color: isMorning ? "#92400e" : C.primary,
+      //   border: `1px solid ${isMorning ? "#fcd34d" : C.primaryBorder}`,
+      // }}
+      className="text-sm font-medium px-2 py-0.5 rounded-full whitespace-nowrap bg-secondary/10 border border-secondary/20 "
     >
-      {isMorning ? "🌅 Morning" : "🌇 Afternoon"} · {timing}
+      {timing}
     </span>
   );
 }
@@ -423,12 +423,12 @@ function DeptTag({ label }) {
   const s = getDeptStyle(label);
   return (
     <span
-      style={{
-        background: s.bg,
-        color: s.color,
-        border: `1px solid ${s.border}`,
-      }}
-      className="text-xs font-medium px-2 py-0.5 rounded-full"
+      // style={{
+      //   background: s.bg,
+      //   color: s.color,
+      //   border: `1px solid ${s.border}`,
+      // }}
+      className="text-sm font-medium px-2 py-0.5 rounded-full bg-primary/60 border border-primary/20 text-white"
     >
       {label}
     </span>
@@ -442,7 +442,7 @@ function Avatar({ name }) {
       style={{
         background: `linear-gradient(135deg, ${C.primaryMid}, ${C.primary})`,
       }}
-      className="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0"
+      className="w-10 h-10 text-xl rounded-full flex items-center justify-center text-white font-bold shrink-0"
     >
       {letter}
     </div>
@@ -465,7 +465,7 @@ function SpecialityClinicTab({ activeDay }) {
           <div className="flex items-start justify-between gap-2 flex-wrap">
             <div className="flex items-center gap-2 flex-wrap">
               <DayBadge day={item.day} />
-              <span style={{ color: C.sub }} className="text-xs font-medium">
+              <span style={{ color: C.sub }} className="text-sm font-medium">
                 {item.dept}
               </span>
             </div>
@@ -474,16 +474,16 @@ function SpecialityClinicTab({ activeDay }) {
           <div className="flex items-center gap-2">
             <Avatar name={item.doctor} />
             <div>
-              <p className="font-semibold text-sm" style={{ color: C.primary }}>
+              <p className="font-extrabold text-xl" style={{ color: C.primary }}>
                 {item.doctor}
               </p>
-              <p className="text-xs" style={{ color: C.sub }}>
+              <p className="text-sm" style={{ color: C.sub }}>
                 {item.speciality}
               </p>
             </div>
           </div>
           <div className="flex items-center gap-1 mt-0.5">
-            <span className="text-xs" style={{ color: C.sub }}>
+            <span className="text-sm" style={{ color: C.sub }}>
               Under:
             </span>
             <DeptTag label={item.under} />
@@ -508,7 +508,7 @@ function UnitScheduleTab({ data }) {
             key={d}
             onClick={() => setActiveDay(d)}
             style={activeDay === d ? { color: C.primary } : { color: C.sub }}
-            className={`flex-1 min-w-[44px] py-1.5 text-xs font-semibold rounded-md transition-all ${activeDay === d ? "bg-white shadow" : "hover:bg-white/60"}`}
+            className={`flex-1 min-w-[44px] py-1.5 font-semibold rounded-md transition-all ${activeDay === d ? "bg-white shadow" : "hover:bg-white/60"}`}
           >
             {d}
           </button>
@@ -520,24 +520,24 @@ function UnitScheduleTab({ data }) {
           return (
             <div
               key={i}
-              className="bg-white rounded-xl p-3 flex items-center gap-3 hover:shadow-sm transition-shadow"
+              className="bg-white rounded-xl p-4  flex items-center gap-3 hover:shadow-sm transition-shadow"
               style={{ border: "1px solid #ede8e9" }}
             >
               <span
-                style={{
-                  background: s.bg,
-                  color: s.color,
-                  border: `1px solid ${s.border}`,
-                }}
-                className="text-xs font-bold px-2 py-1 rounded-lg shrink-0 w-28 text-center"
+                // style={{
+                //   background: s.bg,
+                //   color: s.color,
+                //   border: `1px solid ${s.border}`,
+                // }}
+                className="text-sm font-bold px-2 py-1 rounded-lg shrink-0 w-32 text-center bg-primary/20 border border-primary/20 text-primary"
               >
                 {row.dept}
               </span>
               <div className="flex items-center gap-2">
                 <Avatar name={row[activeDay] || "?"} />
                 <span
-                  className="text-sm font-medium"
-                  style={{ color: "#1e293b" }}
+                  className="text-lg font-medium text-secondary"
+                  // style={{ color: "#1e293b" }}
                 >
                   {row[activeDay] || "—"}
                 </span>
@@ -555,7 +555,7 @@ function BedAllocationTab() {
   const surgDepts = BED_DATA.slice(4);
 
   const BedBar = ({ value, max = 25 }) => (
-    <div className="flex items-center gap-2 w-full">
+    <div className="flex items-center gap-4 w-full">
       <div
         className="flex-1 h-2 rounded-full overflow-hidden"
         style={{ background: "#f1e9ea" }}
@@ -569,7 +569,7 @@ function BedAllocationTab() {
         />
       </div>
       <span
-        className="text-xs font-bold w-5 text-right"
+        className=" font-bold w-5 text-right"
         style={{ color: C.primary }}
       >
         {value}
@@ -577,11 +577,11 @@ function BedAllocationTab() {
     </div>
   );
 
-  const Section = ({ title, rows }) => (
+  const TableSec = ({ title, rows }) => (
     <div className="mb-6">
       <p
-        className="text-xs font-bold uppercase tracking-widest mb-3"
-        style={{ color: C.sub }}
+        className=" font-bold uppercase tracking-widest mb-3 text-secondary"
+        // style={{ color: C.sub }}
       >
         {title}
       </p>
@@ -589,8 +589,8 @@ function BedAllocationTab() {
         className="bg-white rounded-xl overflow-hidden"
         style={{ border: "1px solid #ede8e9" }}
       >
-        <table className="w-full text-sm">
-          <thead>
+        <table className="w-full ">
+          <thead >
             <tr
               style={{
                 background: C.primaryLight,
@@ -598,26 +598,26 @@ function BedAllocationTab() {
               }}
             >
               <th
-                className="text-left py-2 px-3 text-xs font-semibold"
-                style={{ color: C.sub }}
+                className="text-left py-2 px-3 font-semibold bg-primary text-white"
+                // style={{ color: C.sub }}
               >
                 Department
               </th>
               <th
-                className="text-center py-2 px-2 text-xs font-semibold"
-                style={{ color: C.sub }}
+                className="text-center py-2 px-2  font-semibold bg-primary text-white"
+                // style={{ color: C.sub }}
               >
                 Unit I
               </th>
               <th
-                className="text-center py-2 px-2 text-xs font-semibold"
-                style={{ color: C.sub }}
+                className="text-center py-2 px-2 font-semibold bg-primary text-white"
+                // style={{ color: C.sub }}
               >
                 Unit II
               </th>
               <th
-                className="py-2 px-3 text-xs font-semibold text-right"
-                style={{ color: C.sub }}
+                className="py-2 px-3 font-semibold bg-primary text-white text-center"
+                // style={{ color: C.sub }}
               >
                 Total
               </th>
@@ -627,25 +627,25 @@ function BedAllocationTab() {
             {rows.map((row, i) => (
               <tr
                 key={i}
-                className="border-b last:border-0"
+                className="border-b last:border-0 "
                 style={{ borderColor: "#f5eeef" }}
               >
                 <td
-                  className="py-2 px-3 font-medium text-xs"
+                  className="py-3 px-3 font-medium "
                   style={{ color: "#334155" }}
                 >
                   {row.dept}
                 </td>
                 <td className="py-2 px-2 text-center">
                   <span
-                    className="text-xs font-bold"
+                    className="text-sm font-bold"
                     style={{ color: C.primary }}
                   >
                     {row.u1}
                   </span>
                 </td>
                 <td className="py-2 px-2 text-center">
-                  <span className="text-xs font-bold" style={{ color: C.sub }}>
+                  <span className="text-sm font-bold" style={{ color: C.sub }}>
                     {row.u2}
                   </span>
                 </td>
@@ -662,26 +662,23 @@ function BedAllocationTab() {
 
   return (
     <div>
-      <Section title="Medical IP Section" rows={medDepts} />
-      <Section title="Surgical IP Section" rows={surgDepts} />
+      <TableSec title="Medical IP Section" rows={medDepts} />
+      <TableSec title="Surgical IP Section" rows={surgDepts} />
       <div
-        className="rounded-xl p-4 flex items-center justify-between"
-        style={{
-          background: C.primaryLight,
-          border: `1px solid ${C.primaryBorder}`,
-        }}
+        className="rounded-xl p-4 flex items-center justify-between border border-primary/20"
+        
       >
-        <span className="text-sm font-semibold" style={{ color: C.primary }}>
+        <span className="text-primary font-bold" >
           Grand Total Beds
         </span>
-        <div className="flex gap-4 font-bold">
-          <span className="text-xs" style={{ color: C.primary }}>
+        <div className="flex items-center gap-4 font-bold">
+          <span className="text-primary" >
             Unit I: 60
           </span>
-          <span className="text-xs" style={{ color: C.sub }}>
+          <span className="" style={{ color: C.sub }}>
             Unit II: 40
           </span>
-          <span className="text-base" style={{ color: C.primary }}>
+          <span className="text-primary" >
             100
           </span>
         </div>
@@ -700,19 +697,19 @@ function SupportStaffTab() {
           style={{ border: "1px solid #ede8e9" }}
         >
           <div
-            className="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0"
+            className="w-10 h-10 rounded-full flex items-center justify-center text-white text-xl font-bold shrink-0"
             style={{ background: `linear-gradient(135deg, #8a8a8a, ${C.sub})` }}
           >
             {s.name.replace(/Dr\.|Shri/g, "").trim()[0] || "S"}
           </div>
           <div className="flex-1 min-w-0">
             <p
-              className="font-semibold text-sm truncate"
+              className="font-bold text-lg truncate"
               style={{ color: C.primary }}
             >
               {s.name}
             </p>
-            <p className="text-xs" style={{ color: C.sub }}>
+            <p className="text-sm" style={{ color: C.sub }}>
               {s.post}
             </p>
           </div>
@@ -764,7 +761,7 @@ export default function HospitalSchedule() {
             ].map((s, i) => (
               <div
                 key={i}
-                className="rounded-xl p-3 py-10 text-center bg-primary/10"
+                className="rounded-xl p-3 py-10 text-center bg-primary/10 border-2 border-transparent hover:border-primary transition-all duration-300 hover:-translate-y-1"
                 // style={{ background: "rgba(255,255,255,0.15)" }}
               >
                 <h1 className=" font-extrabold">{s.value}</h1>
@@ -780,10 +777,10 @@ export default function HospitalSchedule() {
         </div>
       </div>
 
-      <div className="flex gap-8 container mt-10">
+      <div className="lg:flex gap-8 container mt-10">
         {/* Side Bar */}
-        <div className="sticky top-0 z-10 bg-white w-5/12 rounded-3xl px-9 py-8 pb-14 space-y-9 h-fit">
-          <h1>Heading</h1>
+        <div className="lg:sticky top-0 z-10 bg-white lg:w-5/12 rounded-3xl px-9 py-8 pb-14 space-y-9 h-fit">
+          <h1>Doctors Schedule</h1>
           <div className="space-y-5">
             {tabs.map((tab) => (
               <button
@@ -791,7 +788,7 @@ export default function HospitalSchedule() {
                 onClick={() => setActiveTab(tab)}
                 className={`flex w-full items-center gap-1.5 px-5 py-4 rounded-2xl  whitespace-nowrap text-xl transition-all hover:opacity-80 ${activeTab === tab ? "text-white bg-primary font-bold" : "bg-[#f6f6f6] text-secondary border-transparent font-semibold"}`}
               >
-                {TAB_ICONS[tab]}
+                {/* {TAB_ICONS[tab]} */}
                 {tab}
               </button>
             ))}
@@ -799,7 +796,7 @@ export default function HospitalSchedule() {
         </div>
 
         {/* Content */}
-        <div className="w-7/12 py-5">
+        <div className="lg:w-7/12 py-5">
           {activeTab === "Speciality Clinic" && (
             <div className="flex gap-1 mb-4 overflow-x-auto pb-1">
               {["All", ...DAYS].map((d) => (
@@ -831,8 +828,8 @@ export default function HospitalSchedule() {
                   style={{ background: C.primary }}
                 ></span>
                 <span
-                  className="text-xs font-bold uppercase tracking-wide"
-                  style={{ color: C.sub }}
+                  className="text-secondary font-bold uppercase tracking-wide"
+                  // style={{ color: C.sub }}
                 >
                   Unit I · 9 AM – 5 PM
                 </span>
@@ -849,8 +846,8 @@ export default function HospitalSchedule() {
                   style={{ background: C.sub }}
                 ></span>
                 <span
-                  className="text-xs font-bold uppercase tracking-wide"
-                  style={{ color: C.sub }}
+                  className="text-secondary font-bold uppercase tracking-wide"
+                  // style={{ color: C.sub }}
                 >
                   Unit II · 9 AM – 5 PM
                 </span>

@@ -22,6 +22,10 @@ import Trust from "./Pages/Trust/Trust.jsx";
 import HospitalAttendance from "./Pages/Ayurved Hospital/Hospital Attendance/HospitalAttendancePage.jsx";
 import HospitalAttendancePage from "./Pages/Ayurved Hospital/Hospital Attendance/HospitalAttendancePage.jsx";
 import DoctorsSchedule from "./Pages/Ayurved Hospital/Doctors Schedule/DoctorsSchedule.jsx";
+import Gallery from "./Pages/Gallery/Gallery.jsx";
+import Enquiry from "./Pages/Enquiry/Enquiry.jsx";
+import HospitalActivities from "./Pages/Ayurved Hospital/Hospital Activities/HospitalActivities.jsx";
+
 
 // Lazy loaded pages
 const Home = lazy(() => import("./Pages/Home/Home.jsx"));
@@ -108,13 +112,34 @@ const App = () => {
           {/* Ayurved Hospital */}
           <Route path="/ayurved-hospital" element={<AyurvedHospital />} />
           {/*  */}
-          <Route path="/ayurved-hospital/doctors-schedule" element={<DoctorsSchedule />} />
-          {/* Ayurved Hospital */}
-          <Route path="/ayurved-hospital/attendance" element={<HospitalAttendancePage />} />
+          {/* Doctors Schedule of Ayurveda Hospital */}
+          <Route
+            path="/ayurved-hospital/doctors-schedule"
+            element={<DoctorsSchedule />}
+          />
+          {/* Hospital Attendance of Ayurveda Hospital*/}
+          <Route
+            path="/ayurved-hospital/attendance"
+            element={<HospitalAttendancePage />}
+          />
+          {/* Hospital Attendance of Ayurveda Hospital*/}
+          <Route
+            path="/ayurved-hospital/activities"
+            element={<HospitalActivities />}
+          />
           {/* Services */}
-          <Route path="/ayurved-hospital/:department" element={<ServicesSnapshot />} />
+          <Route
+            path="/ayurved-hospital/:department"
+            element={<ServicesSnapshot />}
+          />
 
+          {/* Trust */}
           <Route path="trust" element={<Trust />} />
+
+          {/* Gallery */}
+          <Route path="gallery" element={<Gallery />} />
+          {/* Enquiry */}
+          <Route path="enquiry" element={<Enquiry />} />
           {/* Contact Us */}
           <Route path="contact-us" element={<ContactUs />} />
         </Route>
