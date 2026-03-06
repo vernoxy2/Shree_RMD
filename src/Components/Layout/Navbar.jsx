@@ -4,19 +4,21 @@ import { Link, NavLink } from "react-router-dom";
 // import { ChevronDown } from "lucide-react";
 
 const NavLinkData = [
+  // Home Page
   { name: "Home", url: "/" },
+  // About Us
   {
     name: "About Us",
     url: "/about-us",
-    // children: [{ name: "Admission", url: "/about-us/admission" }],
   },
+  // Ayurveda College
   {
     name: "Ayurved College",
     url: "/ayurveda-college",
+    // Ayurveda College // About College
     children: [
       {
         name: "About college",
-        // url: "/ayurveda-college/admission",
         children: [
           {
             name: "Committee",
@@ -32,6 +34,7 @@ const NavLinkData = [
           },
         ],
       },
+      // Academics of Ayurveda College
       {
         name: "Academics",
         // url: "/ayurveda-college/admission",
@@ -51,6 +54,7 @@ const NavLinkData = [
           },
         ],
       },
+      // Students of Ayurveda College
       {
         name: "Students",
         children: [
@@ -61,7 +65,9 @@ const NavLinkData = [
           { name: "Activities", url: "/ayurveda-college/activities" },
         ],
       },
-      { name: "Attendance", 
+      // Attendance of Ayurveda College
+      {
+        name: "Attendance",
         children: [
           {
             name: "Students Attendance",
@@ -71,9 +77,9 @@ const NavLinkData = [
             name: "Staff Attendance",
             url: "/ayurveda-college/staff-attendance",
           },
-        ]
-       },
-
+        ],
+      },
+      // Faculty of Ayurveda College
       {
         name: "Faculty",
         children: [
@@ -96,6 +102,7 @@ const NavLinkData = [
           },
         ],
       },
+      // Medical And Updates
       {
         name: "Medical And Updates",
         children: [
@@ -107,13 +114,82 @@ const NavLinkData = [
       },
     ],
   },
+  // Ayurveda Hospital
   {
     name: "Ayurved Hospital",
     url: "/ayurved-Hospital",
     children: [
-      { name: "Admission", url: "/research-and-development/admission" },
+      // Hospital overview
+      {
+        name: "Hospital overview",
+        children: [
+          {
+            name: "Our Team",
+            url: "/ayurved-Hospital/About-Hospital",
+          },
+          {
+            name: "Center of Excellence",
+            url: "/ayurved-Hospital/Departments",
+          },
+          {
+            name: "Institutional Events",
+            url: "/ayurved-Hospital/Facilities",
+          },
+          {
+            name: "Azadi Ka Amrit Mahotsav",
+            url: "/ayurved-Hospital/Facilities",
+          },
+        ],
+      },
+      // Medical Services of Ayurveda Hospital
+      {
+        name: "Medical Services",
+        children: [
+          {
+            name: "Services Offered",
+            url: "/ayurved-Hospital/About-Hospital",
+          },
+          {
+            name: "Clinical Material",
+            url: "/ayurved-Hospital/Departments",
+          },
+          {
+            name: "Diagnostics",
+            url: "/ayurved-Hospital/Facilities",
+          },
+        ],
+      },
+      // Patient Services of Ayurveda Hospital
+      {
+        name: "Patient Services",
+        children: [
+          {
+            name: "Doctors Schedule",
+            url: "/ayurved-hospital/doctors-schedule",
+          },
+          {
+            name: "Hospital Attendance",
+            url: "/ayurved-Hospital/attendance",
+          },
+          {
+            name: "Patients Feedback",
+            url: "/ayurved-Hospital/",
+          },
+        ],
+      },
+      // Events And Activities of Ayurveda Hospital
+      {
+        name: "Events And Activities",
+        children: [
+          {
+            name: "Hospital Activities",
+            url: "/ayurved-hospital/activities",
+          },
+        ],
+      },
     ],
   },
+  // Research & Development
   {
     name: "Research & Development",
     url: "/research-and-development",
@@ -122,12 +198,12 @@ const NavLinkData = [
     ],
   },
   // { name: "Press & Media", url: "/press-and-media" },
-  { name: "Trust", url: "/press-and-media" },
+  { name: "Trust", url: "/trust" },
   { name: "Pharmacy", url: "/press-and-media" },
   { name: "Gallery", url: "/gallery" },
   // { name: "Vacancy", url: "/vacancy" },
+  { name: "Enquiry", url: "/enquiry" },
   { name: "Contact us", url: "/contact-us" },
-  // { name: "Enquiry", url: "/enquiry" },
 ];
 
 const DropdownItem = ({ item, depth = 0 }) => {
@@ -189,9 +265,8 @@ const DropdownItem = ({ item, depth = 0 }) => {
 
 const Navbar = () => {
   return (
-    <div className="container xl:px-24 z-50">
-      <div className="lg:rounded-full px-8 bg-primary">
-        <div className="flex items-stretch justify-between h-16">
+      <div className=" bg-primary">
+        <div className="flex items-center justify-between h-16 container">
           {NavLinkData.map((item, index) => (
             <div key={index} className="relative group flex items-center">
               <NavLink
@@ -217,7 +292,6 @@ const Navbar = () => {
             </div>
           ))}
         </div>
-      </div>
     </div>
   );
 };
