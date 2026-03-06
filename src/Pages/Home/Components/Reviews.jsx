@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReviewsBg from "../../../assets/HomePage/Reviews/ReviewsBg.webp";
-import comma from "../../../assets/HomePage/Reviews/comma.svg";
+import comma from "../../../assets/HomePage/Reviews/Comma.svg";
 import { Clints } from "./Clints";
 import LazyImage from "../../../Components/Ui/LazyImage";
 
