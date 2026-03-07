@@ -1,18 +1,95 @@
-import React from "react";
+import React, { useState } from "react";
 import Comma50 from "../../../assets/Comma50.svg";
+import Img1 from "../../../assets/Trust/AboutImgs/Img1.png";
+import Img2 from "../../../assets/Trust/AboutImgs/Img2.png";
+import Img3 from "../../../assets/Trust/AboutImgs/Img3.png";
+// import { ChevronUp, ChevronDown } from "lucide-react";
+import { FaChevronDown, FaChevronLeft, FaChevronRight, FaChevronUp } from "react-icons/fa";
+
+const images = [Img1, Img2, Img3];
 
 const AboutTrsut = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handlePrev = () =>
+    setActiveIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+
+  const handleNext = () =>
+    setActiveIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+
   return (
     <div className="container grid grid-cols-1 lg:grid-cols-2 gap-8 py-20">
-      <div></div>
-      <div className="space-y-6">
-        <h1 className="flex gap-3">About GiriviharTrust <span><img src={Comma50} alt="" /></span></h1>
+      {/* LEFT: Main Image + Vertical Thumbnail Strip */}
+      <div className="flex gap-3 mr-12 relative">
+        {/* Main Image */}
+        <div className="flex-1 rounded-2xl overflow-hidden">
+          <img
+            src={images[activeIndex]}
+            alt="About Trust"
+            className="w-full h-full object-cover transition-all duration-500"
+          />
+        </div>
+
+        {/* Vertical Thumbnail Strip */}
+        <div className="absolute -right-10 top-1/2 transform -translate-y-1/2  flex flex-col items-center gap-2 w-20">
+          {/* Up Arrow */}
+          <button
+            onClick={handlePrev}
+            className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/80 transition-colors flex-shrink-0"
+            aria-label="Previous image"
+          >
+            <FaChevronUp size={16} />
+          </button>
+
+          {/* Thumbnails */}
+          <div className="flex flex-col gap-2 flex-1 justify-center">
+            {images.map((img, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveIndex(index)}
+                className={`w-16 h-16 rounded-full overflow-hidden flex-shrink-0 transition-all duration-300 ${
+                  activeIndex === index
+                    ? "bor scale-105 opacity-100 "
+                    : "opacity-80 hover:opacity-90"
+                }`}
+              >
+                <img
+                  src={img}
+                  alt={`Thumbnail ${index + 1}`}
+                  className="w-full object-cover"
+                />
+              </button>
+            ))}
+          </div>
+
+          {/* Down Arrow */}
+          <button
+            onClick={handleNext}
+            className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/80 transition-colors flex-shrink-0"
+            aria-label="Next image"
+          >
+            <FaChevronDown size={16} />
+          </button>
+        </div>
+      </div>
+
+      {/* RIGHT: Text Content */}
+      <div className="space-y-6 ">
+        <h1 className="flex gap-3">
+          About GiriviharTrust{" "}
+          <span>
+            <img src={Comma50} alt="" />
+          </span>
+        </h1>
         <p className="tracking-wide">
-          <strong className="text-primary">Shree Prabhav-Hem-Kamdhenu Girivihar Trust – Palitana</strong> is a renowned
-          non-profit charitable organization dedicated to the noble mission of
-          “Service to Mankind and Animals.” Established in 1999 and registered
-          under the Bombay Public Trust Act, 1950 (Registration No. E/1798), the
-          Trust is headquartered at Girivihar, Taleti Road, Palitana, Gujarat.
+          <strong className="text-primary">
+            Shree Prabhav-Hem-Kamdhenu Girivihar Trust – Palitana
+          </strong>{" "}
+          is a renowned non-profit charitable organization dedicated to the
+          noble mission of "Service to Mankind and Animals." Established in 1999
+          and registered under the Bombay Public Trust Act, 1950 (Registration
+          No. E/1798), the Trust is headquartered at Girivihar, Taleti Road,
+          Palitana, Gujarat.
         </p>
         <p className="tracking-wide">
           Inspired by the spiritual vision of Param Pujya Acharyadev Shreemad
