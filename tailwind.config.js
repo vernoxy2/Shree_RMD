@@ -23,6 +23,15 @@ export default {
         poppins: ["Poppins", "sans-serif"],
       },
     },
+    keyframes: {
+      scroll: {
+        "0%": { transform: "translateX(0%)" },
+        "100%": { transform: "translateX(-50%)" },
+      },
+    },
+    animation: {
+      scroll: "scroll 40s linear infinite",
+    },
   },
   plugins: [],
 };

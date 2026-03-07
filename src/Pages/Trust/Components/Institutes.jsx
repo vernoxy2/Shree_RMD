@@ -48,22 +48,24 @@ const Institutes = () => {
   const [selected, setSelected] = React.useState(institutes[0]);
   return (
     <section
-      className="bg-cover bg-center py-20"
+      className="bg-cover bg-center "
       style={{ backgroundImage: `url(${InstitutesBg})` }}
     >
       <div className="container">
         <h1 className="text-white pb-12">
           Institutes <br /> Under The Trust
         </h1>
-        <div className="flex rounded-3xl border border-white/40 overflow-hidden">
+        <div className="flex flex-col-reverse lg:flex-row rounded-3xl border border-white/40 overflow-hidden">
           {/* Menu */}
-          <div className="w-5/12">
+          <div className="lg:w-5/12">
             <div className="h-full">
               {institutes.map((item) => (
                 <div
                   key={item.id}
-                  className={`${
-                    selected.id === item.id ? "bg-white/50 border-l-4 border-white/60" : "bg-white/20"
+                  className={`cursor-pointer transition-all duration-200 ${
+                    selected.id === item.id
+                      ? "bg-white/50 border-l-4 border-white/60"
+                      : "bg-white/20"
                   }  cursor-pointer`}
                   onClick={() => setSelected(item)}
                 >
@@ -76,8 +78,19 @@ const Institutes = () => {
             </div>
           </div>
           {/* Dispaly */}
-          <div className="w-7/12">
-            <img src={selected.img} alt="" className="object-cover" /></div>
+          <div
+            key={selected.id}
+            className="flex-1 w-full bg-cover bg-center space-y-2 px-8 py-7 flex flex-col justify-end animate-[fadeIn_.5s_ease] min-h-[500px]"
+            style={{ backgroundImage: `url(${selected.img})` }}
+          >
+            <h2 className="text-white animate-[fadeIn_.5s_ease]">
+              {selected.title}
+            </h2>
+            <hr className="border animate-[fadeIn_.5s_ease]" />
+            <p className="text-white max-w-xl animate-[fadeIn_.5s_ease]">
+              {selected.subtext}
+            </p>
+          </div>
         </div>
       </div>
     </section>

@@ -309,7 +309,7 @@ export default function EnquiryPage() {
         </div>
       </div> */}
 
-      <div className="container py-14 grid gap-8">
+      <div className="container py-14 grid gap-8 space-y-6">
         {/* Online Consultation Banner */}
         {/* <div className="fade-up rounded-2xl p-5 flex items-center gap-4 flex-wrap"
           style={{ background: "linear-gradient(135deg, #1a0a0d, #A63A4B)", border: `1px solid ${C.primary}` }}>
@@ -328,7 +328,7 @@ export default function EnquiryPage() {
 
         {/* Contact Cards */}
         <div className="fade-up ">
-          <p className="mb-3 font-bold">Quick Contact</p>
+          <h2 className="mb-4 font-bold">Quick Contact</h2>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
             {CONTACT_BLOCKS.map((block, i) => (
               <div
@@ -379,12 +379,12 @@ export default function EnquiryPage() {
 
         {/* Enquiry Forms */}
         <div className="fade-up d2">
-          <p
-            className="mb-3 font-bold"
+          <h2
+            className="mb-4  font-bold"
             // style={{ color: C.sub }}
           >
             Send an Enquiry
-          </p>
+          </h2>
           <div
             className=""
             // style={{ borderColor: C.border }}
@@ -420,7 +420,7 @@ export default function EnquiryPage() {
             </div>
 
             {/* Active tab label */}
-            <div className="px-6 pt-5 pb-1 flex items-center gap-2">
+            <div className="px-2 pt-5 pb-1 flex items-center gap-2">
               <div
                 className="w-12 h-12 rounded-xl flex items-center justify-center bg-primary text-white"
                 // style={{ background: tab.bg }}
@@ -439,7 +439,7 @@ export default function EnquiryPage() {
             </div>
 
             {/* Form */}
-            <div className="px-6 pb-6 pt-3">
+            <div className="px-22 pb-6 pt-3">
               <EnquiryForm key={activeTab} tab={tab} />
             </div>
           </div>
