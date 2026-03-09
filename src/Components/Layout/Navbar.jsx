@@ -193,9 +193,9 @@ const NavLinkData = [
   {
     name: "Research & Development",
     url: "/research-and-development",
-    children: [
-      { name: "Admission", url: "/research-and-development/admission" },
-    ],
+    // children: [
+    //   { name: "Admission", url: "/research-and-development/admission" },
+    // ],
   },
   // { name: "Press & Media", url: "/press-and-media" },
   { name: "Trust", url: "/trust" },
@@ -244,7 +244,7 @@ const DropdownItem = ({ item, depth = 0 }) => {
         <div
           className={`
             absolute
-            ${depth === 0 ? "left-0 -top-full" : "left-[calc(100%+6px)] top-0"}
+            ${depth === 0 ? "left-0 -top-full" : "left-[calc(100%+6px)] top-2"}
             min-w-[220px]
             bg-white rounded-md shadow-lg
             opacity-0 invisible
@@ -283,7 +283,7 @@ const Navbar = () => {
 
               {/* First Level Dropdown */}
               {item.children && (
-                <div className="absolute top-full left-0 mt-1.5 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 min-w-[220px]">
+                <div className="absolute top-[48px] left-0  bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 min-w-[220px]">
                   {item.children.map((child, i) => (
                     <DropdownItem key={i} item={child} depth={1} />
                   ))}
