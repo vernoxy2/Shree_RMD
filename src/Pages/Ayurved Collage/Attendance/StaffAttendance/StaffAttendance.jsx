@@ -1,6 +1,8 @@
 import React from "react";
 import PrimaryHeader from "../../../../Components/Ui/PrimaryHeader";
 import StudDetaHead from "../../../../assets/AyurvedCollage/StudDetaImgs/StudDetaHead.webp";
+import { StudentAttendanceData } from "./StudentAttendanceData";
+import PrimaryBtn from "../../../../Components/Ui/PrimaryBtn";
 
 const TeachingMenu = [
   "Teaching Staff Biometric Attendance Year 2026",
@@ -23,8 +25,13 @@ const NonTeachingMenu = [
 ];
 
 const StaffAttendance = () => {
-  const [sected, setSected] = React.useState(TeachingMenu[0]);
-  const [sected2, setSected2] = React.useState(NonTeachingMenu[0]);
+  const [sected, setSected] = React.useState(StudentAttendanceData[0]);
+  const [sected2, setSected2] = React.useState(StudentAttendanceData[0]);
+
+   const selectedItem = StudentAttendanceData.find(
+      (item) => item.id === sected.id,
+    );
+
   return (
     <div className="bg-Bg">
       <PrimaryHeader BgImg={StudDetaHead} HeadLine={"Staff Attendance"} />
@@ -46,7 +53,7 @@ const StaffAttendance = () => {
               Teaching Staff <br /> Attendance
             </h2>
             <ul className="pt-5 space-y-4">
-              {TeachingMenu.map((item, i) => (
+              {StudentAttendanceData.map((item, i) => (
                 <button
                   key={i}
                   className={`py-4 px-5 text-start w-full bg-[#F6F6F6] rounded-2xl group duration-300 transition-colors ${
@@ -57,14 +64,56 @@ const StaffAttendance = () => {
                   <p
                     className={`text-xl duration-300 transition-colors ${item === sected ? "text-white font-bold" : "group-hover:text-primary"}`}
                   >
-                    {item}
+                    {item.menuData}
                   </p>
                 </button>
               ))}
             </ul>
           </div>
           {/* Table */}
-          <div className="flex-1 h-fit bg-white"></div>
+          <div className="flex-1">
+            <div className="rounded-2xl overflow-hidden shadow-[0_10px_20px_rgba(0,0,0,0.15)]">
+              <table className="w-full border-collapse bg-white">
+                <thead>
+                  <tr className="bg-primary">
+                    <th className="text-left px-6 py-4 border-r border-white/20">
+                      <h2 className="text-xl text-white font-semibold">
+                        Details of Months
+                      </h2>
+                    </th>
+                    <th className="px-6 py-4 w-52">
+                      <h2 className="text-xl text-white font-semibold">View</h2>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="max-h-11">
+                  {selectedItem?.attendanceData.map((row, index) => (
+                    <tr
+                      key={index}
+                      className="border-b border-gray-100 hover:bg-rose-50 transition-colors"
+                    >
+                      <td className="px-6 py-5 border-r border-gray-100">
+                        <div className="flex items-start gap-2">
+                          <span className="text-primary mt-0.5 text-3xl">▸</span>
+                          <p className="text-xl">
+                            <span className="text-primary font-bold">
+                              {row.batchName} –{" "}
+                            </span>
+                            <span className="text-gray-500">{row.year}</span>
+                          </p>
+                        </div>
+                      </td>
+                      <td className="px-6 py-5 text-center">
+                        <div className="flex justify-center">
+                          <PrimaryBtn text={"Know more"} />
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
         {/* Non Teaching Staff Attendance Table */}
         <div className="flex gap-8 flex-grow-0 pt-20">
@@ -92,7 +141,49 @@ const StaffAttendance = () => {
             </ul>
           </div>
           {/* Table */}
-          <div className="flex-1 h-fit bg-white"></div>
+          <div className="flex-1">
+            <div className="rounded-2xl overflow-hidden shadow-[0_10px_20px_rgba(0,0,0,0.15)]">
+              <table className="w-full border-collapse bg-white">
+                <thead>
+                  <tr className="bg-primary">
+                    <th className="text-left px-6 py-4 border-r border-white/20">
+                      <h2 className="text-xl text-white font-semibold">
+                        Details of Months
+                      </h2>
+                    </th>
+                    <th className="px-6 py-4 w-52">
+                      <h2 className="text-xl text-white font-semibold">View</h2>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="max-h-11">
+                  {selectedItem?.attendanceData.map((row, index) => (
+                    <tr
+                      key={index}
+                      className="border-b border-gray-100 hover:bg-rose-50 transition-colors"
+                    >
+                      <td className="px-6 py-5 border-r border-gray-100">
+                        <div className="flex items-start gap-2">
+                          <span className="text-primary mt-0.5 text-3xl">▸</span>
+                          <p className="text-xl">
+                            <span className="text-primary font-bold">
+                              {row.batchName} –{" "}
+                            </span>
+                            <span className="text-gray-500">{row.year}</span>
+                          </p>
+                        </div>
+                      </td>
+                      <td className="px-6 py-5 text-center">
+                        <div className="flex justify-center">
+                          <PrimaryBtn text={"Know more"} />
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </section>
     </div>

@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 
 const FileIcon = () => (
   <svg
@@ -116,6 +116,27 @@ const REPORTS = [
   { name: "Celebrating the 75th Republic Day", tag: "Civic" },
   { name: "Orientation Program for NAAC/NABH", tag: "Admin" },
   { name: 'Seminar on "Nadi Pariksha"', tag: "Seminar" },
+  { name: "Celebrating the 75th Republic Day", tag: "Civic" },
+  { name: "Orientation Program for NAAC/NABH", tag: "Admin" },
+  { name: 'Seminar on "Nadi Pariksha"', tag: "Seminar" },
+  { name: "Celebrating the 75th Republic Day", tag: "Civic" },
+  { name: "Orientation Program for NAAC/NABH", tag: "Admin" },
+  { name: 'Seminar on "Nadi Pariksha"', tag: "Seminar" },
+  { name: "Celebrating the 75th Republic Day", tag: "Civic" },
+  { name: "Orientation Program for NAAC/NABH", tag: "Admin" },
+  { name: 'Seminar on "Nadi Pariksha"', tag: "Seminar" },
+  { name: "Celebrating the 75th Republic Day", tag: "Civic" },
+  { name: "Orientation Program for NAAC/NABH", tag: "Admin" },
+  { name: 'Seminar on "Nadi Pariksha"', tag: "Seminar" },
+  { name: "Celebrating the 75th Republic Day", tag: "Civic" },
+  { name: "Orientation Program for NAAC/NABH", tag: "Admin" },
+  { name: 'Seminar on "Nadi Pariksha"', tag: "Seminar" },
+  { name: "Celebrating the 75th Republic Day", tag: "Civic" },
+  { name: "Orientation Program for NAAC/NABH", tag: "Admin" },
+  { name: 'Seminar on "Nadi Pariksha"', tag: "Seminar" },
+  { name: "Celebrating the 75th Republic Day", tag: "Civic" },
+  { name: "Orientation Program for NAAC/NABH", tag: "Admin" },
+  { name: 'Seminar on "Nadi Pariksha"', tag: "Seminar" },
 ];
 
 const CATEGORIES = [
@@ -132,6 +153,12 @@ const CATEGORIES = [
 export default function ActivityReports() {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All Categories");
+  const [page, setPage] = useState(1);
+  const ITEMS_PER_PAGE = 10;
+
+  useEffect(() => {
+    setPage(1);
+  }, [search, category]);
 
   const filtered = useMemo(() => {
     return REPORTS.filter((r) => {
@@ -140,6 +167,13 @@ export default function ActivityReports() {
       return matchSearch && matchCat;
     });
   }, [search, category]);
+
+  const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
+
+  const paginatedReports = useMemo(() => {
+    const start = (page - 1) * ITEMS_PER_PAGE;
+    return filtered.slice(start, start + ITEMS_PER_PAGE);
+  }, [filtered, page]);
 
   return (
     <div className=" bg-[#FFF6F6] font-sans pt-8 ">
@@ -213,7 +247,7 @@ export default function ActivityReports() {
                   </tr>
                 </thead>
                 <tbody>
-                  {filtered.map((report, i) => (
+                  {paginatedReports.map((report, i) => (
                     <tr
                       key={i}
                       className="row-animate border-t border-gray-100 transition-colors duration-150 hover:bg-red-50/40"
@@ -278,16 +312,35 @@ export default function ActivityReports() {
 
           {/* Pagination */}
           <div className="flex items-center justify-end gap-1.5 mt-5">
+            {/* Previous */}
             <button
-              disabled
-              className="w-8 h-8 rounded-lg border border-gray-200 bg-white flex items-center justify-center text-gray-300 cursor-not-allowed"
+              onClick={() => setPage((p) => Math.max(p - 1, 1))}
+              disabled={page === 1}
+              className={`w-8 h-8 rounded-lg border flex items-center justify-center 
+    ${page === 1 ? "text-gray-300 cursor-not-allowed border-gray-200" : "text-gray-600 hover:border-red-800 hover:text-red-800"}`}
             >
               <ChevronLeftIcon />
             </button>
-            <button className="w-8 h-8 rounded-lg border text-white text-sm font-medium flex items-center justify-center bg-primary">
-              1
-            </button>
-            <button className="w-8 h-8 rounded-lg border border-gray-200 bg-white flex items-center justify-center text-gray-500 hover:border-red-800 hover:text-red-800 transition-colors">
+
+            {/* Page numbers */}
+            {Array.from({ length: totalPages }, (_, i) => (
+              <button
+                key={i}
+                onClick={() => setPage(i + 1)}
+                className={`w-8 h-8 rounded-lg border text-sm font-medium flex items-center justify-center
+      ${page === i + 1 ? "bg-primary text-white border-primary" : "border-gray-200 text-gray-500 hover:border-red-800 hover:text-red-800"}`}
+              >
+                {i + 1}
+              </button>
+            ))}
+
+            {/* Next */}
+            <button
+              onClick={() => setPage((p) => Math.min(p + 1, totalPages))}
+              disabled={page === totalPages}
+              className={`w-8 h-8 rounded-lg border flex items-center justify-center 
+    ${page === totalPages ? "text-gray-300 cursor-not-allowed border-gray-200" : "text-gray-600 hover:border-red-800 hover:text-red-800"}`}
+            >
               <ChevronRightIcon />
             </button>
           </div>

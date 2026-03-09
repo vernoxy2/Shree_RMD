@@ -65,40 +65,52 @@ const NonTeachingStaffDetails = () => {
             <img
               src={StaffDetailsImg}
               alt=""
-              className="w-full rounded-2xl shadow-[0_10px_20px_rgba(0,0,0,0.15)] grayscale group-hover:grayscale-0 group-hover:scale-105 duration-700 transition-all"
+              className="w-full e group-hover:grayscale-0 group-hover:scale-105 duration-700 transition-all"
             />
           </div>
           {/* Table */}
-          <div className="w-2/3 rounded-2xl overflow-hidden shadow-xl bg-white">
-            <table className="w-full border-separate border-spacing-0">
-              <thead>
-                <tr className="bg-primary text-white ">
-                  <th className="px-4 py-3 border-r-2 border-white">Name</th>
-                  <th className="px-4 py-3 border-r-2 border-white">
-                    Designation
-                  </th>
-                  <th className="px-4 py-3">Department</th>
-                </tr>
-              </thead>
-              <tbody className="">
-                {DepartmentList.map((item) => (
-                  <tr
-                    key={item.id}
-                    className="hover:bg-gray-50 transition bg-white"
-                  >
-                    <td className="px-4 py-3 border-r-2 border-primary">
-                      <p className="text-primary font-bold">{item.emp_name}</p>
-                    </td>
-                    <td className="px-4 py-3 text-center border-r-2 border-primary">
-                      <p>{item.emp_designation}</p>
-                    </td>
-                    <td className="px-4 py-3 text-center">
-                      <p>{item.emp_department}</p>
-                    </td>
+          <div className="flex-1">
+            <div className="rounded-2xl overflow-hidden shadow-[0_10px_20px_rgba(0,0,0,0.15)]">
+              <table className="w-full border-separate border-spacing-0">
+                <thead>
+                  <tr className="bg-primary text-white ">
+                    <th className="px-4 py-3 border-r-2 border-white">
+                      <h2 className="text-xl text-white">Name of Employee</h2>
+                    </th>
+                    <th className="px-4 py-3 border-r-2 border-white">
+                      <h2 className="text-xl text-white">
+                        Name of working <br />
+                        department
+                      </h2>
+                    </th>
+                    <th className="px-4 py-3">
+                      <h2 className="text-xl text-white">Department</h2>
+                      
+                    </th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody className="">
+                  {DepartmentList.map((item) => (
+                    <tr
+                      key={item.id}
+                      className="hover:bg-gray-50 transition bg-white"
+                    >
+                      <td className="px-4 py-3 border-r-2 border-primary">
+                        <p className="text-primary font-bold text-xl">
+                          {item.emp_name}
+                        </p>
+                      </td>
+                      <td className="px-4 py-3 text-center border-r-2 border-primary">
+                        <p className="text-xl">{item.emp_designation}</p>
+                      </td>
+                      <td className="px-4 py-3 text-center">
+                        <p className="text-xl">{item.emp_department}</p>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </section>
