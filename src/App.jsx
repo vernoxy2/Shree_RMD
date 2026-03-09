@@ -25,6 +25,7 @@ import DoctorsSchedule from "./Pages/Ayurved Hospital/Doctors Schedule/DoctorsSc
 import Gallery from "./Pages/Gallery/Gallery.jsx";
 import Enquiry from "./Pages/Enquiry/Enquiry.jsx";
 import HospitalActivities from "./Pages/Ayurved Hospital/Hospital Activities/HospitalActivities.jsx";
+import NotFound from "./Components/Layout/NotFound.jsx";
 
 
 // Lazy loaded pages
@@ -142,6 +143,7 @@ const App = () => {
           <Route path="enquiry" element={<Enquiry />} />
           {/* Contact Us */}
           <Route path="contact-us" element={<ContactUs />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </Suspense>

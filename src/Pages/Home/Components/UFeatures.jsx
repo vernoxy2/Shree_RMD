@@ -7,6 +7,7 @@ import library from "../../../assets/HomePage/UFeaturesSVG/library.svg";
 import Parentalcare from "../../../assets/HomePage/UFeaturesSVG/Parentalcare.svg";
 import academic from "../../../assets/HomePage/UFeaturesSVG/academic.svg";
 import LazyImage from "../../../Components/Ui/LazyImage";
+import FeaturesBg from "../../../assets/HomePage/FeaturesBg.webp";
 
 const FeaturesList = [
   {
@@ -53,8 +54,11 @@ const FeaturesList = [
 
 const UFeatures = () => {
   return (
-    <section className="py-24 bg-[#FFF6F6] space-y-16">
-      <h1 className="text-center">Unique Features</h1>
+    <section
+      style={{ backgroundImage: `url(${FeaturesBg})` }}
+      className="py-24 space-y-16 bg-cover bg-center"
+    >
+      <h1 className="text-center text-white">Unique Features</h1>
       <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {FeaturesList.map((item) => (
           <div
@@ -62,10 +66,10 @@ const UFeatures = () => {
             className="flex flex-col items-center justify-center gap-3 text-center hover:bg-white duration-300 p-4 pt-8 pb-14 rounded-3xl text-[#676767] group hover:shadow-xl"
           >
             <div className="bg-[#696969] mb-6 p-2 rounded-full group-hover:bg-primary">
-                <LazyImage src={item.icons} alt="Globally" className="" />
+              <LazyImage src={item.icons} alt="Globally" className="" />
             </div>
-            <p>{item.Text}</p>
-            <hr className="border-2 rounded-full w-20 border-primary"/>
+            <p className="text-white group-hover:text-secondary">{item.Text}</p>
+            <hr className="border-2 rounded-full w-20 border-primary" />
           </div>
         ))}
       </div>
