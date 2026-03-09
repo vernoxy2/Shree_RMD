@@ -1,6 +1,7 @@
 import React from "react";
 import PrimaryHeader from "../../../../Components/Ui/PrimaryHeader";
 import TeachingStaffDetailsBg from "../../../../assets/AyurvedCollage/AyurvedCollageHead.webp";
+import PrimaryBtn from "../../../../Components/Ui/PrimaryBtn";
 
 const DepartmentList = [
   "Dravyaguna Vidnyan",
@@ -84,8 +85,59 @@ const TeachingStaffDetails = () => {
             </ul>
           </div>
           {/* Table */}
-          <div className="flex-1 bg-white shadow-[0_10px_20px_rgba(0,0,0,0.15)] p-10 flex flex-col rounded-2xl">
-            <div className="flex-1 overflow-y-auto"></div>
+          <div className="flex-1">
+            <div className="rounded-2xl overflow-hidden shadow-[0_10px_20px_rgba(0,0,0,0.15)]">
+              <table className="w-full border-collapse bg-white">
+                <thead>
+                  <tr className="bg-primary">
+                    <th className="text-left px-6 py-4 border-r border-white/20">
+                      <h2 className="text-xl text-white font-semibold">Name</h2>
+                    </th>
+                    <th className="text-left px-6 py-4 border-r border-white/20">
+                      <h2 className="text-xl text-white font-semibold">
+                        Details of Months
+                      </h2>
+                    </th>
+                    <th className="px-6 py-4 w-52">
+                      <h2 className="text-xl text-white font-semibold">View</h2>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                 
+                  <tr className="border-b border-gray-100 hover:bg-rose-50 transition-colors">
+                    <td className="px-6 py-5 border-r border-gray-100">
+                      <p className="text-primary text-xl font-bold">
+                        Dr. Yogesh H. Desai
+                      </p>
+                    </td>
+                    <td className="px-6 py-5 border-r border-gray-100">
+                      <p className="text-base">Associate Professor</p>
+                    </td>
+                    <td className="px-6 py-5 text-center">
+                      <div className="flex justify-center">
+                        <PrimaryBtn text={"Know more"} />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr className="border-b border-gray-100 hover:bg-rose-50 transition-colors">
+                    <td className="px-6 py-5 border-r border-gray-100">
+                      <p className="text-primary font-bold">
+                        Dr. Rajesh Ratani
+                      </p>
+                    </td>
+                    <td className="px-6 py-5 border-r border-gray-100">
+                      <p className="text-base">Principal and Medical superintendent</p>
+                    </td>
+                    <td className="px-6 py-5 text-center">
+                      <div className="flex justify-center">
+                        <PrimaryBtn text={"Know more"} />
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </section>

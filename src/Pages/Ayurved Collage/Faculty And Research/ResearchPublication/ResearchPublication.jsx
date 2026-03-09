@@ -2,37 +2,33 @@ import React from "react";
 import PrimaryHeader from "../../../../Components/Ui/PrimaryHeader";
 import TeachingStaffDetailsBg from "../../../../assets/AyurvedCollage/AyurvedCollageHead.webp";
 import ResearchPublicationImg from "../../../../assets/AyurvedCollage/ResearchPublicationImg.svg";
+import PrimaryBtn from "../../../../Components/Ui/PrimaryBtn";
 const DepartmentList = [
   {
     id: 1,
-    emp_name: "Swati Patel",
-    emp_designation: "Librarian",
-    emp_department: "Library",
+    Details : "Concept of distinctive dietics – An Ayurvedic perspective"
   },
   {
     id: 2,
-    emp_name: "Lataben Patel",
-    emp_designation: "Librarian",
-    emp_department: "Surekha Patel",
+    Details : "A conceptual review on mind as per Ayurveda"
   },
   {
     id: 3,
-    emp_name: "Surekha Patel",
-    emp_designation: "Librarian",
-    emp_department: "Attendant",
+    Details : "Physiology of muscle contraction understanding"
   },
   {
     id: 4,
-    emp_name: "Mr. Mayur D Patel",
-    emp_designation: "Collage",
-    emp_department: "Office Staff-Clerk",
+    Details : "A physiological understanding on the concept of Tarpaka Karna"
   },
   {
     id: 5,
-    emp_name: "Mrs. Dharmishta Patel",
-    emp_designation: "Collage",
-    emp_department: "Office Staff-Clerk",
+    Details : "Critical analysis on physiology of reflex mechanism with special reference to Vata Dosha"
   },
+  {
+    id: 6,
+    Details : "Critical analysis on Loka Purusha Samya Siddhanta"
+  },
+  
 ];
 
 const ResearchPublication = () => {
@@ -74,15 +70,18 @@ const ResearchPublication = () => {
           {/* Table */}
           <div className=" overflow-hidden ">
             <h1 className="pb-4">Research Work and Publication – 2018-2023 </h1>
-            <div className="rounded-2x w-full rounded-full">
+            <div className="rounded-2x w-full rounded-2xl overflow-hidden">
               <table className="w-full border-separate border-spacing-0 rounded-2xl">
                 <thead>
                   <tr className="bg-primary text-white ">
-                    <th className="px-4 py-3 border-r-2 border-white">Name</th>
-                    <th className="px-4 py-3 border-r-2 border-white">
-                      Designation
+                    <th className="text-left px-6 py-4 border-r border-white/20">
+                      <h2 className="text-xl text-white font-semibold">
+                        Details of Months
+                      </h2>
                     </th>
-                    <th className="px-4 py-3">Department</th>
+                    <th className="px-6 py-4 w-52">
+                      <h2 className="text-xl text-white font-semibold">View</h2>
+                    </th>
                   </tr>
                 </thead>
                 <tbody className="">
@@ -91,16 +90,14 @@ const ResearchPublication = () => {
                       key={item.id}
                       className="hover:bg-gray-50 transition bg-white"
                     >
-                      <td className="px-4 py-3 border-r-2 border-primary">
-                        <p className="text-primary font-bold">
-                          {item.emp_name}
-                        </p>
+                      
+                      <td className="px-4 py-3 text-xl border-r-2 border-primary">
+                        <p>{item.Details}</p>
                       </td>
-                      <td className="px-4 py-3 text-center border-r-2 border-primary">
-                        <p>{item.emp_designation}</p>
-                      </td>
-                      <td className="px-4 py-3 text-center">
-                        <p>{item.emp_department}</p>
+                      <td className="px-6 py-5 text-center">
+                        <div className="flex justify-center">
+                          <PrimaryBtn text={"Know more"} />
+                        </div>
                       </td>
                     </tr>
                   ))}

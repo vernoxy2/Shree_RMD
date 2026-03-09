@@ -5,7 +5,7 @@ import ExaminationResults from './Components/ExaminationResults';
 
 const University_Examination = () => {
   return (
-    <div>
+    <div className='bg-Bg'>
       <PrimaryHeader HeadLine={"University Examination"}/>
       <ExaminationResults/>
       {/* <ExaminationResultss/> */}

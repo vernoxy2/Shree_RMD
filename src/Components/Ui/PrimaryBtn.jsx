@@ -6,7 +6,7 @@ const PrimaryBtn = ({ to, text, icon, type="submit" }) => {
     <Link
     type={type}
       to={to}
-      className="inline-flex items-center gap-3 bg-primary px-5 py-3.5 text-white  hover:opacity-90 transition text-xl font-bold"
+      className="inline-flex items-center gap-3 bg-primary px-5 py-3.5 text-white  hover:opacity-90 transition text-xl font-bold font-inter"
     >
       {text}
       {icon && <span>{icon}</span>}

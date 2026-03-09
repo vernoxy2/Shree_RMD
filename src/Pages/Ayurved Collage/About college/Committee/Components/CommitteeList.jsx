@@ -73,20 +73,20 @@ function MemberCard({ num, role, name, dept, desc }) {
   return (
     <div className="flex gap-4 py-5 border-b border-pink-100 last:border-0">
       {/* Number Badge */}
-      <div className="flex-shrink-0 w-10 h-10 rounded-full border-2 border-pink-300 flex items-center justify-center text-sm font-bold text-pink-400 bg-white">
+      <h2 className="flex-shrink-0 w-16 h-16 bg-primary/40 rounded-full flex items-center justify-center font-bold text-primary ">
         {num}
-      </div>
+      </h2>
       {/* Info */}
       <div className="flex-1 min-w-0">
-        <p className="text-base font-extrabold text-[#9b2335] tracking-wide leading-tight">
+        <h2 >
           {role}
-        </p>
-        <p className="text-sm font-semibold text-gray-800 mt-0.5">{name}</p>
-        <p className="text-xs text-gray-400 italic">[{dept}]</p>
+        </h2>
+        <p className="text-xl font-bold mt-0.5">{name}</p>
+        <p className="text-sm">[{dept}]</p>
       </div>
       {/* Description */}
       {desc && (
-        <p className="hidden md:block text-xs text-gray-400 max-w-[180px] leading-relaxed flex-shrink-0">
+        <p className="hidden md:block  max-w-[260px]  flex-shrink-0">
           {desc}
         </p>
       )}
@@ -97,9 +97,9 @@ function MemberCard({ num, role, name, dept, desc }) {
 function SectionHeading({ title }) {
   return (
     <div className="flex flex-col items-center my-6">
-      <p className="text-base font-extrabold tracking-widest text-gray-700 uppercase text-center">
+      <h2 className="text-secondary">
         {title}
-      </p>
+      </h2>
       <div className="mt-2 w-16 h-0.5 bg-[#9b2335] rounded-full opacity-40" />
     </div>
   );
@@ -109,7 +109,7 @@ const CommitteeList = () => {
 
   return (
     <div className=" bg-[#FFF6F6]  py-12">
-      <div className="flex gap-6 w-full container">
+      <div className="flex gap-8 w-full container">
         {/* ── Sidebar ── */}
         <div className="w-5/12 bg-white backdrop-blur-md rounded-xl shadow-md p-8 py-14 space-y-5 overflow-hidden h-fit">
           {sidebarItems.map((item, i) => (
@@ -129,12 +129,12 @@ const CommitteeList = () => {
         </div>
 
         {/* ── Main Content ── */}
-        <div className="flex-1 bg-white/60 backdrop-blur-md rounded-2xl shadow-md border border-white/80 p-6">
+        <div className="flex-1 ">
           {/* Title */}
-          <h2 className="text-xl font-extrabold text-[#9b2335] mb-1 tracking-tight">
+          <h2 className="mb-3">
             Human Resource Development cell
           </h2>
-          <div className="w-full h-px bg-pink-200 mb-2" />
+          <div className="w-full h-0.5 bg-[#D9D9D9] mb-2" />
 
           {/* Core Members */}
           <div>
