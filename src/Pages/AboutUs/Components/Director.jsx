@@ -63,7 +63,6 @@ const Director = () => {
           addition/alteration in our Website. Very soon we are coming with a
           newly updated modern version of our Website. Please watch for it.
         </p>
-        <h1 className="text-center pt-8">Thank You</h1>
       </div>
     </div>
   );
