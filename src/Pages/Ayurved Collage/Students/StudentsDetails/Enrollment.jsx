@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import PDF from "../../../../PDFs/Mannat Brochure.pdf";
+import PDF from "../../../../PDFs/Students-2024_25-website.pdf";
 
 const years = [
   { label: "Students List 2025-26", pdf: PDF }, // reuse same PDF for now

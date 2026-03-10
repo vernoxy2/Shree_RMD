@@ -11,7 +11,7 @@ const Established = () => {
         </div>
         <div className="space-y-8">
           <h1>
-            Premier Ayurveda <br /> College in Gujarat
+            Institutional Overview
           </h1>
           <p className="text-primary font-bold">
             Shree Rasiklal Manikchand Dhariwal Ayurveda College,

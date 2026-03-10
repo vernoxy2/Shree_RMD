@@ -7,7 +7,7 @@ const Counting = [
   {
     id: 1,
     count: "17 km",
-    title: "Campus located",
+    title: "17km Away From Valsad",
   },
   {
     id: 2,
