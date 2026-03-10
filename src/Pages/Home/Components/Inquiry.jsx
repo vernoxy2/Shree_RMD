@@ -12,11 +12,17 @@ const Inquiry = () => {
     <section className="bg-primary/10 py-14 pb-20">
       <div className="container grid lg:grid-cols-2 gap-8">
         <div className="max-w-xl">
-          <LazyImage src={InquiryImg} alt="Inquiry Image" className="h-full object-cover" />
+          <LazyImage
+            src={InquiryImg}
+            alt="Inquiry Image"
+            className="h-full object-cover"
+          />
         </div>
         <div className="space-y-5">
-          <div></div>
-          <h1>Need More Information? Send Your Inquiry</h1>
+          <div className="space-y-2">
+            <h1>Connect With Us</h1>
+            <p>Fill in your details and let us know how we can assist you.</p>
+          </div>
 
           <form className="pt-6 space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
