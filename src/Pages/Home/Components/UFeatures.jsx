@@ -6,6 +6,7 @@ import Renowned from "../../../assets/HomePage/UFeaturesSVG/Renowned.svg";
 import library from "../../../assets/HomePage/UFeaturesSVG/library.svg";
 import Parentalcare from "../../../assets/HomePage/UFeaturesSVG/Parentalcare.svg";
 import academic from "../../../assets/HomePage/UFeaturesSVG/academic.svg";
+import Hostel from "../../../assets/HomePage/UFeaturesSVG/Hostel.svg";
 import LazyImage from "../../../Components/Ui/LazyImage";
 import FeaturesBg from "../../../assets/HomePage/FeaturesBg.webp";
 
@@ -47,7 +48,7 @@ const FeaturesList = [
   },
   {
     id: 8,
-    icons: "",
+    icons: Hostel,
     Text: "Spacious hostel facilities within peaceful campus environment",
   },
 ];
@@ -65,8 +66,8 @@ const UFeatures = () => {
             key={item.id}
             className="flex flex-col items-center justify-center gap-3 text-center hover:bg-white duration-300 p-4 pt-8 pb-14 rounded-3xl text-[#676767] group hover:shadow-xl"
           >
-            <div className="bg-[#696969] mb-6 p-2 rounded-full group-hover:bg-primary">
-              <LazyImage src={item.icons} alt="Globally" className="" />
+            <div className="bg-white mb-6 p-3 rounded-full group-hover:bg-primary">
+              <LazyImage src={item.icons} alt="Globally" className="transition duration-300 group-hover:invert group-hover:brightness-0" />
             </div>
             <p className="text-white group-hover:text-secondary">{item.Text}</p>
             <hr className="border-2 rounded-full w-20 border-primary" />

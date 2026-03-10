@@ -4,6 +4,8 @@ import Campus from "../../../assets/HomePage/HomeAboutUs/Campus.png";
 import AyurvedaCollege from "../../../assets/HomePage/HomeAboutUs/AyurvedaCollege.png";
 import Hospital from "../../../assets/HomePage/HomeAboutUs/Hospital.png";
 import LazyImage from "../../../Components/Ui/LazyImage";
+import AboutBg from "../../../assets/HomePage/HomeAboutUs/AboutBg.png"
+import RoundPrimaryBtn from "../../../Components/Ui/RoundPrimaryBtn";
 
 const AboutData = [
   {
@@ -37,7 +39,7 @@ const AboutUS = () => {
         {/* Main Container */}
         <div className="grid grid-cols-1 md:grid-cols-2">
           {/* Left Section */}
-          <div className="flex flex-col justify-center xl:px-24 gap-y-4">
+          <div style={{backgroundImage: `url(${AboutBg})`}} className="flex flex-col justify-center xl:px-24 gap-y-4 bg-cover 0">
             <h1>About Us </h1>
             <p>
               Established in 2016 under the esteemed Shree Prabhav Hem Kamdhenu
@@ -63,12 +65,12 @@ const AboutUS = () => {
           </div>
         </div>
         {/* Image Slider */}
-        <div className="flex h-96 overflow-hidden">
+        <div className="flex h-[550px] overflow-hidden">
           {AboutData.map((item, index) => (
             <div
               key={index}
               onMouseEnter={() => setActive(index)}
-              className={`relative cursor-pointer transition-all duration-700
+              className={`relative cursor-pointer transition-all duration-1000
         ${active === index ? "min-w-[60%]" : "min-w-[20%]"}
       `}
             >
@@ -76,7 +78,7 @@ const AboutUS = () => {
               <img
                 src={item.Img}
                 alt=""
-                className={`h-full w-full object-cover transition-all duration-700
+                className={`h-full w-full object-cover transition-all duration-10 00
           ${active === index ? "grayscale-0" : "grayscale"}
         `}
               />
@@ -85,7 +87,7 @@ const AboutUS = () => {
               <div className="absolute inset-0 pointer-events-none flex flex-col justify-between p-8">
                 <div className="flex justify-between items-center">
                   <h1 className="text-white">0{item.id}</h1>
-                  <button className={`${active === index ? "opacity-100" : "opacity-0"}`}>{">"}</button>
+                  <RoundPrimaryBtn className={`${active === index ? "opacity-100" : "opacity-0"}`} text="Read More" />
                 </div>
 
                 <div>

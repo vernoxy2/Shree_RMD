@@ -2,11 +2,11 @@ import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
 
-const RoundPrimaryBtn = ({ to = "#", text }) => {
+const RoundPrimaryBtn = ({ to = "#", text, className="" }) => {
   return (
     <Link
       to={to}
-      className="group inline-flex items-center gap-3 bg-primary pl-4 pr-2 py-2 text-white rounded-full font-medium overflow-hidden"
+      className={`group inline-flex items-center gap-1 bg-primary hover:bg-white pl-2 border-4 border-primary text-white rounded-full font-medium overflow-hidden ${className}`}
     >
       <span>{text}</span>
 
