@@ -36,11 +36,11 @@ const Principal = () => {
         <div className=" grid md:grid-cols-2 gap-8 relative">
           <div>
             <div className="relative w-full h-fit overflow-hidden group">
-              <img src={Rajeshbhai} alt="Rajeshbhai" className=" w-full" />
+              <img src={Rajeshbhai} alt="Rajeshbhai" className="group-hover:scale-105 duration-700 w-full" />
               <div
-                className="absolute -bottom-20 group-hover:bottom-2 duration-500 left-1/2 -translate-x-1/2 
+                className="absolute -bottom-20 group-hover:bottom-2 duration-700 left-1/2 -translate-x-1/2 
                   bg-white/80 backdrop-blur-lg 
-                  px-6 py-3 rounded-lg text-center w-full mx-2"
+                  px-6 py-3 rounded-lg text-center w-full mx-2 "
               >
                 <h2 className="text-xl">Dr. Rajesh Ratani</h2>
                 <p>Principal</p>
@@ -50,7 +50,7 @@ const Principal = () => {
           <div className="flex items-end">
             <div className="relative w-full h-fit overflow-hidden group">
 
-            <img src={Nimeshbhai} alt="Nimeshbhai" className="w-full" />
+            <img src={Nimeshbhai} alt="Nimeshbhai" className="group-hover:scale-105 duration-700 w-full" />
             <div
                 className="absolute -bottom-20 group-hover:bottom-2 duration-500 left-1/2 -translate-x-1/2 
                   bg-white/80 backdrop-blur-lg 

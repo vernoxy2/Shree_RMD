@@ -108,12 +108,12 @@ const CoreValues = () => {
         {VisionMission.map((item) => (
           <div
             key={item.id}
-            className="flex flex-col items-start justify-center gap-3 bg-primary/20 hover:bg-primary duration-300 p-8 pt-8 pb-24 text-[#676767] group relative"
+            className="flex flex-col items-start justify-center gap-3 bg-primary/20 hover:bg-primary duration-500 p-8 pt-8 pb-24 text-[#676767] group relative hover:shadow-lg hover:scale-105 overflow-hidden"
           >
             <img src={item.icons} alt="Globally" className="group-hover:brightness-0 group-hover:invert" />
-            <hr className="border rounded-full w-full border-primary group-hover:border-white duration-300" />
+            <hr className="border rounded-full w-20 group-hover:w-full border-primary group-hover:border-white duration-500" />
             <p className="group-hover:text-white max-w-[78%]">{item.text}</p>
-            <h1 className="text-7xl text-transparent group-hover:text-outline absolute left-0 -bottom-1 translate-y-16 group-hover:translate-y-0 duration-700">{item.title}</h1>
+            <h1 className="text-7xl text-transparent group-hover:text-outline absolute left-0 -bottom-3 translate-y-16 group-hover:translate-y-0 duration-700">{item.title}</h1>
           </div>
         ))}
       </div>

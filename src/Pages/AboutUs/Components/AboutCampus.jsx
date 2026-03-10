@@ -62,7 +62,7 @@ const AboutCampus = () => {
         </div>
         {/* Image */}
         <div className="space-y-6">
-          <div className="bg-primary/40 p-6 overflow-hidden group">
+          <div className="bg-primary/40 p-6  group relative">
             <div className="h-full w-full overflow-hidden">
               <img
                 src={CampusImg}
@@ -74,16 +74,20 @@ const AboutCampus = () => {
       group-hover:scale-110"
               />
             </div>
+            <div className="absolute -top-1 -right-1 h-24 w-24 border-r-4 border-t-4 border-white/50"></div>
+            {/* <hr className="h-32 absolute -top-1 -right-1 w-1 bg-white/50 rounded-full"/> */}
+            {/* <hr className="w-32 absolute -top-1 -right-0 h-1 bg-white/50 rounded-full"/> */}
           </div>
           <hr className="border-white border w-full rounded-full" />
           <div className="grid grid-cols-3 gap-8">
             {Counting.map((item) => (
               <div
                 key={item.id}
-                className="flex flex-col items-center gap-2 bg-white/20 backdrop-blur-lg p-4"
+                className="flex flex-col items-center gap-2 bg-white/20 backdrop-blur-lg p-4 relative"
               >
                 <p className="text-3xl font-bold text-white">{item.count}</p>
                 <p className="text-white text-center">{item.title}</p>
+                <div className="absolute top-2 right-2 h-10 w-10 border-r-2 border-t-2 border-white"></div>
               </div>
             ))}
           </div>
