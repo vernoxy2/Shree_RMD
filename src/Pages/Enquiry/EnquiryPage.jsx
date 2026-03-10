@@ -328,8 +328,8 @@ export default function EnquiryPage() {
 
         {/* Contact Cards */}
         <div className="fade-up ">
-          <h2 className="mb-4 font-bold">Quick Contact</h2>
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+          <h1 className="mb-4 font-bold">Quick Contact</h1>
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
             {CONTACT_BLOCKS.map((block, i) => (
               <div
                 key={i}
@@ -340,7 +340,7 @@ export default function EnquiryPage() {
                     {block.icon}
                   </div>
                   <div>
-                    <h2 className="font-bold text-xl leading-tight">
+                    <h2 className="font-bold leading-tight">
                       {block.title}
                     </h2>
                   </div>
@@ -357,7 +357,7 @@ export default function EnquiryPage() {
                       </div>
                       <div className="min-w-0">
                         <p
-                          className="font-bold"
+                          className="font-bold text-xl"
                           // style={{ color: C.sub }}
                         >
                           {item.label}
@@ -379,12 +379,12 @@ export default function EnquiryPage() {
 
         {/* Enquiry Forms */}
         <div className="fade-up d2">
-          <h2
+          <h1
             className="mb-4  font-bold"
             // style={{ color: C.sub }}
           >
             Send an Enquiry
-          </h2>
+          </h1>
           <div
             className=""
             // style={{ borderColor: C.border }}
@@ -420,18 +420,18 @@ export default function EnquiryPage() {
             </div>
 
             {/* Active tab label */}
-            <div className="px-2 pt-5 pb-1 flex items-center gap-2">
+            <div className="px-2 pt-6 pb-2 flex items-center gap-2">
               <div
-                className="w-12 h-12 rounded-xl flex items-center justify-center bg-primary text-white"
+                className="w-14 h-14 rounded-xl flex items-center justify-center bg-primary text-white"
                 // style={{ background: tab.bg }}
               >
                 
                 {tab.icon}
               </div>
               <div>
-                <h3 className="font-bold text-xl" style={{ color: C.dark }}>
+                <h2 className="font-bold " style={{ color: C.dark }}>
                   {tab.label} Enquiry
-                </h3>
+                </h2>
                 <p className="" style={{ color: C.sub }}>
                   Fill in the form and we'll respond within 24 hours
                 </p>
