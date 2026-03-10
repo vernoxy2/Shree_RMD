@@ -6,7 +6,7 @@ import AboutUS from "./Components/AboutUS";
 import HomeSlider from "./Components/HomeSlider";
 import Reviews from "./Components/Reviews";
 import Affiliation from "./Components/Affiliation";
-import Nationally from "./Components/nationally";
+import Nationally from "./Components/Nationally";
 
 const Home = () => {
   return (
