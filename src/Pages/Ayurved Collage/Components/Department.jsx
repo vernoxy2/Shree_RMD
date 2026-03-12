@@ -2,6 +2,7 @@ import React from "react";
 import CategoryImg1 from "../../../assets/AyurvedCollage/CategoriesImg/Cat1.png";
 import CategoryImg2 from "../../../assets/AyurvedCollage/CategoriesImg/Cat2.png";
 import CategoryImg3 from "../../../assets/AyurvedCollage/CategoriesImg/Cat3.png";
+import CategoryBg from "../../../assets/AyurvedCollage/CategoriesImg/CatBg.png";
 import { IoIosArrowForward } from "react-icons/io";
 import { Link, Links } from "react-router-dom";
 
@@ -38,7 +39,7 @@ const Department = () => {
   ];
 
   return (
-    <div className="bg-primary/10 py-20">
+    <div style={{backgroundImage: `url(${CategoryBg})`}} className="bg-primary/5 py-20">
       <div className="container space-y-12">
         <h1 className="text-center">Categories Department</h1>
 
@@ -52,7 +53,7 @@ const Department = () => {
                 onMouseEnter={() => setActive(item.id)}
                 className={`
                   relative overflow-hidden rounded-xl cursor-pointer
-                  transition-all duration-500
+                  transition-all duration-700
                   ${isActive ? "flex-[4]" : "flex-1"}
                 `}
               >

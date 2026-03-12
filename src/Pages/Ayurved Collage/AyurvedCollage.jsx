@@ -4,11 +4,12 @@ import AyurvedCollageHead from "../../assets/AyurvedCollage/AyurvedCollageHead.w
 import Established from "./Components/Established";
 import Department from "./Components/Department";
 import AddmissionUpdate from "./Components/AddmissionUpdate";
-import Affiliation from "./Components/Affiliation";
+import LegacyReach from "./Components/LegacyReachBg";
 import BlogsSec from "./Components/BlogsSec";
 import GallerySec from "./Components/GallerySec";
 import ResAndDev from "./Components/ResAndDev";
 import Calendar from "./Components/Calendar";
+import HospitalReview from "./Components/HospitalReview";
 
 const AyurvedCollage = () => {
   return (
@@ -24,10 +25,11 @@ const AyurvedCollage = () => {
       <Department/>
       <AddmissionUpdate/>
       <Calendar/>
+      <LegacyReach/>
       <ResAndDev/>
-      <Affiliation/>
       <GallerySec/>
       <BlogsSec/>
+      <HospitalReview/>
     </div>
   );
 };

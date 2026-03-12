@@ -5,7 +5,7 @@ import RoundBtn from "../../../../Components/Ui/RoundBtn";
 
 const PrimaryCard = ({ HeadLine, Img, SubText, link }) => {
   return (
-     <div className="bg-primary py-5 rounded-2xl flex flex-col h-full">
+     <div className="bg-primary py-5 rounded-2xl flex flex-col h-full hover:-translate-y-3 duration-300 shadow-[0_16px_40px_rgba(166,58,75,0.18)]">
       <h2 className="text-white text-xl my-auto text-center pb-4 min-h-[4rem] leading-snug">{HeadLine}</h2>
       <LazyImage src={Img} alt="Sanskrit Samhita Siddhant" className="w-full" />
       <div className="flex flex-col justify-between flex-grow">

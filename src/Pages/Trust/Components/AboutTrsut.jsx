@@ -42,14 +42,14 @@ const AboutTrsut = () => {
           </button>
 
           {/* Thumbnails */}
-          <div className="flex flex-col gap-2 flex-1 justify-center">
+          <div className="flex flex-col gap-3 flex-1 justify-center">
             {images.map((img, index) => (
               <button
                 key={index}
                 onClick={() => setActiveIndex(index)}
                 className={`w-16 h-16 rounded-full overflow-hidden flex-shrink-0 transition-all duration-300 ${
                   activeIndex === index
-                    ? "bor scale-105 opacity-100 "
+                    ? "transform ring ring-primary ring-offset-2 scale-105 opacity-100 bg-transparent"
                     : "opacity-80 hover:opacity-90"
                 }`}
               >

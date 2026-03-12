@@ -1,6 +1,7 @@
 import React from "react";
 import EstablishedImg from "../../../assets/AyurvedCollage/EstablishedImg.svg";
 import LazyImage from "../../../Components/Ui/LazyImage";
+import Comma50 from "../../../assets/Comma50.svg"
 
 const Established = () => {
   return (
@@ -10,11 +11,13 @@ const Established = () => {
             <LazyImage src={EstablishedImg} alt="EstablishedImg" className="w-fit" />
         </div>
         <div className="space-y-8">
-          <h1>
+          <h1 className="flex items-start gap-4">
             Institutional Overview
+            <img src={Comma50} alt="Comma50" className="mt-5 -mb-5"/>
           </h1>
-          <p className="text-primary font-bold">
+          <p className="text-primary font-bold ">
             Shree Rasiklal Manikchand Dhariwal Ayurveda College,
+            
           </p>
           <p>
             Established in 2016, is a leading institution dedicated to quality

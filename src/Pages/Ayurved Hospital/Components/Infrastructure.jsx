@@ -23,12 +23,17 @@ const Infrastructure = () => {
             and patient care.
           </p>
         </div>
-        <div className="my-auto">
-          <LazyImage
+        <div className="my-auto relative group">
+          <img
             src={InfrastructureImg}
             alt="Infrastructure"
             className="w-full"
           />
+          <div className="absolute inset-0 py-6 px-10 ">
+            <h1 className="text-white origin-left scale-x-0 opacity-0 group-hover:scale-x-100 group-hover:opacity-100 transition-transform duration-500">
+  Clinical Material
+</h1>
+          </div>
         </div>
       </div>
     </div>

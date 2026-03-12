@@ -52,14 +52,14 @@ const Trustees = () => {
                 className=" object-cover w-full h-full scale-110 group-hover:scale-100 duration-700"
               />
               <div
-  className="absolute bottom-5 left-5 right-5 
+                className="absolute bottom-5 left-5 right-5 
     bg-white/30 backdrop-blur-lg rounded-xl text-white 
     overflow-hidden
     max-h-14
     transition-[max-height] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
     group-hover:max-h-96
-    px-6 py-2"
->
+    px-6 py-2 "
+              >
                 <p className="text-3xl font-bol text-white">{item.role}</p>
 
                 <p

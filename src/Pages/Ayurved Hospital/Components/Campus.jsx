@@ -5,7 +5,7 @@ import Right1 from "../../../assets/AyurvedHospital/Campus/R1.svg";
 import Right2 from "../../../assets/AyurvedHospital/Campus/R2.svg";
 import { GoCheckCircleFill } from "react-icons/go";
 
-const features = ["Beds In Hospital", "Free Food", "Foods", "Accommodation"];
+const features = ["Accommodation", "Free Medicine", "Foods", ""];
 
 const Campus = () => {
   return (
@@ -40,7 +40,7 @@ const Campus = () => {
             </p>
           </div>
           <div className="mt-5 space-y-3">
-            <div className="flex gap-3 items-center">
+            <div className="flex gap-6 items-center">
               <div className="h-28 w-28 rounded-full border-2 border-primary flex flex-col items-center justify-center">
                 <h2>18</h2>
                 <p>Acres</p>
@@ -51,16 +51,16 @@ const Campus = () => {
               </p>
             </div>
             <hr className="border-b rounded-full" />
-            <div className="flex gap-4 items-center">
+            <div className="flex gap-6 items-center">
               <div className="h-28 w-28 rounded-full border-2 border-primary flex flex-col items-center justify-center">
                 <h2 className="text-4xl font-bold">
                   100<sup className="text-lg relative -top-2.5">%</sup>
                 </h2>
               </div>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 flex-1 items-stretch">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 flex-1 items-stretch">
                 {features.map((item, index) => (
                   <p key={index} className="flex items-center gap-2">
-                    <GoCheckCircleFill className="text-primary text-xl" />
+                    <GoCheckCircleFill className="text-primary text-2xl" />
                     {item}
                   </p>
                 ))}

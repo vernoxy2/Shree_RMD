@@ -51,7 +51,7 @@ const Institutes = () => {
       className="bg-cover bg-center "
       style={{ backgroundImage: `url(${InstitutesBg})` }}
     >
-      <div className="container">
+      <div className="container py-20">
         <h1 className="text-white pb-12">
           Institutes <br /> Under The Trust
         </h1>

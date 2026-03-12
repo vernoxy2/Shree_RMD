@@ -4,6 +4,7 @@ import GalleryBg from "../../assets/Gallery/GalleryBg.png";
 import LazyImage from "../../Components/Ui/LazyImage";
 import { GalleryItems } from "./GalleryItems";
 import { IoArrowBackOutline } from "react-icons/io5";
+import { FiPlus } from "react-icons/fi";
 
 const ALL_TAGS = [
   "All",
@@ -18,7 +19,7 @@ function FilterChip({ label, active, count, onClick }) {
   return (
     <button
       onClick={onClick}
-      className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border whitespace-nowrap transition-all hover:-translate-y-[1px]
+      className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full font-semibold border whitespace-nowrap transition-all hover:-translate-y-[1px]
   ${
     active
       ? "bg-primary text-white border-primary shadow-[0_4px_12px_rgba(166,58,75,0.3)]"
@@ -27,7 +28,7 @@ function FilterChip({ label, active, count, onClick }) {
     >
       {label}
       <span
-        className={`text-xs px-1.5 py-0.5 rounded-full font-bold ${active ? "text-white bg-white/20" : "text-primary bg-primary/10"}`}
+        className={` px-2 py- rounded-full font-bold ${active ? "text-white bg-white/20" : "text-primary bg-primary/10"}`}
       >
         {count}
       </span>
@@ -74,7 +75,7 @@ function GalleryDetailView({ item, onBack }) {
   return (
     <div
       className="bg-cover py-16 min-h-screen"
-        style={{ backgroundImage: `url(${GalleryBg})` }}// keep your GalleryBg
+      style={{ backgroundImage: `url(${GalleryBg})` }} // keep your GalleryBg
     >
       <div className="container space-y-8">
         {/* ── Header ── */}
@@ -86,7 +87,6 @@ function GalleryDetailView({ item, onBack }) {
             className="flex items-center gap-1.5  font-semibold rounded-full px-3 py-1 border border-primary text-primary bg-white hover:bg-primary hover:text-white transition-colors"
           >
             <IoArrowBackOutline />
-
             Back
           </button>
         </div>
@@ -102,13 +102,18 @@ function GalleryDetailView({ item, onBack }) {
               <div
                 key={idx}
                 onClick={() => setActive(src)}
-                className="break-inside-avoid cursor-pointer overflow-hidden rounded-2xl border-2 border-transparent hover:border-primary transition-all duration-200 hover:shadow-lg"
+                className="break-inside-avoid cursor-pointer relative group overflow-hidden rounded-2xl border-2 border-transparent hover:border-primary transition-all duration-200 hover:shadow-lg"
               >
                 <img
                   src={src}
                   alt={`${item.name} ${idx + 1}`}
-                  className="w-full h-full object-cover rounded-2xl transition-transform duration-500 hover:scale-105"
+                  className="w-full h-full object-cover rounded-2xl transition-transform duration-500 group-hover:scale-105 "
                 />
+                <div className="bg-black/60 absolute inset-0 scale-y-0 origin-bottom opacity-0 transition-all duration-500 group-hover:scale-y-100 group-hover:opacity-100  flex items-center justify-center">
+                 <div className="p-2 bg-white rounded-full opacity-0 transition-all duration-500 group-hover:opacity-100 delay-200 border-8 border-black/50">
+    <FiPlus size={40} className="text-primary" />
+</div>
+                </div>
               </div>
             ))}
           </div>
