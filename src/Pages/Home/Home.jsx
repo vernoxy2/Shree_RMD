@@ -7,6 +7,7 @@ import HomeSlider from "./Components/HomeSlider";
 import Reviews from "./Components/Reviews";
 import Affiliation from "./Components/Affiliation";
 import Nationally from "./Components/Nationally";
+import CircaleAnimation from "../../Components/Ui/CircaleAnimation";
 
 const Home = () => {
   return (

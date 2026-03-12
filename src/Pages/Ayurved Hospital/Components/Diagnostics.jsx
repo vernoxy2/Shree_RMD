@@ -73,13 +73,13 @@ const Diagnostics = () => {
               onMouseEnter={() => setActive(item.id)}
               className={`
                   relative overflow-hidden cursor-pointer
-                  transition-all duration-500
+                  transition-all duration-1000
                   ${isActive ? "flex-[4]" : "flex-1"}
                 `}
             >
               {/* Background */}
               <div
-                className={`absolute inset-0 bg-cover bg-center transition-transform duration-700 ${
+                className={`absolute inset-0 bg-cover bg-center transition-transform duration-1000 ${
                   isActive ? "scale-110" : "scale-100"
                 }`}
                 style={{ backgroundImage: `url(${item.img})` }}
@@ -87,7 +87,7 @@ const Diagnostics = () => {
 
               {/* Overlay */}
               <div
-                className={`absolute inset-0 transition-all duration-500 ${
+                className={`absolute inset-0 transition-all duration-1000 ${
                   isActive
                     ? "bg-gradient-to-t from-black/80 via-black/40 to-transparent"
                     : "bg-gradient-to-t from-primary/70 to-primary/40"

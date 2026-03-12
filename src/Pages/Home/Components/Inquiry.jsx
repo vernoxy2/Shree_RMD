@@ -6,17 +6,21 @@ import { FaArrowRight } from "react-icons/fa";
 import PrimaryInput from "../../../Components/Ui/PrimaryInput";
 import PrimaryTextarea from "../../../Components/Ui/PrimaryTextarea";
 import PrimarySelect from "../../../Components/Ui/PrimarySelect";
+import CircaleAnimation from "../../../Components/Ui/CircaleAnimation";
 
 const Inquiry = () => {
   return (
-    <section className="bg-primary/10 py-14 pb-20">
+    <section className="bg-primary/10 py-20">
       <div className="container grid lg:grid-cols-2 gap-8">
-        <div className="max-w-xl">
+        <div className="max-w-xl relative">
           <LazyImage
             src={InquiryImg}
             alt="Inquiry Image"
             className="h-full object-cover"
           />
+           <div className="absolute top-1/2 -right-16 -translate-y-1/2 ">
+            <CircaleAnimation />
+          </div>
         </div>
         <div className="space-y-5">
           <div className="space-y-2">
@@ -37,7 +41,7 @@ const Inquiry = () => {
               <PrimaryInput label="State*" placeholder="State*" type="text" />
               <PrimarySelect
                 id="country"
-                label="Country"
+                label="Purpose of inquiry*"
                 // value={country}
                 // onChange={(e) => setCountry(e.target.value)}
                 options={[

@@ -11,6 +11,8 @@ const NavLinkData = [
     name: "About Us",
     url: "/about-us",
   },
+  { name: "Trust", url: "/trust" },
+
   // Ayurveda College
   {
     name: "Ayurved College",
@@ -198,7 +200,6 @@ const NavLinkData = [
     // ],
   },
   // { name: "Press & Media", url: "/press-and-media" },
-  { name: "Trust", url: "/trust" },
   { name: "Pharmacy", url: "/press-and-media" },
   { name: "Gallery", url: "/gallery" },
   // { name: "Vacancy", url: "/vacancy" },
