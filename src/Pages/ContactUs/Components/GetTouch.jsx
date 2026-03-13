@@ -1,6 +1,7 @@
 import React from "react";
 import { CiClock2, CiLocationOn } from "react-icons/ci";
 import { MdOutlineCall } from "react-icons/md";
+import Comma50 from "../../../assets/Comma50.svg";
 
 const Address_Hours = [
   {
@@ -52,12 +53,19 @@ const GetTouch = () => {
     <div className="bg-[#FFF6F6] pb-14 pt-24">
       <div className="container space-y-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="flex items-center">
-            <h1 className="md:col-span-2 ">Get In Touch</h1>
+          <div data-aos="fade-up" data-aos-delay="100" className="flex items-center">
+            
+            <h1 className="md:col-span-2 flex gap-4 pl-5
+            ">
+              <img src={Comma50} alt="" className="rotate-180 -mt-20" />
+              Get <br /> In Touch
+            </h1>
           </div>
 
           {Address_Hours.map((item, index) => (
             <div
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
               key={index}
               className=" py-7 pb-12 px-5 pr-16 border-2 border-[#DEDEDE] hover:border-primary duration-500"
             >
@@ -92,6 +100,8 @@ const GetTouch = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
           {ContactData.map((item, index) => (
             <div
+              data-aos="fade-up"
+              data-aos-delay={index * 200}
               key={index}
               className="mb-6 py-7 pb-12 px-5 pr-16 border-2 border-[#DEDEDE] hover:border-primary duration-500"
             >

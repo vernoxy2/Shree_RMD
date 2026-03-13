@@ -1,14 +1,15 @@
 import Down from "./../../assets/InputDown.svg";
 
-const PrimaryInput = ({ label, placeholder, type = "text", id }) => {
+const PrimaryInput = ({ label, placeholder, type = "text", id, className="" }) => {
   return (
     <div className="w-full space-y-2">
       <div className="relative flex flex-col-reverse gap-2">
         <input
+        required
           id={id}
           type={type}
           placeholder={placeholder}
-          className="peer outline-none focus:border-primary relative"
+          className={`peer outline-none focus:border-primary relative ${className}`}
         />
 
         <img

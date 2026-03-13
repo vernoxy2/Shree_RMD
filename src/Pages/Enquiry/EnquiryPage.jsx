@@ -130,9 +130,21 @@ const CONTACT_BLOCKS = [
     bg: "#fdf4f5",
     border: "#e8a8b0",
     items: [
-      { icon: <MdOutlineCall size={26} />, label: "Gen Enquiry", value: "8141007556" },
-      { icon: <MdOutlineCall size={26} />, label: "Gen Enquiry", value: "74350 80560" },
-      { icon: <MdOutlineMail size={26} />, label: "Email", value: "rmdayuhospital@gmail.com" },
+      {
+        icon: <MdOutlineCall size={26} />,
+        label: "Gen Enquiry",
+        value: "8141007556",
+      },
+      {
+        icon: <MdOutlineCall size={26} />,
+        label: "Gen Enquiry",
+        value: "74350 80560",
+      },
+      {
+        icon: <MdOutlineMail size={26} />,
+        label: "Email",
+        value: "rmdayuhospital@gmail.com",
+      },
     ],
   },
   {
@@ -142,7 +154,11 @@ const CONTACT_BLOCKS = [
     bg: "#f0faf4",
     border: "#a7d9ba",
     items: [
-      { icon: <MdOutlineCall size={26} />, label: "Gen Enquiry", value: "6352339690" },
+      {
+        icon: <MdOutlineCall size={26} />,
+        label: "Gen Enquiry",
+        value: "6352339690",
+      },
       {
         icon: <MdOutlineMail size={26} />,
         label: "Email",
@@ -229,8 +245,11 @@ function EnquiryForm({ tab }) {
   }
 
   return (
-    <div className="grid gap-4">
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+  <form onSubmit={handleSubmit} className="grid gap-4">
+
+    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+      
+      <div data-aos="fade-up" data-aos-delay="100">
         <PrimaryInput
           label="Your Name"
           placeholder="Full name"
@@ -238,6 +257,9 @@ function EnquiryForm({ tab }) {
           onChange={update("name")}
           required
         />
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="200">
         <PrimaryInput
           label="Your Email"
           type="email"
@@ -247,6 +269,10 @@ function EnquiryForm({ tab }) {
           required
         />
       </div>
+
+    </div>
+
+    <div data-aos="fade-up" data-aos-delay="300">
       <PrimaryInput
         label="Contact No."
         type="tel"
@@ -255,28 +281,27 @@ function EnquiryForm({ tab }) {
         onChange={update("phone")}
         required
       />
+    </div>
+
+    <div data-aos="fade-up" data-aos-delay="400">
       <PrimaryTextarea
         label="Your Message"
-        type="textarea"
         placeholder="Write your enquiry here…"
         value={form.message}
         onChange={update("message")}
       />
-
-      {/* <button
-        onClick={handleSubmit}
-        className="enq-submit w-full py-3 rounded-xl font-semibold text-sm text-white mt-1"
-        style={{
-          background: `linear-gradient(135deg, ${tab.color}, ${C.primary})`,
-        }}
-      >
-        Send {tab.label} Enquiry →
-      </button> */}
-      <div className="w-fit ml-auto">
-        <PrimaryBtn type="submit" text="Send Message" icon={<FaArrowRight />} />
-      </div>
     </div>
-  );
+
+    <div data-aos="fade-up" data-aos-delay="500" className="w-fit ml-auto">
+      <PrimaryBtn
+        type="submit"
+        text="Send Message"
+        icon={<FaArrowRight />}
+      />
+    </div>
+
+  </form>
+);
 }
 
 export default function EnquiryPage() {
@@ -285,53 +310,17 @@ export default function EnquiryPage() {
 
   return (
     <div className="bg-Bg">
-      <style>{css}</style>
-
-      {/* Hero */}
-      {/* <div className="bg-primary/40 pt-12 pb-10">
-        <div className="relative z-10 container">
-          <nav className="flex items-center gap-1.5 text-xs mb-5" style={{ color: "rgba(255,255,255,0.45)" }}>
-            <span>Home</span>
-            <span>›</span>
-            <span className="text-primary font-semibold">Enquiry</span>
-          </nav>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] mb-2"
-            style={{ color: "rgba(255,255,255,0.5)" }}>
-            Shree RMD Ayurveda College &amp; Hospital
-          </p>
-          <h1 className="text-4xl font-black text-primary tracking-tight leading-none mb-2">
-            Get in <span style={{ color: "#f4b8c0" }}>Touch</span>
-          </h1>
-          <div className="w-10 h-1 rounded-full mb-3" style={{ background: C.primary }} />
-          <p className=" font-light" >
-            Reach us for college admissions, hospital services, research or cancer unit queries
-          </p>
-        </div>
-      </div> */}
-
       <div className="container py-14 grid gap-8 space-y-6">
-        {/* Online Consultation Banner */}
-        {/* <div className="fade-up rounded-2xl p-5 flex items-center gap-4 flex-wrap"
-          style={{ background: "linear-gradient(135deg, #1a0a0d, #A63A4B)", border: `1px solid ${C.primary}` }}>
-          <div className="text-3xl">💻</div>
-          <div className="flex-1 min-w-0">
-            <p className="font-bold text-white text-sm">Online Consultation Available</p>
-            <p className="text-xs mt-0.5" style={{ color: "rgba(255,255,255,0.6)" }}>
-              Connect with our Ayurveda specialists from the comfort of your home
-            </p>
-          </div>
-          <button className="enq-submit px-5 py-2 rounded-xl text-sm font-semibold text-white border"
-            style={{ borderColor: "rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.15)" }}>
-            Book Now →
-          </button>
-        </div> */}
-
         {/* Contact Cards */}
-        <div className="fade-up ">
-          <h1 className="mb-4 font-bold">Quick Contact</h1>
+        <div className="fade-up space-y-8">
+          <h1 data-aos="fade-up" className=" font-bold">
+            Quick Contact
+          </h1>
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
             {CONTACT_BLOCKS.map((block, i) => (
               <div
+                data-aos="fade-up"
+                data-aos-delay={i * 200}
                 key={i}
                 className="enq-contact-card  p-5 border-2 hover:border-primary duration-500"
               >
@@ -340,21 +329,18 @@ export default function EnquiryPage() {
                     {block.icon}
                   </div>
                   <div>
-                    <h2 className="font-bold leading-tight">
-                      {block.title}
-                    </h2>
+                    <h2 className="font-bold leading-tight">{block.title}</h2>
                   </div>
                 </div>
                 <div className="grid gap-2">
                   {block.items.map((item, j) => (
                     <div
+                      data-aos="fade-up"
+                      data-aos-delay={j * 200}
                       key={j}
                       className=" flex items-center gap-2.5 p-2.5 rounded-xl"
                     >
-                      <div className="text-primary">
-
-                      {item.icon}
-                      </div>
+                      <div className="text-primary">{item.icon}</div>
                       <div className="min-w-0">
                         <p
                           className="font-bold text-xl"
@@ -378,9 +364,11 @@ export default function EnquiryPage() {
         </div>
 
         {/* Enquiry Forms */}
-        <div className="fade-up d2">
+        <div className="fade-up d2 space-y-8">
           <h1
-            className="mb-4  font-bold"
+            data-aos="fade-up"
+            data-aos-delay={100}
+            className=" font-bold"
             // style={{ color: C.sub }}
           >
             Send an Enquiry
@@ -394,8 +382,10 @@ export default function EnquiryPage() {
               className="flex overflow-x-auto"
               style={{ borderBottom: `1px solid ${C.border}` }}
             >
-              {ENQUIRY_TABS.map((t) => (
+              {ENQUIRY_TABS.map((t, i) => (
                 <button
+                  data-aos="fade-down"
+                  data-aos-delay={i * 100}
                   key={t.id}
                   onClick={() => setActiveTab(t.id)}
                   className="enq-tab flex items-center gap-2 px-5 py-3.5 font-medium border-b-2 flex-1 justify-center"
@@ -421,18 +411,17 @@ export default function EnquiryPage() {
 
             {/* Active tab label */}
             <div className="px-2 pt-6 pb-2 flex items-center gap-2">
-              <div
+              <div data-aos="zoom-out"
                 className="w-14 h-14 rounded-xl flex items-center justify-center bg-primary text-white"
                 // style={{ background: tab.bg }}
               >
-                
                 {tab.icon}
               </div>
               <div>
-                <h2 className="font-bold " style={{ color: C.dark }}>
+                <h2 data-aos="fade-right" className="font-bold " style={{ color: C.dark }}>
                   {tab.label} Enquiry
                 </h2>
-                <p className="" style={{ color: C.sub }}>
+                <p data-aos="fade-right" className="" style={{ color: C.sub }}>
                   Fill in the form and we'll respond within 24 hours
                 </p>
               </div>

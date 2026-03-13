@@ -1,17 +1,18 @@
 import React from "react";
 import Down from "./../../assets/InputDown.svg";
 
-const PrimaryTextarea = ({ label, placeholder, id, rows = 4 }) => {
+const PrimaryTextarea = ({ label, placeholder, id, rows = 4, className="" }) => {
   return (
     <div className="w-full space-y-2">
       <div className="relative flex flex-col-reverse gap-2">
 
         <textarea
+        required
           id={id}
           rows={rows}
           placeholder={placeholder}
-          className="peer w-full outline-none border-b border-gray-300 
-          focus:border-primary transition pr-8 resize-none"
+          className={`peer w-full outline-none border-b border-gray-300 
+          focus:border-primary transition pr-8 resize-none ${className}`}
         />
 
         <img

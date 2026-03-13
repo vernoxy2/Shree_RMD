@@ -2,39 +2,7 @@ import React from "react";
 import PrimaryHeader from "../../../../Components/Ui/PrimaryHeader";
 import TeachingStaffDetailsBg from "../../../../assets/AyurvedCollage/AyurvedCollageHead.webp";
 import StaffDetailsImg from "../../../../assets/AyurvedCollage/StaffDetailsImg.svg";
-
-const DepartmentList = [
-  {
-    id: 1,
-    emp_name: "Swati Patel",
-    emp_designation: "Librarian",
-    emp_department: "Library",
-  },
-  {
-    id: 2,
-    emp_name: "Lataben Patel",
-    emp_designation: "Librarian",
-    emp_department: "Surekha Patel",
-  },
-  {
-    id: 3,
-    emp_name: "Surekha Patel",
-    emp_designation: "Librarian",
-    emp_department: "Attendant",
-  },
-  {
-    id: 4,
-    emp_name: "Mr. Mayur D Patel",
-    emp_designation: "Collage",
-    emp_department: "Office Staff-Clerk",
-  },
-  {
-    id: 5,
-    emp_name: "Mrs. Dharmishta Patel",
-    emp_designation: "Collage",
-    emp_department: "Office Staff-Clerk",
-  },
-];
+import { NonTeachingStaff } from "../../../../Data/nonteachingsatff_detailsData";
 
 const NonTeachingStaffDetails = () => {
   return (
@@ -59,7 +27,7 @@ const NonTeachingStaffDetails = () => {
         </div>
 
         {/* Attendance Table */}
-        <div className="flex gap-8 flex-grow-0 pt-20 items-stretch">
+        <div className="flex gap-8 flex-grow-0 pt-20 items-stretch ">
           {/* Said Menu */}
           <div className="w-1/3 h-fit bg-white rounded-2xl group shadow-[0_10px_20px_rgba(0,0,0,0.15)] overflow-hidden">
             <img
@@ -68,12 +36,13 @@ const NonTeachingStaffDetails = () => {
               className="w-full e group-hover:grayscale-0 group-hover:scale-105 duration-700 transition-all"
             />
           </div>
+
           {/* Table */}
-          <div className="flex-1">
-            <div className="rounded-2xl overflow-hidden shadow-[0_10px_20px_rgba(0,0,0,0.15)]">
-              <table className="w-full border-separate border-spacing-0">
+          <div className="flex-1 overflow-y-auto">
+            <div className="h-full rounded-2xl overflow-hidden shadow-[0_10px_20px_rgba(0,0,0,0.15)]">
+              <table className="w-full border-separate border-spacing-0 h-full">
                 <thead>
-                  <tr className="bg-primary text-white ">
+                  <tr className="bg-primary text-white">
                     <th className="px-4 py-3 border-r-2 border-white">
                       <h2 className="text-xl text-white">Name of Employee</h2>
                     </th>
@@ -85,26 +54,25 @@ const NonTeachingStaffDetails = () => {
                     </th>
                     <th className="px-4 py-3">
                       <h2 className="text-xl text-white">Department</h2>
-                      
                     </th>
                   </tr>
                 </thead>
-                <tbody className="">
-                  {DepartmentList.map((item) => (
+                <tbody className="h-full">
+                  {NonTeachingStaff.map((item) => (
                     <tr
                       key={item.id}
-                      className="hover:bg-gray-50 transition bg-white"
+                      className="hover:bg-primary/10 transition bg-white"
                     >
-                      <td className="px-4 py-3 border-r-2 border-primary">
+                      <td className="px-4 py-4 border-r-2 border-primary">
                         <p className="text-primary font-bold text-xl">
-                          {item.emp_name}
+                          {item.name}
                         </p>
                       </td>
                       <td className="px-4 py-3 text-center border-r-2 border-primary">
-                        <p className="text-xl">{item.emp_designation}</p>
+                        <p className="text-xl">{item.dept_name}</p>
                       </td>
                       <td className="px-4 py-3 text-center">
-                        <p className="text-xl">{item.emp_department}</p>
+                        <p className="text-xl">{item.designation}</p>
                       </td>
                     </tr>
                   ))}

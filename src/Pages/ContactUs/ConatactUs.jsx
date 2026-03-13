@@ -5,11 +5,11 @@ import PrimaryHeader from '../../Components/Ui/PrimaryHeader';
 
 const ConatactUs = () => {
   return (
-    <>
+    <div className='overflow-hidden'>
     <PrimaryHeader HeadLine={"Contact Us"}/>
     <GetTouch/>
     <TellUs/>
-    </>
+    </div>
   );
 }
 

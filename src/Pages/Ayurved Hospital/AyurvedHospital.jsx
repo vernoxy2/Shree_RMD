@@ -8,6 +8,7 @@ import Services from "./Components/Services";
 import Infrastructure from "./Components/Infrastructure";
 import Diagnostics from "./Components/Diagnostics";
 import Snapshot from "./Components/Snapshot";
+import HospitalReview from "./Components/HospitalReview";
 
 const AyurvedHospital = () => {
   return (
@@ -24,6 +25,7 @@ const AyurvedHospital = () => {
       <Infrastructure/>
       <Diagnostics/>
       <Snapshot/>
+      <HospitalReview/>
     </div>
   );
 };

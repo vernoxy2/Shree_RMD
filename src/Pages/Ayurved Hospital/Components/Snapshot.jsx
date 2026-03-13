@@ -101,7 +101,7 @@ const SerSnapshotCard = ({ item }) => {
 
 const Snapshot = () => {
   return (
-    <div className="py-20 container">
+    <div className="py-24 container">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div className="flex items-center justify-center bg-primary/20 rounded-2xl p-10 shadow-lg">
           <h1 className="leading-tight">

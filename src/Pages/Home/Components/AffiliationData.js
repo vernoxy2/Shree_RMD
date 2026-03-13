@@ -3,7 +3,7 @@ export const AffiliationData = [
   {
     id: 0,
     icon: NAAC,
-    category: "college",
+    category: "College",
     title: "NAAC Accredited",
     points: "A+ Grade",
     text: "Nationally assessed by the National Assessment and Accreditation Council for academic excellence",
@@ -30,7 +30,7 @@ export const AffiliationData = [
   {
     id: 3,
     icon: NAAC,
-    category: "COLLEGE",
+    category: "College",
     title: "NAAC Accredited",
     points: "A+ Grade",
     text: "Nationally assessed by the National Assessment and Accreditation Council for academic excellence",
@@ -39,7 +39,7 @@ export const AffiliationData = [
   {
     id: 4,
     icon: NAAC,
-    category: "COLLEGE",
+    category: "College",
     title: "NAAC Accredited",
     points: "A+ Grade",
     text: "Nationally assessed by the National Assessment and Accreditation Council for academic excellence",
@@ -48,7 +48,7 @@ export const AffiliationData = [
   {
     id: 5,
     icon: NAAC,
-    category: "COLLEGE",
+    category: "College",
     title: "NAAC Accredited",
     points: "A+ Grade",
     text: "Nationally assessed by the National Assessment and Accreditation Council for academic excellence",
@@ -57,7 +57,7 @@ export const AffiliationData = [
   {
     id: 6,
     icon: NAAC,
-    category: "COLLEGE",
+    category: "College",
     title: "NAAC Accredited",
     points: "A+ Grade",
     text: "Nationally assessed by the National Assessment and Accreditation Council for academic excellence",
@@ -66,7 +66,7 @@ export const AffiliationData = [
   {
     id: 7,
     icon: NAAC,
-    category: "COLLEGE",
+    category: "College",
     title: "NAAC Accredited",
     points: "A+ Grade",
     text: "Nationally assessed by the National Assessment and Accreditation Council for academic excellence",

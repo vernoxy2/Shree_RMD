@@ -28,6 +28,7 @@ import HospitalActivities from "./Pages/Ayurved Hospital/Hospital Activities/Hos
 import NotFound from "./Components/Layout/NotFound.jsx";
 
 
+
 // Lazy loaded pages
 const Home = lazy(() => import("./Pages/Home/Home.jsx"));
 const AboutUs = lazy(() => import("./Pages/AboutUs/AboutUs.jsx"));

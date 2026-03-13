@@ -2,8 +2,10 @@ import React from "react";
 import { AffiliationData } from "./AffiliationData";
 import Rightsaid from "../../../assets/HomePage/AffiliationIcons/Rightsaid.svg";
 
-const fitterData = (data, category) => {
-  return data.filter((item) => item.category === category);
+const filterData = (data, category) => {
+  return data.filter(
+    (item) => item.category.toLowerCase() === category.toLowerCase(),
+  );
 };
 
 const AffiliationCard = ({ item }) => {
@@ -28,15 +30,18 @@ const AffiliationCard = ({ item }) => {
           View More
         </button>
       </div>
-      <img src={Rightsaid} alt="" className="absolute right-0 -top-2"/>
+      <img src={Rightsaid} alt="" className="absolute right-0 -top-2" />
     </div>
   );
 };
 
 const Affiliation = () => {
- const [affiliationData, setAffiliationData] = React.useState(AffiliationData);
+  const [affiliationData, setAffiliationData] = React.useState(AffiliationData);
+  const [activeFilter, setActiveFilter] = React.useState("all");
 
   const handleFilter = (category) => {
+    setActiveFilter(category);
+
     if (category === "all") {
       setAffiliationData(AffiliationData);
     } else {
@@ -59,28 +64,31 @@ const Affiliation = () => {
       <div className="mt-10 flex gap-5 items-center justify-center">
         <button
           onClick={() => handleFilter("all")}
-          className="bg-primary py-1.5 px-3 font-inter font-bold text-white"
+          className={`py-1.5 px-5 font-inter font-bold border border-primary 
+    ${activeFilter === "all" ? "bg-primary text-white" : "bg-transparent text-primary"}`}
         >
           All
         </button>
 
         <button
-          onClick={() => handleFilter("colleges")}
-          className="bg-primary py-1.5 px-3 font-inter font-bold text-white"
+          onClick={() => handleFilter("college")}
+          className={`py-1.5 px-5 font-inter font-bold border border-primary
+    ${activeFilter === "college" ? "bg-primary text-white" : "bg-transparent text-primary"}`}
         >
-          colleges
+          College
         </button>
 
         <button
-          onClick={() => handleFilter("Hospital")}
-          className="bg-primary py-1.5 px-3 font-inter font-bold text-white"
+          onClick={() => handleFilter("hospital")}
+          className={`py-1.5 px-5 font-inter font-bold border border-primary
+    ${activeFilter === "hospital" ? "bg-primary text-white" : "bg-transparent text-primary"}`}
         >
           Hospital
         </button>
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mt-10">
-        {AffiliationData.map((item) => (
+        {affiliationData.map((item) => (
           <AffiliationCard key={item.id} item={item} />
         ))}
       </div>

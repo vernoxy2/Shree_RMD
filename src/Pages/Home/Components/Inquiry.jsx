@@ -18,7 +18,7 @@ const Inquiry = () => {
             alt="Inquiry Image"
             className="h-full object-cover"
           />
-           <div className="absolute top-1/2 -right-16 -translate-y-1/2 ">
+          <div className="absolute top-1/2 -right-16 -translate-y-1/2 ">
             <CircaleAnimation />
           </div>
         </div>
@@ -39,11 +39,10 @@ const Inquiry = () => {
               />
               <PrimaryInput label="City*" placeholder="City*" type="text" />
               <PrimaryInput label="State*" placeholder="State*" type="text" />
+
               <PrimarySelect
                 id="country"
                 label="Purpose of inquiry*"
-                // value={country}
-                // onChange={(e) => setCountry(e.target.value)}
                 options={[
                   { label: "Admission", value: "Admission" },
                   { label: "Hospital", value: "Hospital" },
@@ -53,13 +52,14 @@ const Inquiry = () => {
               />
             </div>
 
-            <PrimaryTextarea label="Message" placeholder={"Message*"} />
+            <PrimaryTextarea label="Message" placeholder="Message*" />
+
+            <PrimaryBtn
+              type="submit"
+              text="Send Message"
+              icon={<FaArrowRight />}
+            />
           </form>
-          <PrimaryBtn
-            to="/contact"
-            text="Send Message"
-            icon={<FaArrowRight />}
-          />
         </div>
       </div>
     </section>

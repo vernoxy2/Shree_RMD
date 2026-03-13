@@ -3,32 +3,33 @@ import PrimaryHeader from "../../../../Components/Ui/PrimaryHeader";
 import TeachingStaffDetailsBg from "../../../../assets/AyurvedCollage/AyurvedCollageHead.webp";
 import ResearchPublicationImg from "../../../../assets/AyurvedCollage/ResearchPublicationImg.svg";
 import PrimaryBtn from "../../../../Components/Ui/PrimaryBtn";
+import { ResearchData } from "../../../../Data/ResearchData";
 const DepartmentList = [
   {
     id: 1,
-    Details : "Concept of distinctive dietics – An Ayurvedic perspective"
+    Details: "Concept of distinctive dietics – An Ayurvedic perspective",
   },
   {
     id: 2,
-    Details : "A conceptual review on mind as per Ayurveda"
+    Details: "A conceptual review on mind as per Ayurveda",
   },
   {
     id: 3,
-    Details : "Physiology of muscle contraction understanding"
+    Details: "Physiology of muscle contraction understanding",
   },
   {
     id: 4,
-    Details : "A physiological understanding on the concept of Tarpaka Karna"
+    Details: "A physiological understanding on the concept of Tarpaka Karna",
   },
   {
     id: 5,
-    Details : "Critical analysis on physiology of reflex mechanism with special reference to Vata Dosha"
+    Details:
+      "Critical analysis on physiology of reflex mechanism with special reference to Vata Dosha",
   },
   {
     id: 6,
-    Details : "Critical analysis on Loka Purusha Samya Siddhanta"
+    Details: "Critical analysis on Loka Purusha Samya Siddhanta",
   },
-  
 ];
 
 const ResearchPublication = () => {
@@ -68,7 +69,7 @@ const ResearchPublication = () => {
             />
           </div>
           {/* Table */}
-          <div className=" overflow-hidden ">
+          <div className="flex-1 overflow-hidden mxa-h-fit">
             <h1 className="pb-4">Research Work and Publication – 2018-2023 </h1>
             <div className="rounded-2x w-full rounded-2xl overflow-hidden">
               <table className="w-full border-separate border-spacing-0 rounded-2xl">
@@ -85,14 +86,13 @@ const ResearchPublication = () => {
                   </tr>
                 </thead>
                 <tbody className="">
-                  {DepartmentList.map((item) => (
+                  {ResearchData.map((item) => (
                     <tr
                       key={item.id}
                       className="hover:bg-gray-50 transition bg-white"
                     >
-                      
                       <td className="px-4 py-3 text-xl border-r-2 border-primary">
-                        <p>{item.Details}</p>
+                        <p>{item.name}</p>
                       </td>
                       <td className="px-6 py-5 text-center">
                         <div className="flex justify-center">

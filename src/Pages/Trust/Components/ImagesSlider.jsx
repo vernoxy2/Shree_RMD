@@ -31,6 +31,8 @@ const ImagesSlider = () => {
 
             {[...slides, ...slides].map((img, index) => (
               <img
+              data-aos="zoom-in"
+                data-aos-delay={index * 100}
                 key={index}
                 src={img}
                 alt="logo"

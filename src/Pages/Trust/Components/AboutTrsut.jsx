@@ -20,7 +20,7 @@ const AboutTrsut = () => {
   return (
     <div className="container grid grid-cols-1 lg:grid-cols-2 gap-8 py-20">
       {/* LEFT: Main Image + Vertical Thumbnail Strip */}
-      <div className="flex gap-3 mr-12 relative">
+      <div data-aos="fade-right" className="flex gap-3 mr-12 relative">
         {/* Main Image */}
         <div className="flex-1 rounded-2xl overflow-hidden">
           <img
@@ -75,13 +75,13 @@ const AboutTrsut = () => {
 
       {/* RIGHT: Text Content */}
       <div className="space-y-6 ">
-        <h1 className="flex gap-3">
+        <h1 data-aos="fade-left" data-aos-delay="100" className="flex gap-3">
           About GiriviharTrust{" "}
           <span>
             <img src={Comma50} alt="" />
           </span>
         </h1>
-        <p className="tracking-wide">
+        <p data-aos="fade-left" data-aos-delay="200" className="tracking-wide">
           <strong className="text-primary">
             Shree Prabhav-Hem-Kamdhenu Girivihar Trust – Palitana
           </strong>{" "}
@@ -91,14 +91,14 @@ const AboutTrsut = () => {
           No. E/1798), the Trust is headquartered at Girivihar, Taleti Road,
           Palitana, Gujarat.
         </p>
-        <p className="tracking-wide">
+        <p data-aos="fade-left" data-aos-delay="300" className="tracking-wide">
           Inspired by the spiritual vision of Param Pujya Acharyadev Shreemad
           Vijay Hem Prabh Suriswarji Maharaj Saheb and guided by Param Pujya
           Acharyadev Shri Vijay Vignan Prabh Surishwarji Maharaj Saheb, the
           Trust works tirelessly to promote compassion, healthcare, education,
           and humanitarian service rooted in Jain values.
         </p>
-        <p className="tracking-wide">
+        <p data-aos="fade-left" data-aos-delay="400" className="tracking-wide">
           Over the years, Girivihar Trust has developed several impactful
           initiatives focused on Ayurvedic education, holistic healthcare, cow
           protection, and community welfare. Through its institutions such as
@@ -107,7 +107,7 @@ const AboutTrsut = () => {
           by providing authentic Ayurvedic treatment, medical education,
           cow-based medicinal research, and affordable meals for the community.
         </p>
-        <p className="tracking-wide">
+        <p data-aos="fade-left" data-aos-delay="500" className="tracking-wide">
           With a strong commitment to ethical healthcare, spiritual values, and
           social responsibility, Girivihar Trust continues to uplift lives by
           combining ancient Ayurvedic wisdom, compassionate service, and modern
