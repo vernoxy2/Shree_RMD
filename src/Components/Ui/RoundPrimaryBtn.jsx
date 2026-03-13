@@ -6,7 +6,7 @@ const RoundPrimaryBtn = ({ to = "#", text, className="" }) => {
   return (
     <Link
       to={to}
-      className={`group inline-flex items-center gap-1 bg-primary hover:bg-white pl-2 border-4 border-primary text-white rounded-full font-medium overflow-hidden ${className}`}
+      className={`group inline-flex items-center gap-1 bg-primary  pl-2 border-4 border-primary text-white rounded-full font-medium overflow-hidden ${className}`}
     >
       <span>{text}</span>
 

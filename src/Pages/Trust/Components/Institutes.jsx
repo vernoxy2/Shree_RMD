@@ -52,22 +52,26 @@ const Institutes = () => {
       style={{ backgroundImage: `url(${InstitutesBg})` }}
     >
       <div className="container py-20">
-        <h1 className="text-white pb-12">
+        <h1
+          data-aos="fade-up"
+          data-aos-delay="100"
+          className="text-white pb-12"
+        >
           Institutes <br /> Under The Trust
         </h1>
-        <div className="flex flex-col-reverse lg:flex-row rounded-3xl border border-white/40 overflow-hidden">
+        <div data-aos="fade" className="flex flex-col-reverse lg:flex-row rounded-3xl border border-white/40 overflow-hidden">
           {/* Menu */}
           <div className="lg:w-5/12">
             <div className="h-full">
               {institutes.map((item) => (
                 <div
                   key={item.id}
-                  className={`cursor-pointer transition-all duration-200 ${
+                  className={`transition-all duration-200 ${
                     selected.id === item.id
                       ? "bg-white/50 border-l-4 border-white/60"
                       : "bg-white/20"
-                  }  cursor-pointer`}
-                  onClick={() => setSelected(item)}
+                  }`}
+                  onMouseEnter={() => setSelected(item)}
                 >
                   <div className="flex items-center gap-5 px-7 py-8">
                     <img src={item.icon} alt="" />

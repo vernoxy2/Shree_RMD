@@ -13,13 +13,13 @@ const AboutUs = () => {
   return (
     <>
       <PrimaryHeader HeadLine={"About Us"} />
-    <GuruJi/>
-      <AboutCampus/>
-      <Trustee/>
-      <Trustees/>
+      <GuruJi />
+      <AboutCampus />
+      <Trustee />
+      <Trustees />
       <CoreValues />
-      <Principal/>
-      <Director/>
+      <Principal />
+      <Director />
     </>
   );
 };

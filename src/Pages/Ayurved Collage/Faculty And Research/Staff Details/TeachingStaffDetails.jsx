@@ -2,6 +2,7 @@ import React from "react";
 import PrimaryHeader from "../../../../Components/Ui/PrimaryHeader";
 import TeachingStaffDetailsBg from "../../../../assets/AyurvedCollage/AyurvedCollageHead.webp";
 import PrimaryBtn from "../../../../Components/Ui/PrimaryBtn";
+import { SatffDetailsData } from "../../../../Data/SatffDetailsData";
 
 const DepartmentList = [
   "Dravyaguna Vidnyan",
@@ -26,7 +27,7 @@ const DepartmentList = [
 ];
 
 const TeachingStaffDetails = () => {
-  const [activeTeb, setActiveTeb] = React.useState(DepartmentList[0]);
+  const [activeTeb, setActiveTeb] = React.useState(SatffDetailsData[0]);
 
   return (
     <div className="bg-Bg">
@@ -65,7 +66,7 @@ const TeachingStaffDetails = () => {
                 scrollBehavior: "smooth",
               }}
             >
-              {DepartmentList.map((item, i) => (
+              {SatffDetailsData.map((item, i) => (
                 <button
                   key={i}
                   className={`py-4 px-5 w-full text-start bg-[#F6F6F6] rounded-2xl group duration-300 transition-colors ${
@@ -78,7 +79,7 @@ const TeachingStaffDetails = () => {
                   <p
                     className={`text-xl duration-300 transition-colors ${item === activeTeb ? "text-white font-bold" : "group-hover:text-primary"}`}
                   >
-                    {item}
+                    {item.dept_name}
                   </p>
                 </button>
               ))}
@@ -89,37 +90,60 @@ const TeachingStaffDetails = () => {
             <div className="rounded-2xl overflow-hidden shadow-[0_10px_20px_rgba(0,0,0,0.15)]">
               <table className="w-full border-collapse bg-white">
                 <thead>
-                  <tr className="bg-primary">
+                  <tr className="bg-primary ">
                     <th className="text-left px-6 py-4 border-r border-white/20">
-                      <h2 className="text-xl text-white font-semibold">Name</h2>
+                      <h2 className="text-xl text-center text-white font-semibold">
+                        Name
+                      </h2>
                     </th>
                     <th className="text-left px-6 py-4 border-r border-white/20">
-                      <h2 className="text-xl text-white font-semibold">
-                        Details of Months
+                      <h2 className="text-xl text-center text-white font-semibold">
+                        Designation
                       </h2>
                     </th>
                     <th className="px-6 py-4 w-52">
-                      <h2 className="text-xl text-white font-semibold">View</h2>
+                      <h2 className="text-xl text-white font-semibold text-center">
+                        Profile link
+                      </h2>
                     </th>
                   </tr>
                 </thead>
                 <tbody>
-                 
-                  <tr className="border-b border-gray-100 hover:bg-rose-50 transition-colors">
-                    <td className="px-6 py-5 border-r border-gray-100">
-                      <p className="text-primary text-xl font-bold">
-                        Dr. Yogesh H. Desai
-                      </p>
-                    </td>
-                    <td className="px-6 py-5 border-r border-gray-100">
-                      <p className="text-base">Associate Professor</p>
-                    </td>
-                    <td className="px-6 py-5 text-center">
-                      <div className="flex justify-center">
-                        <PrimaryBtn text={"Know more"} />
-                      </div>
-                    </td>
-                  </tr>
+                  {SatffDetailsData.map((item, i) => (
+                    <tr
+                      key={i}
+                      className="border-b border-gray-100 hover:bg-rose-50 transition-colors"
+                    >
+                      {/* Names & Designations */}
+                      <td className="px-6 py-5 border-r border-gray-100">
+                        <div className="space-y-2">
+                          {item.Children.map((child, j) => (
+                            <div key={j}>
+                              <p className="text-primary font-bold">
+                                {child.name}
+                              </p>
+                              <p className="text-gray-600">
+                                {child.designation}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
+                      </td>
+
+                      {/* Department */}
+                      <td className="px-6 py-5 border-r border-gray-100">
+                        <p className="text-base">{item.dept_details}</p>
+                      </td>
+
+                      {/* Button */}
+                      <td className="px-6 py-5 text-center">
+                        <div className="flex justify-center">
+                          <PrimaryBtn text={"Know more"} />
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+
                   <tr className="border-b border-gray-100 hover:bg-rose-50 transition-colors">
                     <td className="px-6 py-5 border-r border-gray-100">
                       <p className="text-primary font-bold">
@@ -127,7 +151,9 @@ const TeachingStaffDetails = () => {
                       </p>
                     </td>
                     <td className="px-6 py-5 border-r border-gray-100">
-                      <p className="text-base">Principal and Medical superintendent</p>
+                      <p className="text-base">
+                        Principal and Medical superintendent
+                      </p>
                     </td>
                     <td className="px-6 py-5 text-center">
                       <div className="flex justify-center">

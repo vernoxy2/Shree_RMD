@@ -9,7 +9,7 @@ const PrimaryHeader = ({HeadLine, SubText, BgImg = ConatactUsBg}) => {
     >
         <div className="container py-28 space-y-6">
 
-      <h1 className="text-white border-l-2 border-primary pl-5">{HeadLine}</h1>
+      <h1 data-aos="fade-right" className="text-white border-l-2 border-primary pl-5">{HeadLine}</h1>
       <p className="text-white w-1/3">{SubText}</p>
         </div>
     </div>

@@ -6,6 +6,7 @@ import Hospital from "../../../assets/HomePage/HomeAboutUs/Hospital.png";
 import LazyImage from "../../../Components/Ui/LazyImage";
 import AboutBg from "../../../assets/HomePage/HomeAboutUs/AboutBg.png"
 import RoundPrimaryBtn from "../../../Components/Ui/RoundPrimaryBtn";
+import Comma50 from "../../../assets/Comma50.svg";
 
 const AboutData = [
   {
@@ -39,7 +40,7 @@ const AboutUS = () => {
         {/* Main Container */}
         <div className="grid grid-cols-1 md:grid-cols-2">
           {/* Left Section */}
-          <div style={{backgroundImage: `url(${AboutBg})`}} className="flex flex-col justify-center xl:px-24 gap-y-4 bg-cover 0">
+          <div style={{backgroundImage: `url(${AboutBg})`}} className="flex flex-col justify-center xl:px-24 gap-y-4 bg-cover 0 relative">
             <h1>About Us </h1>
             <p>
               Established in 2016 under the esteemed Shree Prabhav Hem Kamdhenu
@@ -54,6 +55,7 @@ const AboutUS = () => {
               research, and nation building, we strive to create a healthier
               society through sustainable, holistic healthcare.
             </p>
+            <img src={Comma50} alt="Comma50" className="absolute right-16 bottom-20" />
           </div>
           {/* Right Section */}
           <div className="overflow-hidden ">
