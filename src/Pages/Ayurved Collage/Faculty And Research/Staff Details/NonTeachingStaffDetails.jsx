@@ -2,7 +2,7 @@ import React from "react";
 import PrimaryHeader from "../../../../Components/Ui/PrimaryHeader";
 import TeachingStaffDetailsBg from "../../../../assets/AyurvedCollage/AyurvedCollageHead.webp";
 import StaffDetailsImg from "../../../../assets/AyurvedCollage/StaffDetailsImg.svg";
-import { NonTeachingStaff } from "../../../../Data/nonteachingsatff_detailsData";
+import { NonTeachingStaff } from "../../../../Data/NonTeachingStaff";
 
 const NonTeachingStaffDetails = () => {
   return (
