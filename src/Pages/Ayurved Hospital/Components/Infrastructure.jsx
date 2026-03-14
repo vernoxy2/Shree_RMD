@@ -11,10 +11,10 @@ const Infrastructure = () => {
     >
       <div className=" grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="2xl:pr-20 space-y-5 py-20 container xl:pl-24 ">
-          <h2 className="text-white">
+          <h2 data-aos="fade-right" data-aos-delay="100" className="text-white">
             Hospital Infrastructure & Patient Care Services
           </h2>
-          <p className="text-white ">
+          <p data-aos="fade-right" data-aos-delay="200" className="text-white ">
             Shree RMD Ayurveda College and Hospital, Waghaldhara, offers
             comprehensive clinical material including advanced hospital
             infrastructure, Medical and Surgical IP sections, OPD and IPD
@@ -23,16 +23,16 @@ const Infrastructure = () => {
             and patient care.
           </p>
         </div>
-        <div className="my-auto relative group">
+        <div data-aos="fade-left" className="my-auto relative group">
           <img
             src={InfrastructureImg}
             alt="Infrastructure"
             className="w-full"
           />
           <div className="absolute inset-0 py-6 px-10 ">
-            <h1 className="text-white origin-left scale-x-0 opacity-0 group-hover:scale-x-100 group-hover:opacity-100 transition-transform duration-500">
-  Clinical Material
-</h1>
+            <h1 className="text-white origin-left scale-x-0 opacity-0 group-hover:scale-x-100 group-hover:opacity-100 transition-transform duration-500 ease-in-out">
+              Clinical Material
+            </h1>
           </div>
         </div>
       </div>

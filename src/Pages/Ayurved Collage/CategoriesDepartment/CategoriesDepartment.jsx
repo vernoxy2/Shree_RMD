@@ -19,7 +19,7 @@ const CategoriesDepartment = () => {
         }
       />
       <div className="container space-y-12 py-20">
-        <h1 className="text-center">Departments</h1>
+        <h1 data-aos="fade-up" data-aos-delay="100" className="text-center">Departments</h1>
         <hr className="border-b rounded-full" />
         <Professional HeadLine={"I - Professional"} Data={Department1} />
         <Professional HeadLine={"II - Professional"} Data={Department2} />

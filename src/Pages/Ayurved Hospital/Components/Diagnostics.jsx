@@ -46,13 +46,13 @@ const Diagnostics = () => {
       {/* Diagnostics Head */}
       <div className="space-y-4">
         <div className="flex justify-between">
-          <h1>Diagnostics</h1>
-          <h2 className="text-right text-secondary">
+          <h1 data-aos="fade-right" className="text-3xl">Diagnostics</h1>
+          <h2 data-aos="fade-left" className="text-right text-secondary">
             Advanced Laboratory & Ayurvedic <br />
             Assessment Services
           </h2>
         </div>
-        <p className="text-center text-xl">
+        <p data-aos="fade-up" data-aos-delay="200" className="text-center text-xl">
           The Diagnostics Department at Shree RMD Ayurved College & Hospital
           offers comprehensive pathological laboratory services, health check-up
           schemes, X-Ray and ultrasonography facilities, and classical Prakruti
@@ -63,7 +63,7 @@ const Diagnostics = () => {
         </p>
         <hr className=" max-w-xs border-primary border-2 rounded-full mx-auto" />
       </div>
-      <div className="flex gap-2 h-[550px] mt-12">
+      <div data-aos="fade" data-aos-delay="400" data-aos-duration="500" className="flex gap-2 h-[550px] mt-12">
         {categories.map((item) => {
           const isActive = active === item.id;
 
