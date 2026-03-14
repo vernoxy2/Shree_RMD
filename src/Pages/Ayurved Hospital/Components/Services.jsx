@@ -53,13 +53,19 @@ const ServicesData = [
 
 const ServicesCard = ({ img, title, description, id }) => {
   return (
-    <div className="space-y-6">
+    <div
+    data-aos="fade-up"
+    data-aos-delay={id * 200}
+     className="space-y-6 group hover:-translate-y-3 duration-500">
       <img src={img} alt={title} className="w-full" />
       <div className="flex items-center gap-4">
         <h1>0{id}</h1>
         <h2 className="">{title}</h2>
       </div>
-      <hr className="my-6"/>
+      <div className="relative">
+        <hr className="my-6 border-gray-300" />
+        <hr className="absolute top-1/2 left-0 w-20 group-hover:w-full border-2 border-primary -translate-y-1/2 z-10 duration-700" />
+      </div>
       <p className="text-xl">{description}</p>
     </div>
   );
@@ -70,11 +76,17 @@ const Services = () => {
     <div className=" ">
       <div className="container py-20">
         <div className="space-y-6">
-          <h1 className="text-center">Services Offered</h1>
-          <h2 className="text-secondary text-center">
+          <h1 data-aos="fade-up" data-aos-delay="100" className="text-center">
+            Services Offered
+          </h1>
+          <h2
+            data-aos="fade-up"
+            data-aos-delay="200"
+            className="text-secondary text-center"
+          >
             Comprehensive Ayurvedic & Healthcare Facilities
           </h2>
-          <p className="text-center">
+          <p data-aos="fade-up" data-aos-delay="200" className="text-center">
             Shree RMD Ayurved College & Hospital offers advanced Physiotherapy,
             Yoga therapy, Suvarnaprashana immunization, medical camps, medical
             store services, and ambulance facilities. Equipped with modern
@@ -83,7 +95,12 @@ const Services = () => {
             and community wellness through integrated Ayurvedic and supportive
             medical services.
           </p>
-          <hr className=" max-w-xs border-primary border-2 rounded-full mx-auto" />
+          <hr
+            data-aos="zoom-in"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+            className=" max-w-xs border-primary border-2 rounded-full mx-auto"
+          />
         </div>
         <div className="pt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-16">
           {ServicesData.map((item) => (

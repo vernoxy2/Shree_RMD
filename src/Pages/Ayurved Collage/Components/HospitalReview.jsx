@@ -6,7 +6,7 @@ const HospitalReview = () => {
   return (
     <div className="bg-primary/10 py-20 relative">
       <div className=" grid grid-cols-12 gap-8 container items-stretch">
-        <div className="col-span-4 overflow-hidden relative group">
+        <div data-aos="fade" data-aos-delay="200" className="col-span-4 overflow-hidden relative group">
           <img
             src={SavbanPatel}
             alt=""
@@ -17,7 +17,7 @@ const HospitalReview = () => {
           </div>
         </div>
         <div className="col-span-1"></div>
-        <div className="col-span-7 max-w-2xl space-y-4 flex flex-col gap-4 items-start justify-center">
+        <div data-aos="fade-right" data-aos-delay="300" className="col-span-7 max-w-2xl space-y-4 flex flex-col gap-4 items-start justify-center">
           <img src={CommaPrimaryOutLine} alt="" />
 
           <h1>Trusted Ayurvedic College for Learning</h1>

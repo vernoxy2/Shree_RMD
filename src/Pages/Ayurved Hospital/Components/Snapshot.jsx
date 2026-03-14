@@ -8,6 +8,7 @@ import Kaumarbhritya from "../../../assets/AyurvedHospital/Snapshot/Kaumarbhrity
 import Swasthavritta from "../../../assets/AyurvedHospital/Snapshot/Swasthavritta.svg";
 import { IoIosArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
+import Comma50 from "../../../assets/Comma50.svg";
 
 // ✅ slugs must match SLUG_MAP keys in ServicesSnapshot
 const SerSnapshotList = [
@@ -103,13 +104,21 @@ const Snapshot = () => {
   return (
     <div className="py-24 container">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div className="flex items-center justify-center bg-primary/20 rounded-2xl p-10 shadow-lg">
+        <div data-aos="fade-up" data-aos-delay="100" className="flex items-center justify-center bg-primary/20 rounded-2xl p-10 shadow-lg relative">
           <h1 className="leading-tight">
             Services <br /> Snapshot <br /> Section
           </h1>
+          <div className="top-8 left-8 absolute">
+            <img
+              src={Comma50}
+              alt="Services Snapshot"
+              className="rotate-180 scale-y-[-1] "
+            />
+          </div>
         </div>
         {SerSnapshotList.map((item) => (
           <div
+          data-aos="fade-up" data-aos-delay={item.id * 100}
             key={item.id}
             className={`${item.id === 3 ? "lg:row-span-2 border" : ""} h-full`}
           >

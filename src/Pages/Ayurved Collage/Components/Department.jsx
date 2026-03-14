@@ -39,9 +39,9 @@ const Department = () => {
   ];
 
   return (
-    <div style={{backgroundImage: `url(${CategoryBg})`}} className="bg-primary/5 py-20">
+    <div data-aos="fade" data-aos-delay="100" style={{backgroundImage: `url(${CategoryBg})`}} className="bg-primary/5 py-20">
       <div className="container space-y-12">
-        <h1 className="text-center">Categories Department</h1>
+        <h1 data-aos="fade-up" data-aos-delay="100" className="text-center">Categories Department</h1>
 
         <div className="flex gap-6 h-[520px]">
           {categories.map((item) => {
@@ -49,6 +49,7 @@ const Department = () => {
 
             return (
               <div
+              
                 key={item.id}
                 onMouseEnter={() => setActive(item.id)}
                 className={`

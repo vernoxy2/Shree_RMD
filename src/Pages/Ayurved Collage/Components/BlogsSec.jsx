@@ -34,10 +34,10 @@ const BlogsSec = () => {
   return (
     <div className="bg-[#FFF6F6] py-20">
       <div className="container space-y-12">
-        <h1 className="text-center">Blogs</h1>
+        <h1 data-aos="fade-up" data-aos-delay="100" className="text-center">Blogs</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
           {BlogData.map((item) => (
-            <div key={item.id} className="flex flex-col h-full">
+            <div data-aos="fade-up" data-aos-delay={item.id * 200} key={item.id} className="flex flex-col h-full">
               <h3 className="w-full bg-primary text-xl text-center text-white font-black font-poppins px-14 py-2">
                 {item.mainTitle}
               </h3>

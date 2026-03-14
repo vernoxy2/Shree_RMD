@@ -7,19 +7,19 @@ const Established = () => {
   return (
     <div className="bg-[#FFF6F6] py-20">
       <div className="container grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div>
+        <div data-aos="fade" data-aos-delay="100" data-aos-duration="1000">
             <LazyImage src={EstablishedImg} alt="EstablishedImg" className="w-fit" />
         </div>
         <div className="space-y-8">
-          <h1 className="flex items-start gap-4">
+          <h1 data-aos="fade-right" data-aos-delay="100" className="flex items-start gap-4">
             Institutional Overview
             <img src={Comma50} alt="Comma50" className="mt-5 -mb-5"/>
           </h1>
-          <p className="text-primary font-bold ">
+          <p data-aos="fade-right" data-aos-delay="200" className="text-primary font-bold ">
             Shree Rasiklal Manikchand Dhariwal Ayurveda College,
             
           </p>
-          <p>
+          <p data-aos="fade-right" data-aos-delay="300">
             Established in 2016, is a leading institution dedicated to quality
             Ayurvedic medical education. Affiliated with Gujarat Ayurved
             University, Jamnagar and recognized by the National Commission for
@@ -30,7 +30,7 @@ const Established = () => {
             Ayurvedic professionals rooted in traditional wisdom and
             contemporary healthcare practices.
           </p>
-          <div className="flex items-center gap-5">
+          <div data-aos="fade-right" data-aos-delay="400" className="flex items-center gap-5">
             <h1 className="bg-primary py-2.5 px-4 text-white text-3xl rounded-xl flex items-center gap-3 w-fit">
               {" "}
               <span><hr className="border h-5" /></span>2016

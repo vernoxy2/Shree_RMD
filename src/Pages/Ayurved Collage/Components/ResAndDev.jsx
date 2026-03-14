@@ -14,11 +14,11 @@ const ResAndDev = () => {
       className="bg-[#FFF6F6] py-20 bg-cover bg-center"
     >
       <div className="container space-y-6">
-        <h1>
+        <h1 data-aos="fade-right" data-aos-delay="100">
           Research <br /> & Development
         </h1>
         <hr className="border" />
-        <p className="lg:w-[94%]">
+        <p data-aos="fade-up" data-aos-delay="200" className="lg:w-[94%]">
           The Research & Development Center at Shree RMD Ayurved College &
           Hospital is dedicated to advanced Ayurvedic research, drug testing,
           and scientific innovation. The center integrates classical Ayurveda
@@ -29,7 +29,7 @@ const ResAndDev = () => {
           excellence in Ayurveda research and innovation.
         </p>
 
-        <div className="flex group">
+        <div data-aos="fade-up" data-aos-delay="300" className="flex group">
           <div className="overflow-hidden">
             <img src={Img1} alt="" className="hover:scale-110 duration-500 " />
           </div>
@@ -59,7 +59,7 @@ const ResAndDev = () => {
             </div>
           </div>
         </div>
-        <div className="flex group ">
+        <div data-aos="fade-up" data-aos-delay="400" className="flex group ">
           <div className="overflow-hidden">
             <img src={Img2} alt="" className="hover:scale-110 duration-500 " />
           </div>

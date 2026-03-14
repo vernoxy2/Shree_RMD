@@ -11,7 +11,7 @@ const Calendar = () => {
           <div className="flex items-center">
             <img src={Academic} alt="" />
           </div>
-          <div className="space-y-4">
+          <div data-aos="fade-left" data-aos-delay="200" className="space-y-4">
             <h1>Academic Calendar</h1>
             <p>
               <strong className="text-primary">The Academic Calendar</strong> of
@@ -37,7 +37,7 @@ const Calendar = () => {
       <div className="container ">
         {/* Div-1 */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="space-y-4">
+          <div data-aos="fade-right" data-aos-delay="200" className="space-y-4">
             <h1>Student calendar</h1>
             <p>
               <strong className="text-primary">The Student Calendar</strong> The Student Calendar outlines key student activities, cultural programs, sports events, holidays, NSS initiatives, workshops, and campus celebrations. It promotes holistic development by balancing academic excellence with extracurricular engagement, scheduled holidays, and professional growth opportunities.

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import DrSandip from "../../../assets/AyurvedHospital/HospitalReviewImgs/DeepChand.svg";
 import Comma50 from "../../../assets/Comma50.svg";
@@ -31,6 +31,13 @@ const Reviews = [
 const HospitalReview = () => {
   const [current, setCurrent] = useState(0);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev === Reviews.length - 1 ? 0 : prev + 1));
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
   const handlePrev = () =>
     setCurrent((prev) => (prev === 0 ? Reviews.length - 1 : prev - 1));
 
@@ -46,8 +53,9 @@ const HospitalReview = () => {
           alt=""
           className="absolute -top-32 right-24 h-44 animate-bounce"
         />
-        <h1>What they say about us</h1>
+        <h1 data-aos="fade-up" data-aos-delay="200">What they say about us</h1>
         <div
+        data-aos="fade-up" data-aos-delay="200"
           className="flex gap-8 pt-8
         "
         >
@@ -70,7 +78,7 @@ const HospitalReview = () => {
           </button>
         </div>
         <div className="grid grid-cols-2 gap-8 ">
-          <div className=" relative ">
+          <div data-aos="fade-up" data-aos-delay="200" className=" relative ">
             <AnimatePresence mode="wait">
               <motion.img
                 key={activeReview.id}
@@ -109,7 +117,7 @@ const HospitalReview = () => {
             </AnimatePresence>
           </div>
           <div className="flex flex-col justify-end">
-            <span className="border-2 border-primary rounded-3xl w-fit px-5 py-1">
+            <span data-aos="fade-up" data-aos-delay="200" className="border-2 border-primary rounded-3xl w-fit px-5 py-1">
               <p>
                 {current + 1} / {Reviews.length}
               </p>
@@ -117,6 +125,7 @@ const HospitalReview = () => {
             <div className="grid grid-cols-3 justify-end gap-8">
               {Reviews.map((review, index) => (
                 <button
+                data-aos="fade-up" data-aos-delay={index * 200}
                   key={index}
                   onClick={() => setCurrent(index)}
                   className="relative p-3 mt-auto"

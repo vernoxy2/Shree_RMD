@@ -33,12 +33,12 @@ const LegacyReach = () => {
       grid gap-8 grid-cols-1 lg:grid-cols-2"
       >
         <div className="flex items-center">
-          <h1 className="max-w-xs text-white border-l-2 pl-5">Our legacy and reach</h1>
+          <h1 data-aos="fade-right" data-aos-delay="100" className="max-w-xs text-white border-l-2 pl-5">Our legacy and reach</h1>
         </div>
 
         <div className="py-8 grid grid-cols-1 md:grid-cols-2 gap-8">
           {affiliationData.map((item) => (
-            <div key={item.id} className="px-5 py-3.5 bg-white/10 rounded ">
+            <div data-aos="fade-down" data-aos-delay={item.id * 200} key={item.id} className="px-5 py-3.5 bg-white/10 rounded ">
               <h2 className="text-white">{item.number}+</h2>
               <h1 className="font-medium text-base text-white">{item.text}</h1>
             </div>

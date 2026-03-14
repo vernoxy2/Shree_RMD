@@ -12,7 +12,7 @@ import HospitalReview from "./Components/HospitalReview";
 
 const AyurvedHospital = () => {
   return (
-    <div className="bg-Bg">
+    <div className="bg-Bg overflow-x-hidden">
       <PrimaryHeader
         BgImg={AyurvedHospitalHead}
         HeadLine={"Ayurved Hospital"}
