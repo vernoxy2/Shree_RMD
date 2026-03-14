@@ -1,8 +1,8 @@
 export const ActivitiesData = [
   {
     act_id: 1,
-    name: "SPORTS DAY REPORT Utkarsha Utsava  2K25",
-    category: "",
+    name: "SPORTS DAY REPORT Utkarsha Utsava - 2K25",
+    category: "Sports",
     pdf: "",
   },
   {
@@ -13,7 +13,7 @@ export const ActivitiesData = [
   },
   {
     act_id: 3,
-    name: "POST EVENT REPORT ON NATIONAL DOCTORS DAY CELEBRATION",
+    name: "POST EVENT REPORT ON NATIONAL DOCTOR'S DAY CELEBRATION",
     category: "",
     pdf: "",
   },
@@ -49,13 +49,13 @@ export const ActivitiesData = [
   },
   {
     act_id: 9,
-    name: "Seminar on Nadi Pariksha",
+    name: 'Seminar on "Nadi Pariksha"',
     category: "",
     pdf: "",
   },
   {
     act_id: 10,
-    name: "Guest lecture on Alcoholisom and Drug addiction",
+    name: 'Guest lecture on "Alcoholisom and Drug addiction"',
     category: "",
     pdf: "",
   },
@@ -139,7 +139,7 @@ export const ActivitiesData = [
   },
   {
     act_id: 24,
-    name: "Ayushyaman Bharat  Arogya Samanway  CCCH Training Program",
+    name: "Ayushyaman Bharat - Arogya Samanway - CCCH Training Program",
     category: "",
     pdf: "",
   },
@@ -169,7 +169,7 @@ export const ActivitiesData = [
   },
   {
     act_id: 29,
-    name: "Ayushyaman Bharat  Arogya Samanway  CCCH Training Program",
+    name: "Ayushyaman Bharat - Arogya Samanway - CCCH Training Program",
     category: "",
     pdf: "",
   },
@@ -271,19 +271,19 @@ export const ActivitiesData = [
   },
   {
     act_id: 46,
-    name: "FAREWELL 2021",
+    name: '"FAREWELL 2021"',
     category: "",
     pdf: "",
   },
   {
     act_id: 47,
-    name: "FRESHERS DAY 2021",
+    name: '"FRESHERS DAY 2021"',
     category: "",
     pdf: "",
   },
   {
     act_id: 48,
-    name: "GANESH CHATURTHI CELEBRATION 2021",
+    name: '"GANESH CHATURTHI CELEBRATION 2021"',
     category: "",
     pdf: "",
   },

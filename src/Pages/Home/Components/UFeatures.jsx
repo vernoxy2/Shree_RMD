@@ -59,10 +59,12 @@ const UFeatures = () => {
       style={{ backgroundImage: `url(${FeaturesBg})` }}
       className="py-24 space-y-16 bg-cover bg-center"
     >
-      <h1 className="text-center text-white">Unique Features</h1>
+      <h1 data-aos="fade-up" className="text-center text-white">Unique Features</h1>
       <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {FeaturesList.map((item) => (
           <div
+          data-aos="zoom-in"
+          data-aos-delay={item.id * 100}
             key={item.id}
             className="flex flex-col items-center justify-center gap-3 text-center hover:bg-white duration-300 p-4 pt-8 pb-14 rounded-3xl text-[#676767] group hover:shadow-xl"
           >

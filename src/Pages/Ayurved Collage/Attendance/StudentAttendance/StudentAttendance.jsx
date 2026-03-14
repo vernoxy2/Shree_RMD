@@ -3,11 +3,12 @@ import PrimaryHeader from "../../../../Components/Ui/PrimaryHeader";
 import StudDetaHead from "../../../../assets/AyurvedCollage/StudDetaImgs/StudDetaHead.webp";
 import PrimaryBtn from "../../../../Components/Ui/PrimaryBtn";
 import { StudentAttendanceData } from "./StudentAttendanceData";
+import {StudentAttendanceList} from "../../../../Data/StudentAttendanceList.js";
 
 const StudentAttendance = () => {
-  const [sected, setSected] = React.useState(StudentAttendanceData[0]);
+  const [sected, setSected] = React.useState(StudentAttendanceList[0]);
 
-  const selectedItem = StudentAttendanceData.find(
+  const selectedItem = StudentAttendanceList.find(
     (item) => item.id === sected.id,
   );
 
@@ -37,7 +38,7 @@ const StudentAttendance = () => {
               Month Wise Attendance <br /> of Student
             </h2>
             <ul className="pt-5 space-y-4">
-              {StudentAttendanceData.map((item, i) => (
+              {StudentAttendanceList.map((item, i) => (
                 <button
                   key={i}
                   className={`w-full py-4 px-5 text-start rounded-2xl group duration-300 transition-colors ${
@@ -54,7 +55,7 @@ const StudentAttendance = () => {
                         : "group-hover:text-primary"
                     }`}
                   >
-                    {item.menuData}
+                    {item.year}
                   </p>
                 </button>
               ))}
@@ -78,7 +79,7 @@ const StudentAttendance = () => {
                   </tr>
                 </thead>
                 <tbody className="max-h-11">
-                  {selectedItem?.attendanceData.map((row, index) => (
+                  {selectedItem?.months.map((row, index) => (
                     <tr
                       key={index}
                       className="border-b border-gray-100 hover:bg-rose-50 transition-colors"
@@ -90,7 +91,7 @@ const StudentAttendance = () => {
                             <span className="text-primary font-bold">
                               {row.batchName} –{" "}
                             </span>
-                            <span className="text-gray-500">{row.year}</span>
+                            <span className="text-gray-500">{row.batchYear}</span>
                           </p>
                         </div>
                       </td>

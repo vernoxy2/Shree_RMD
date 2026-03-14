@@ -7,8 +7,8 @@ const Principal = () => {
     <div className="bg-primary/10 py-20">
       <div className="container grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="space-y-5 xl:w-[92%]">
-          <h1>Principal’s Message</h1>
-          <p>
+          <h1 data-aos="fade-up" data-aos-delay="100"> Principal’s Message</h1>
+          <p data-aos="fade-up" data-aos-delay="200">
             {" "}
             <strong className="text-primary">The sphere of Ayurveda</strong> is
             moving fast and the entire health care systems existing in the world
@@ -20,7 +20,7 @@ const Principal = () => {
             physicians, researchers, etc with real zeal of Ayurveda has to be
             created with multi task performance and potentials.{" "}
           </p>
-          <p>
+          <p data-aos="fade-up" data-aos-delay="300">
             The institute is created and aimed with this vision and innovative
             move. By providing all material desired to create a supreme with
             great team of teachers, non-teaching members can be achieved.
@@ -35,7 +35,7 @@ const Principal = () => {
         {/* Image */}
         <div className=" grid md:grid-cols-2 gap-8 relative">
           <div>
-            <div className="relative w-full h-fit overflow-hidden group">
+            <div data-aos="zoom" data-aos-delay="400" className="relative w-full h-fit overflow-hidden group">
               <img src={Rajeshbhai} alt="Rajeshbhai" className="group-hover:scale-105 duration-700 w-full" />
               <div
                 className="absolute -bottom-20 group-hover:bottom-2 duration-700 left-1/2 -translate-x-1/2 
@@ -48,7 +48,7 @@ const Principal = () => {
             </div>
           </div>
           <div className="flex items-end">
-            <div className="relative w-full h-fit overflow-hidden group">
+            <div data-aos="zoom" data-aos-delay="500" className="relative w-full h-fit overflow-hidden group">
 
             <img src={Nimeshbhai} alt="Nimeshbhai" className="group-hover:scale-105 duration-700 w-full" />
             <div
@@ -60,7 +60,7 @@ const Principal = () => {
                 <p>Vice Principal</p>
               </div>
             </div>
-          <div className="absolute border-2 border-primary p-28 py-36 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[-1]"></div>
+          <div  className="absolute border-2 border-primary p-28 py-36 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[-1]"></div>
           </div>
         </div>
       </div>

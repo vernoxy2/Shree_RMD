@@ -4,7 +4,7 @@ import Campus from "../../../assets/HomePage/HomeAboutUs/Campus.png";
 import AyurvedaCollege from "../../../assets/HomePage/HomeAboutUs/AyurvedaCollege.png";
 import Hospital from "../../../assets/HomePage/HomeAboutUs/Hospital.png";
 import LazyImage from "../../../Components/Ui/LazyImage";
-import AboutBg from "../../../assets/HomePage/HomeAboutUs/AboutBg.png"
+import AboutBg from "../../../assets/HomePage/HomeAboutUs/AboutBg.png";
 import RoundPrimaryBtn from "../../../Components/Ui/RoundPrimaryBtn";
 import Comma50 from "../../../assets/Comma50.svg";
 
@@ -40,22 +40,34 @@ const AboutUS = () => {
         {/* Main Container */}
         <div className="grid grid-cols-1 md:grid-cols-2">
           {/* Left Section */}
-          <div style={{backgroundImage: `url(${AboutBg})`}} className="flex flex-col justify-center xl:px-24 gap-y-4 bg-cover 0 relative">
-            <h1>About Us </h1>
-            <p>
+          <div
+            style={{ backgroundImage: `url(${AboutBg})` }}
+            className="flex flex-col justify-center xl:px-24 gap-y-4 bg-cover 0 relative"
+          >
+            <h1 data-aos="fade-right" data-aos-delay="100">
+              About Us{" "}
+            </h1>
+            <p data-aos="fade-right" data-aos-delay="200">
               Established in 2016 under the esteemed Shree Prabhav Hem Kamdhenu
               Girivihar Trust, Shree RMD Ayurved College & Hospital stands as a
               center of excellence in Ayurvedic education and healthcare. Our
               vision goes beyond teaching medicine{" "}
             </p>
-            <p>
+            <p data-aos="fade-right" data-aos-delay="300">
               we cultivate leaders, researchers, and practitioners who uphold
               the purity and authenticity of Ayurveda while embracing modern
               scientific advancements.With a strong commitment to service,
               research, and nation building, we strive to create a healthier
               society through sustainable, holistic healthcare.
             </p>
-            <img src={Comma50} alt="Comma50" className="absolute right-16 bottom-20" />
+            <img
+              data-aos="fade"
+              data-aos-delay="500"
+              data-aos-duration="1000"
+              src={Comma50}
+              alt="Comma50"
+              className="absolute right-16 bottom-20"
+            />
           </div>
           {/* Right Section */}
           <div className="overflow-hidden ">
@@ -89,7 +101,10 @@ const AboutUS = () => {
               <div className="absolute inset-0 pointer-events-none flex flex-col justify-between p-8">
                 <div className="flex justify-between items-center">
                   <h1 className="text-white">0{item.id}</h1>
-                  <RoundPrimaryBtn className={`${active === index ? "opacity-100" : "opacity-0"}`} text="Read More" />
+                  <RoundPrimaryBtn
+                    className={`${active === index ? "opacity-100" : "opacity-0"}`}
+                    text="Read More"
+                  />
                 </div>
 
                 <div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CommaPrimary from "../../../assets/CommaPrimary.svg";
 import Comma100 from "../../../assets/Comma100.svg";
 import DrSandip from "../../../assets/Trust/TrustReviews/DrSandip.svg";
@@ -32,6 +32,14 @@ const Reviews = [
 
 const TrustReviews = () => {
   const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+  const interval = setInterval(() => {
+    setCurrent((prev) => (prev === Reviews.length - 1 ? 0 : prev + 1));
+  }, 4000); // 4 seconds
+
+  return () => clearInterval(interval);
+}, []);
 
   const handlePrev = () =>
     setCurrent((prev) => (prev === 0 ? Reviews.length - 1 : prev - 1));

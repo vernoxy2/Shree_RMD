@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect } from "react";
-
+import { ActivitiesData } from "../../../../../Data/ActivitiesData";
 const FileIcon = () => (
   <svg
     width="15"
@@ -119,24 +119,6 @@ const REPORTS = [
   { name: "Celebrating the 75th Republic Day", tag: "Civic" },
   { name: "Orientation Program for NAAC/NABH", tag: "Admin" },
   { name: 'Seminar on "Nadi Pariksha"', tag: "Seminar" },
-  { name: "Celebrating the 75th Republic Day", tag: "Civic" },
-  { name: "Orientation Program for NAAC/NABH", tag: "Admin" },
-  { name: 'Seminar on "Nadi Pariksha"', tag: "Seminar" },
-  { name: "Celebrating the 75th Republic Day", tag: "Civic" },
-  { name: "Orientation Program for NAAC/NABH", tag: "Admin" },
-  { name: 'Seminar on "Nadi Pariksha"', tag: "Seminar" },
-  { name: "Celebrating the 75th Republic Day", tag: "Civic" },
-  { name: "Orientation Program for NAAC/NABH", tag: "Admin" },
-  { name: 'Seminar on "Nadi Pariksha"', tag: "Seminar" },
-  { name: "Celebrating the 75th Republic Day", tag: "Civic" },
-  { name: "Orientation Program for NAAC/NABH", tag: "Admin" },
-  { name: 'Seminar on "Nadi Pariksha"', tag: "Seminar" },
-  { name: "Celebrating the 75th Republic Day", tag: "Civic" },
-  { name: "Orientation Program for NAAC/NABH", tag: "Admin" },
-  { name: 'Seminar on "Nadi Pariksha"', tag: "Seminar" },
-  { name: "Celebrating the 75th Republic Day", tag: "Civic" },
-  { name: "Orientation Program for NAAC/NABH", tag: "Admin" },
-  { name: 'Seminar on "Nadi Pariksha"', tag: "Seminar" },
 ];
 
 const CATEGORIES = [
@@ -161,9 +143,9 @@ export default function ActivityReports() {
   }, [search, category]);
 
   const filtered = useMemo(() => {
-    return REPORTS.filter((r) => {
+    return ActivitiesData.filter((r) => {
       const matchSearch = r.name.toLowerCase().includes(search.toLowerCase());
-      const matchCat = category === "All Categories" || r.tag === category;
+      const matchCat = category === "All Categories" || r.category === category;
       return matchSearch && matchCat;
     });
   }, [search, category]);
@@ -176,7 +158,7 @@ export default function ActivityReports() {
   }, [filtered, page]);
 
   return (
-    <div className=" bg-[#FFF6F6] font-sans pt-8 ">
+    <div className=" bg-[#FFF6F6]  pt-8 ">
       {/* Google Fonts */}
       <div className="container">
         {/* Page Header */}
@@ -194,7 +176,7 @@ export default function ActivityReports() {
       </div> */}
 
         {/* Toolbar */}
-        <div className=" border-b border-gray-200 px-12 py-5 flex items-center justify-between gap-4 flex-wrap">
+        <div className=" border-b border-gray-200 py-5 flex items-center justify-between gap-4 flex-wrap">
           <div className="flex items-center gap-3 flex-wrap">
             {/* Search */}
             <div className="relative flex items-center">
@@ -229,19 +211,19 @@ export default function ActivityReports() {
         </div>
 
         {/* Table */}
-        <div className="px-12 py-6 pb-12">
+        <div className=" py-6 pb-12">
           {filtered.length > 0 ? (
             <div className="w-full rounded-xl border border-gray-200 overflow-hidden shadow-sm bg-white">
               <table className="w-full border-collapse">
                 <thead>
                   <tr className="bg-primary">
-                    <th className="text-left text-white font-inter font-medium tracking-widest px-5 py-3.5">
+                    <th className="text-left text-white font-poppins font-medium tracking-widest px-5 py-3.5">
                       Report Name
                     </th>
-                    <th className="text-left text-white font-inter font-medium tracking-widest px-5 py-3.5 w-36">
+                    <th className="text-left text-white font-Poppins font-medium tracking-widest px-5 py-3.5 w-36">
                       Category
                     </th>
-                    <th className="text-center text-white font-inter font-medium tracking-widest px-5 py-3.5 w-28">
+                    <th className="text-center text-white font-poppins font-medium tracking-widest px-5 py-3.5 w-28">
                       Action
                     </th>
                   </tr>
@@ -255,14 +237,8 @@ export default function ActivityReports() {
                     >
                       {/* Report Name */}
                       <td className="px-5 py-4">
-                        <div className="flex items-start gap-3">
-                          <div
-                            className="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center mt-0.5"
-                            style={{
-                              backgroundColor: "#f8f0f1",
-                              color: "#8B1A2B",
-                            }}
-                          >
+                        <div className="flex items-center gap-3">
+                          <div className="flex-shrink-0 w-10 h-10 text-primary bg-primary/10 rounded-lg flex items-center justify-center mt-0.5">
                             <FileIcon />
                           </div>
                           <span className="font-inter font-medium text-gray-800 leading-snug">
@@ -276,7 +252,7 @@ export default function ActivityReports() {
                         <span
                           className={`inline-block font-inter px-2.5 py-0.5 rounded-full font-normal ${TAG_STYLES[report.tag] || "bg-gray-100 text-gray-600"}`}
                         >
-                          {report.tag}
+                          {report.category}
                         </span>
                       </td>
 

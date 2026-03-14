@@ -27,7 +27,7 @@ const Nationally = () => {
       <div className="py-20 container flex flex-col md:flex-row gap-4 items-center justify-between h-full">
         {/* Left Heading */}
         <div>
-          <h2 className="text-white border-l-2 border-white pl-5">
+          <h2 data-aos="fade-right" className="text-white border-l-2 border-white pl-5">
             Recognised nationally. <br /> Trusted locally
           </h2>
         </div>
@@ -35,6 +35,8 @@ const Nationally = () => {
         <div className=" bg-white max-w-xl w-full grid grid-cols-3 gap-0.5">
           {NationallyData.map((item) => (
             <div
+            data-aos="fade"
+            data-aos-delay={item.id * 100}
               key={item.id}
               className="flex bg-primary flex-col items-center justify-center gap-3"
             >
