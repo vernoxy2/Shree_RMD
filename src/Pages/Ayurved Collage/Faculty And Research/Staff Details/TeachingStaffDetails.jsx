@@ -4,28 +4,6 @@ import TeachingStaffDetailsBg from "../../../../assets/AyurvedCollage/AyurvedCol
 import PrimaryBtn from "../../../../Components/Ui/PrimaryBtn";
 import { SatffDetailsData } from "../../../../Data/SatffDetailsData";
 
-const DepartmentList = [
-  "Dravyaguna Vidnyan",
-  "Kayachikitsa",
-  "Shalyatantra",
-  "Strirog and Prasuti Tantra",
-  "Stree Roga Evum Prsutitantra",
-  "Panchkarma",
-  "Kaumarbhritya",
-  "Kaumarbhritya- Balroga",
-  "Agadtantra ,Vyavahar Ayurveda Evum Vidhi Vaidyak",
-  "Agadtantra Avum Vidhivaidyaka",
-  "Rog Nidan Vikriti Vidnyan",
-  "Rasashsatra & Bhaishajya Kalpana",
-  "Rachana Shareera",
-  "Rachana Sharir",
-  "Sharira Department",
-  "Kriya Sharira",
-  "Samhita & Siddhanta",
-  "Ayurveda Samhita siddhant",
-  "Sanskrit Ayurved samhita siddhant",
-];
-
 const TeachingStaffDetails = () => {
   const [activeTeb, setActiveTeb] = React.useState(SatffDetailsData[0]);
 
@@ -109,30 +87,19 @@ const TeachingStaffDetails = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {SatffDetailsData.map((item, i) => (
+                  {activeTeb.Children.map((staff) => (
                     <tr
-                      key={i}
+                      key={staff.id}
                       className="border-b border-gray-100 hover:bg-rose-50 transition-colors"
                     >
-                      {/* Names & Designations */}
-                      <td className="px-6 py-5 border-r border-gray-100">
-                        <div className="space-y-2">
-                          {item.Children.map((child, j) => (
-                            <div key={j}>
-                              <p className="text-primary font-bold">
-                                {child.name}
-                              </p>
-                              <p className="text-gray-600">
-                                {child.designation}
-                              </p>
-                            </div>
-                          ))}
-                        </div>
+                      {/* Name */}
+                      <td className="px-6 py-5 border-r border-gray-100 text-center">
+                        <p className="text-primary font-bold">{staff.name}</p>
                       </td>
 
-                      {/* Department */}
-                      <td className="px-6 py-5 border-r border-gray-100">
-                        <p className="text-base">{item.dept_details}</p>
+                      {/* Designation */}
+                      <td className="px-6 py-5 border-r border-gray-100 text-center">
+                        <p className="text-gray-600">{staff.designation}</p>
                       </td>
 
                       {/* Button */}
@@ -143,24 +110,6 @@ const TeachingStaffDetails = () => {
                       </td>
                     </tr>
                   ))}
-
-                  <tr className="border-b border-gray-100 hover:bg-rose-50 transition-colors">
-                    <td className="px-6 py-5 border-r border-gray-100">
-                      <p className="text-primary font-bold">
-                        Dr. Rajesh Ratani
-                      </p>
-                    </td>
-                    <td className="px-6 py-5 border-r border-gray-100">
-                      <p className="text-base">
-                        Principal and Medical superintendent
-                      </p>
-                    </td>
-                    <td className="px-6 py-5 text-center">
-                      <div className="flex justify-center">
-                        <PrimaryBtn text={"Know more"} />
-                      </div>
-                    </td>
-                  </tr>
                 </tbody>
               </table>
             </div>

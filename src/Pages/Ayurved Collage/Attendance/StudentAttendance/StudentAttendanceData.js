@@ -24,6 +24,7 @@ const attendanceTemplate = [
     pdf: "",
   },
 ];
+
 const attendanceTemplate2 = [
   {
     id: 0,

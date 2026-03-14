@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Comma50 from "../../../assets/Comma50.svg";
 import Img1 from "../../../assets/Trust/AboutImgs/Img1.png";
 import Img2 from "../../../assets/Trust/AboutImgs/Img2.png";
@@ -10,6 +10,14 @@ const images = [Img1, Img2, Img3];
 
 const AboutTrsut = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+
+ useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    }, 4000); // 4 seconds
+
+    return () => clearInterval(interval);
+  }, []);
 
   const handlePrev = () =>
     setActiveIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));

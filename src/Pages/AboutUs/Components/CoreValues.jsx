@@ -107,6 +107,8 @@ const CoreValues = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 container pb-10">
         {VisionMission.map((item) => (
           <div
+          data-aos="fade-down"
+          data-aos-delay={item.id * 200}
             key={item.id}
             className="flex flex-col items-start justify-center gap-3 bg-primary/20 hover:bg-primary duration-500 p-8 pt-8 pb-24 text-[#676767] group relative hover:shadow-lg hover:scale-105 overflow-hidden"
           >
@@ -117,7 +119,7 @@ const CoreValues = () => {
           </div>
         ))}
       </div>
-      <h1 className="text-center">Core Values</h1>
+      <h1 data-aos="fade-up" className="text-center">Core Values</h1>
 
       <div className="container mx-auto ">
         {ValueData.map((item, index) => (
@@ -129,15 +131,18 @@ const CoreValues = () => {
             <div
               className={`lg:p-10 py-10 ${index % 2 !== 0 ? "lg:order-2" : ""}`}
             >
-              <img src={item.Icon} alt={item.title} className=" mb-2 " />
+              <div data-aos="fade-right" data-aos-delay={index * 100}>
 
-              <h2 className="text-3xl font-bold text-primary mb-4">
+              <img src={item.Icon} alt={item.title} className=" mb-2 " />
+              </div>
+
+              <h2 data-aos="fade-right" data-aos-delay={index * 100} className="text-3xl font-bold text-primary mb-4">
                 {item.title}
               </h2>
 
-              <p className="text-gray-600 mb-3">{item.subtext}</p>
+              <p data-aos="fade-right" data-aos-delay={index * 100} className="text-gray-600 mb-3">{item.subtext}</p>
 
-              <p className="text-gray-600">{item.subtext2}</p>
+              <p data-aos="fade-right" data-aos-delay={index * 100} className="text-gray-600">{item.subtext2}</p>
             </div>
 
             {/* IMAGE SECTION */}
@@ -146,11 +151,15 @@ const CoreValues = () => {
                 index % 2 !== 0 ? "lg:order-1" : ""
               }`}
             >
+              <div data-aos="fade">
+
               <img
+              
                 src={item.img}
                 alt={item.title}
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-500"
-              />
+                />
+                </div>
             </div>
           </div>
         ))}

@@ -37,12 +37,15 @@ const Trustees = () => {
     <div
       style={{ backgroundImage: `url(${TrusteeBg})` }}
       className="py-16 bg-cover bg-center"
+      data-aos="fade"
     >
       <div className="text-center container space-y-12">
-        <h1> Meet Our Trustees</h1>
+        <h1 data-aos="fade-up" > Meet Our Trustees</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {TrusteesList.map((item) => (
             <div
+            data-aos="zoom-in"
+            data-aos-delay={item.id * 200}
               key={item.id}
               className="flex flex-col overflow-hidden items-center text-center hover:bg-white duration-300 rounded-3xl  group hover:shadow-xl relative "
             >

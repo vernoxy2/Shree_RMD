@@ -25,7 +25,7 @@ const Legacy = () => {
       <div className="container mx-auto flex flex-col lg:flex-row gap-8 items-center">
         {/* Left Heading */}
         <div className="lg:w-4/12">
-          <h1 className="text-white  border-l-4 border-white pl-5">
+          <h1 data-aos="fade-right" data-aos-delay="100" className="text-white  border-l-4 border-white pl-5">
             Our Legacy and Reach
           </h1>
         </div>
@@ -33,7 +33,7 @@ const Legacy = () => {
         {/* Right Counters */}
         <div className="lg:w-8/12 e grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 text-center">
           {countData.map((item) => (
-            <div key={item.id} className="  flex flex-col items-center">
+            <div data-aos="fade-up" data-aos-delay={item.id * 100} key={item.id} className="  flex flex-col items-center">
               <div className="relative h-32 w-32 flex items-center justify-center">
                 <div className="absolute inset-0 border-2 border-white/40 border-t-white rounded-full animate-[spin_8s_linear_infinite]"></div>
 

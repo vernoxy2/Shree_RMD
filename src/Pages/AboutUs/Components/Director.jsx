@@ -6,7 +6,11 @@ const Director = () => {
   return (
     <div>
       <div className="container py-28 space-y-4">
-        <div className="relative lg:w-fit lg:float-left lg:pr-8 pb-4">
+        <div
+          data-aos="zoom"
+          data-aos-delay="300"
+          className="relative lg:w-fit lg:float-left lg:pr-8 pb-4"
+        >
           <LazyImage
             src={Kantilal}
             alt="Kantilal"
@@ -22,17 +26,21 @@ const Director = () => {
             <h2>Yogesh Desai</h2>
             <p>Campus Director</p>
           </div>
-          <div className="absolute border-2 border-primary p-28 -top-8 -left-8 z-[-1]"></div>
+          <div
+            data-aos="zoom-in"
+            data-aos-delay="700"
+            className="absolute border-2 border-primary p-28 -top-8 -left-8 z-[-1]"
+          ></div>
         </div>
-        <h1 className="text-4xl ">Desk of Director Campus</h1>
-        <h1 className="text-3xl font-normal text-[#676767]">
+        <h1 data-aos="fade-up" data-aos-delay="200" className="text-4xl ">Desk of Director Campus</h1>
+        <h1 data-aos="fade-up" data-aos-delay="200" className="text-3xl font-normal text-[#676767]">
           ( Director Message )
         </h1>
-        <p className="text-primary font-bold lg:pr-20">
+        <p data-aos="fade-up" data-aos-delay="200"  className="text-primary font-bold lg:pr-20">
           IGNORENCE IS AT THE VERY ROOT OF ALL THE DISEASES (OF BOTH THE BODY
           AND MIND). KNOWLEDGE (ULTIMATE REALIZATION) LEADS TO HAPPINESS.
         </p>
-        <p>
+        <p data-aos="fade-up" data-aos-delay="200">
           It gives me immense pleasure to invite you all to the Official Website
           of “SHREE RMD AYURVEDA COLLEGE AND HOSPITAL, WAGALDHARA” in order to
           know more about the varied activities of this Institute. This
@@ -42,13 +50,13 @@ const Director = () => {
           research and patient care and also to invoke scientific outlook to the
           knowledge of Ayurvedic System of Medicine.
         </p>
-        <p>
+        <p data-aos="fade-up" data-aos-delay="200">
           The institute has a well developed research center, Speciality
           Hospital (Cancer Hospital), Gaushala and mega Herbal
           Garden.Accreditation of our Hospitals with NABH & Accreditation of our
           College with NAAC are in process.
         </p>
-        <p>
+        <p data-aos="fade-up" data-aos-delay="200">
           I am happy to inform that our trust is extending its full financial
           and other supports for the enrichment and progress of the Institute in
           all its spheres. We will not leave any stone unturned in achieving
@@ -57,7 +65,7 @@ const Director = () => {
           dedicated and highly qualified Faculty Members with a number of good
           supporting staff in different categories.
         </p>
-        <p>
+        <p data-aos="fade-up" data-aos-delay="200">
           With these humble words, I once again welcome you to our Website. I
           shall be very happy to receive any suggestion/comment to make any
           addition/alteration in our Website. Very soon we are coming with a

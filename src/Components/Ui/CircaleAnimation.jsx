@@ -4,9 +4,12 @@ import CircaleLevel2 from "../../assets/CircaleLevel2.svg"
 
 const CircaleAnimation = () => {
   return (
-    <div className='relative inline-flex items-center justify-center'>
+    <div data-aos="zoom-in"
+      data-aos-duration="1000" className='relative z-20 inline-flex items-center justify-center'>
       {/* Outer circle - slow continuous spin */}
       <img
+      data-aos="fade"
+      data-aos-duration="1000"
         src={CircaleLevel1}
         alt="CircaleLevel1"
         style={{
@@ -16,6 +19,7 @@ const CircaleAnimation = () => {
 
       {/* Inner circle - gentle pulse/breathe */}
       <img
+      
         src={CircaleLevel2}
         alt="CircaleLevel2"
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"

@@ -30,18 +30,30 @@ const AboutCampus = () => {
       <div className="container grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Content */}
         <div className="space-y-5 sm:w-[90%] 2xl:w-[80%]">
-          <h1 className="text-white border-l-2 border-white pl-5">
+          <h1
+            data-aos="fade-right"
+            data-aos-delay="100"
+            className="text-white border-l-2 border-white pl-5"
+          >
             About The Campus
           </h1>
           <div className="pl-5 space-y-5">
-            <p className="text-white">
+            <p
+              data-aos="fade-right"
+              data-aos-delay="200"
+              className="text-white"
+            >
               Our campus is strategically located just 17 km from Valsad Railway
               Station and 1 km from Wagaldhara town, easily accessible from
               National Highway 48 (NH-48). Spread across 24 acres of serene and
               well-planned land, the campus is situated opposite the Extension
               Unit (Cancer Hospital) of our main hospital facility.
             </p>
-            <p className="text-white">
+            <p
+              data-aos="fade-right"
+              data-aos-delay="300"
+              className="text-white"
+            >
               The infrastructure includes a modern Ayurvedic College building, a
               fully functional 150-bed charitable hospital, separate students’
               hostels, staff quarters, a well-maintained medicinal plant garden,
@@ -50,7 +62,11 @@ const AboutCampus = () => {
               crores, ensuring quality education and patient care under one
               integrated campus.
             </p>
-            <p className="text-white">
+            <p
+              data-aos="fade-right"
+              data-aos-delay="400"
+              className="text-white"
+            >
               Our 150-bed hospital was established with a strong social
               commitment to provide affordable Ayurvedic treatment and
               healthcare services to underprivileged and economically weaker
@@ -62,7 +78,11 @@ const AboutCampus = () => {
         </div>
         {/* Image */}
         <div className="space-y-6">
-          <div className="bg-primary/40 p-6  group relative">
+          <div
+            data-aos="fade"
+            data-aos-delay="100"
+            className="bg-primary/40 p-6  group relative"
+          >
             <div className="h-full w-full overflow-hidden">
               <img
                 src={CampusImg}
@@ -75,13 +95,13 @@ const AboutCampus = () => {
               />
             </div>
             <div className="absolute -top-1 -right-1 h-24 w-24 border-r-4 border-t-4 border-white/50"></div>
-            {/* <hr className="h-32 absolute -top-1 -right-1 w-1 bg-white/50 rounded-full"/> */}
-            {/* <hr className="w-32 absolute -top-1 -right-0 h-1 bg-white/50 rounded-full"/> */}
           </div>
           <hr className="border-white border w-full rounded-full" />
           <div className="grid grid-cols-3 gap-8">
             {Counting.map((item) => (
               <div
+                data-aos="fade-up"
+                data-aos-delay={item.id * 100}
                 key={item.id}
                 className="flex flex-col items-center gap-2 bg-white/20 backdrop-blur-lg p-4 relative"
               >
